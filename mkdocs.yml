@@ -1,0 +1,38 @@
+site_name: Analogue Video Specifications
+site_description: Reference material for analogue television systems and LaserDisc formats.
+theme:
+  name: material
+plugins:
+  - search
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+      smart_dollar: false
+docs_dir: docs
+site_dir: site
+exclude_docs: |
+  .DS_Store
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js
+  - javascripts/katex.js
+nav:
+  - Home: index.md
+  - Television and video formats:
+      - ITU-R BT.1700: video_formats/BT-1700-E/BT-1700-E.md
+      - ITU-R BT.470-6: video_formats/BT-470-6-1998/BT-470-6-1998.md
+      - ITU-R BT.601-5: video_formats/BT-601-5-1995/BT-601-5-1995.md
+      - CCIR Report 624-4: video_formats/BT-624-4-1990/BT-624-4-1990.md
+      - EBU Tech. 3213-E: video_formats/EBU-Tech-3213-E/EBU-Tech-3213-E.md
+      - EBU Tech. 3280-E: video_formats/EBU-Tech-3280-E/EBU-Tech-3280-E.md
+      - SMPTE 170M-2004: video_formats/SMPTE-170M-2004/SMPTE-170M-2004.md
+      - SMPTE 244M-2003: video_formats/SMPTE-244M-2003/SMPTE-244M-2003.md
+  - LaserDisc and Laservision:
+      - IEC 60856:1986 Laservision PAL: laserdisc/IEC-60856-1986-Laservision-PAL/IEC-60856-1986-Laservision-PAL.md
+      - IEC 60856:1986 Amendment 1: laserdisc/IEC-60856-1986-Laservision-PAL-Amendment-1/IEC-60856-1986-Laservision-PAL-Amendment-1.md
+      - IEC 60856:1986 Amendment 2: laserdisc/IEC-60856-1986-Laservision-PAL-Amendment-2/IEC-60856-1986-Laservision-PAL-Amendment-2.md
+      - IEC 60857:1986 Laservision NTSC: laserdisc/IEC-60857-1986-Laservision-NTSC/IEC-60857-1986-Laservision-NTSC.md
+      - IEC 60857:1986 Amendment 1: laserdisc/IEC-60857-1986-Laservision-NTSC-Amendment-1/IEC-60857-1986-Laservision-NTSC-Amendment-1.md
+      - IEC 60857:1986 Amendment 2: laserdisc/IEC-60857-1986-Laservision-NTSC-Amendment-2/IEC-60857-1986-Laservision-NTSC-Amendment-2.md
+
