@@ -48,7 +48,7 @@ This standard applies to pre-recorded optical reflective videodisks compatible w
 
 To serve as a reference for manufacturers intending to make disks or players compatible with the optical system described herein.
 
-# 3. Standard atmospheric conditions for testing
+## 3. Standard atmospheric conditions for testing
 
 Measurements and mechanical checks shall be carried out at any combination of temperature, humidity and air pressure within the following limits unless otherwise specified for certain parameters elsewhere in this standard:
 
@@ -162,7 +162,7 @@ max. 2 μm |   |
 | --- | --- | --- |
 |  6. Temperature and humidity requirements | Must satisfy all requirements following exposure to a temperature range of 5 °C to 45 °C at a relative humidity within the range of 5% to 90% for a period of 4 days | Parameters to be measured 20 ± 1 °C and 48% to 52% relative humidity after a recovery of 24 h following exposure to the specified environment  |
 
-# SECTION THREE — RECORDED PARAMETERS
+## SECTION THREE — RECORDED PARAMETERS
 
 ## 7. Audio parameters
 
@@ -410,7 +410,7 @@ In the readout spot the peak intensity of the first diffraction ring is less tha
 
 In the measuring set-up the readout spot is projected on a photodiode. The electrical output of this diode is raised by means of an amplifier to a convenient level for the actual measurement. Both photodiode and amplifier shall have an adequate bandwidth.
 
-11.3 General measurement conditions
+#### 11.3 General measurement conditions
 
 11.3.1 The angle between the normal to the information plane and the central ray of the optical stylus is not greater than 10 mrad.
 
@@ -421,25 +421,25 @@ In the measuring set-up the readout spot is projected on a photodiode. The elect
 |  CAV | ±1.3 μm | ±2.5 μm  |
 |  CLV | ±1.3 μm | ±1.3 μm  |
 
-12. Operational parameters
+### 12. Operational parameters
 
-12.1 Radial signal
+#### 12.1 Radial signal
 
-12.1.1 Radial modulation index (RMI) (see Figure 15, page 49)
+##### 12.1.1 Radial modulation index (RMI) (see Figure 15, page 49)
 
 $$
 \mathrm{RMI} = \frac{V_2 - V_3}{V_1} : \text{limits are shown in Figure 16, page 49.}
 $$
 
-12.1.2 Radial reflection index (RRI) (see Figure 15)
+##### 12.1.2 Radial reflection index (RRI) (see Figure 15)
 
 $$
 \mathrm{RRI} = \frac{V_2 + V_3}{2V_1} : \text{limits are shown in Figure 17, page 49.}
 $$
 
-12.1.3 Radial noise
+##### 12.1.3 Radial noise
 
-12.1.3.1 Radial noise ratio (RNR)
+###### 12.1.3.1 Radial noise ratio (RNR)
 
 $$
 \mathrm{RNR} = \frac{V_{\mathrm{rms}}, \text{closed loop signal error}}{V_{\mathrm{pp}}, \text{open loop signal error}} \leqslant -28 \mathrm{dB}
@@ -447,21 +447,21 @@ $$
 
 $V_{\mathrm{rms}}$, closed loop error signal, is measured between $2.2\,\mathrm{kHz}$ and $100\,\mathrm{kHz}$. The servo bandwidth of the measuring set-up is $1.5\,\mathrm{kHz}$.
 
-12.2 Tangential signal
+#### 12.2 Tangential signal
 
-12.2.1 Drop-outs
+##### 12.2.1 Drop-outs
 
 Maximum drop-out length is $100\,\mu\mathrm{s}$ at playback speed.
 
 The drop-out level is defined with reference to Figure 18, page 51, as the signal level where $V_3 / V_1 \leqslant 0.1$.
 
-12.2.2 Signal-to-noise ratio of the video signal
+##### 12.2.2 Signal-to-noise ratio of the video signal
 
 The minimum unweighted signal-to-noise ratio, measured at the blanking level, should be $\geqslant 30\,\mathrm{dB}$.
 
-12.3 High-frequency signal
+#### 12.3 High-frequency signal
 
-12.3.1 High frequency modulation index (HFMI) (see Figure 18)
+##### 12.3.1 High frequency modulation index (HFMI) (see Figure 18)
 
 $$
 \mathrm{HFMI} = \frac{V_2 - V_3}{V_1} : \text{limits are shown in Figure 19, page 51.}
@@ -747,7 +747,7 @@ To minimize the effect of cross-talk from adjacent tracks the “Laser vision”
 - in the trajects $\mathbf{A} \rightarrow \mathbf{B}$, $\mathbf{C} \rightarrow \mathbf{D}$, $\mathbf{E} \rightarrow \mathbf{F} \dots \mathbf{n} = \text{constant}$;
 - in the trajects $\mathbf{B} \rightarrow \mathbf{C}$, $\mathbf{D} \rightarrow \mathbf{E} \dots$, the linear velocity decreases. The resulting angular acceleration should not exceed $-0.32 \, \text{rad/s}^2$.
 
-# APPENDIX A
+## APPENDIX A
 
 ## LIST OF ABBREVIATIONS
 
@@ -757,7 +757,7 @@ To minimize the effect of cross-talk from adjacent tracks the “Laser vision”
 - NA: Numerical Aperture
 - VITS: Vertical Interval Test Signal
 
-# APPENDIX B
+## APPENDIX B
 
 ## AUDIO COMPRESSION SYSTEM
 
@@ -815,11 +815,13 @@ $$
 
 *Figure B3 - Block diagram encoder (bilingual).*
 
-# APPENDIX C
+## APPENDIX C
 
 ## PROGRAMME STATUS CODE
 
-### C1. Definition of the data in programme status code 8 $\frac{\mathrm{DC}}{\mathrm{BA}}, \mathbf{X}_3, \mathbf{X}_4, \mathbf{X}_5$
+### C1. Definition of the data in programme status code
+
+Code: $8 \frac{\mathrm{DC}}{\mathrm{BA}}, \mathbf{X}_3, \mathbf{X}_4, \mathbf{X}_5$
 
 - DC = CX noise reduction on;
 - BA = CX noise reduction off
@@ -870,7 +872,7 @@ X52 is the parity with X41, X43 and X44
 
 X53 is the parity with X42, X43 and X44
 
-# C2. Hamming Code
+## C2. Hamming Code
 
 Information vector  $\mathbf{X}_4\colon A = \left[a_1,a_2,a_3,a_4\right]$
 - Check vector  $\mathbf{X}_5$ :  $C = \left[c_1, c_2, c_3\right]$

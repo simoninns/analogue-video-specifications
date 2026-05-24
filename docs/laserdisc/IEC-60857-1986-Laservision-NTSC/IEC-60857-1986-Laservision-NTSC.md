@@ -461,15 +461,15 @@ The readout beam has a circular cross-section and a Gaussian intensity profile.
 
 The intensity at the rim is $23 \pm 1\%$ of the intensity at the centre.
 
-11.1.4 Readout spot
+##### 11.1.4 Readout spot
 
 In the readout spot the peak intensity of the first diffraction ring is less than 2% of the peak intensity of the central diffraction disk.
 
-11.2 Measuring set-up
+#### 11.2 Measuring set-up
 
 In the measuring set-up the readout spot is projected on a photodiode. The electrical output of this diode is raised to a convenient level by means of an amplifier for the actual measurement. Both photodiode and amplifier shall have an adequate bandwidth.
 
-11.3 General measurement conditions
+#### 11.3 General measurement conditions
 
 11.3.1 The angle between the normal to the information plane and the central ray of the optical stylus is not greater than 10 mrad.
 
@@ -480,25 +480,25 @@ In the measuring set-up the readout spot is projected on a photodiode. The elect
 |  CAV | ± 1.3 μm | ± 2.5 μm  |
 |  CLV | ± 1.3 μm | ± 1.3 μm  |
 
-12. Operational parameters
+### 12. Operational parameters
 
-12.1 Radial signal
+#### 12.1 Radial signal
 
-12.1.1 Radial modulation index (RMI) (see Figure 14, page 51)
+##### 12.1.1 Radial modulation index (RMI) (see Figure 14, page 51)
 
 $$
 \mathrm{RMI} = \frac{V_2 - V_3}{V_1} : \text{limits are shown in Figure 15, page 51.}
 $$
 
-12.1.2 Radial reflection index (RRI) (see Figure 14)
+##### 12.1.2 Radial reflection index (RRI) (see Figure 14)
 
 $$
 \mathrm{RRI} = \frac{V_2 + V_3}{2V_1} : \text{limits are shown in Figure 16, page 51.}
 $$
 
-12.1.3 Radial noise
+##### 12.1.3 Radial noise
 
-12.1.3.1 Radial noise ratio (RNR)
+###### 12.1.3.1 Radial noise ratio (RNR)
 
 $$
 \mathrm{RNR} = \frac{V_{\mathrm{rms}}, \text{closed loop error signal}}{V_{\mathrm{pp}}, \text{open loop error signal}} \leqslant -28 \mathrm{dB}
@@ -506,21 +506,21 @@ $$
 
 $V_{\mathrm{rms}}$, closed loop error signal, is measured between 2.2 kHz and 100 kHz. The servo bandwidth of the measuring set-up is 1.5 kHz.
 
-12.2 Tangential signal
+#### 12.2 Tangential signal
 
-12.2.1 Drop-outs
+##### 12.2.1 Drop-outs
 
 Maximum drop-out length is 100 μs at playback speed.
 
 The drop-out level is defined with reference to Figure 17, page 53, as the signal level where $V_3 / V_1 \leqslant 0.1$.
 
-12.2.2 Signal-to-noise ratio of the video signal
+##### 12.2.2 Signal-to-noise ratio of the video signal
 
 The minimum unweighted signal-to-noise ratio, measured at the blanking level, should be $\geqslant 30$ dB.
 
-12.3 High-frequency signal
+#### 12.3 High-frequency signal
 
-12.3.1 High-frequency modulation index (HFMI) (see Figure 17)
+##### 12.3.1 High-frequency modulation index (HFMI) (see Figure 17)
 
 $$
 \mathrm{HFMI} = \frac{V_2 - V_3}{V_1} : \text{limits are shown in Figure 18, page 53}.
@@ -812,7 +812,9 @@ $$
 
 ### PROGRAMME STATUS CODE
 
-C1. Definition of the data in programme status code 8 $\frac{\mathrm{DC}}{\mathrm{BA}} \mathrm{X}_3, \mathrm{X}_4, \mathrm{X}_5$
+#### C1. Definition of the data in programme status code
+
+Code: $8 \frac{\mathrm{DC}}{\mathrm{BA}} \mathrm{X}_3, \mathrm{X}_4, \mathrm{X}_5$
 
 - DC = CX noise reduction on
 - BA = CX noise reduction off

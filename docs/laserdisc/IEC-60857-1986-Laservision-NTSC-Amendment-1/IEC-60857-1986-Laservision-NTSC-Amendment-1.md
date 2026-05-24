@@ -41,7 +41,9 @@ The optical pick-up to be used for disk measurement shall comply with the follow
 
 ### 12.1.4.2 Measurement conditions
 
-#### 12.1.4.2.1 Time constant: $t = 1,8 \, \mu \mathrm{s}$
+#### 12.1.4.2.1 Time constant
+
+$t = 1,8 \, \mu \mathrm{s}$
 
 #### 12.1.4.2.2 Filtering: low pass.
 
