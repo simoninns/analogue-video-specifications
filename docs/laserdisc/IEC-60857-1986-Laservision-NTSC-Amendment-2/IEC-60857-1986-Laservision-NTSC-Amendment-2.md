@@ -1,6 +1,6 @@
 # IEC 60857-1986 Laservision NTSC Amendment 2
 
-# FOREWORD
+## FOREWORD
 
 This amendment has been prepared by subcommittee 100B: Recording, of IEC technical committee 100: Audio, video and multimedia systems and equipment.
 
@@ -14,7 +14,7 @@ Full information on the voting for the approval of this amendment can be found i
 
 ---
 
-## CONTENTS
+### CONTENTS
 
 Add the title of clause 13 as follows:
 
@@ -22,7 +22,7 @@ Add the title of clause 13 as follows:
 
 ---
 
-## 4 Mechanical parameters
+### 4 Mechanical parameters
 
 Add, after subclause 4.1.2, the following new subclause 4.1.3:
 
@@ -74,7 +74,7 @@ Replace the existing subclause 4.21.1 by the following:
 12 in version | 0,18
 0,18 |   |
 
-## 5 Optical requirements
+### 5 Optical requirements
 
 Replace the existing subclause 5.2 by the following:
 
@@ -82,7 +82,7 @@ Replace the existing subclause 5.2 by the following:
 | --- | --- | --- |
 |  5.2 Birefringence of transparent disk (double pass) | 40° max. |   |
 
-## 6 Temperature and humidity requirements
+### 6 Temperature and humidity requirements
 
 Replace the text in the second column by the following new text:
 
@@ -90,7 +90,7 @@ Replace the text in the second column by the following new text:
 | --- |
 |  Must satisfy all requirements following exposure to any temperature within the range of 5 °C to 45 °C at any relative humidity within the range of 5 % to 90 % held constant for a period of four days  |
 
-## 10.1.10 CLV picture number
+### 10.1.10 CLV picture number
 
 Replace the text of subclause 10.1.10 by the following new text:
 
@@ -124,13 +124,13 @@ $$
 
 The start of the programme time code is zero hour and zero minute, and that of CLV picture number is zero second and zero picture at the beginning of the active programme.
 
-## 10.2.3 Picture numbers
+### 10.2.3 Picture numbers
 
 Replace the text of subclause 10.2.3 by the following new text:
 
 The picture numbers are always present on CAV disks. They are unique and in normal count sequence, starting with the number 1 at the beginning of the active programme. The maximum available picture number is 79 999.
 
-### 11.1.2 Numerical aperture
+#### 11.1.2 Numerical aperture
 
 Replace the text of subclause 11.1.2 by the following new text:
 
@@ -140,21 +140,21 @@ $$
 NA = 0,40 \pm 0,01.
 $$
 
-### 12 Operational parameters
+#### 12 Operational parameters
 
 Add, after clause 12, the following new clause 13:
 
-### 13 Implementation of a digital audio signal
+#### 13 Implementation of a digital audio signal
 
 This clause specifies the implementation of a digital audio signal as an optional addition to the laser vision system (LV). See sections three and four of IEC 60908.
 
-## 13.1 Signal modulation
+### 13.1 Signal modulation
 
-### 13.1.1 General
+#### 13.1.1 General
 
 The EFM signal, as defined in IEC 60908, prior to modulation, is filtered by a low-pass filter with a frequency response as detailed in 13.1.2, a high-pass filter with a response as shown in figure 24 and shall have a pre-emphasis as detailed in figure 24. The digital signal is a symmetrical double edge pulsewidth modulated onto the main carrier and recorded onto the disk as shown in figure 22.
 
-### 13.1.2 Low-pass filter (see figure 23)
+#### 13.1.2 Low-pass filter (see figure 23)
 
 a) The frequency response shall be as follows:
 
@@ -173,27 +173,27 @@ b) The group delay shall be as follows:
 
 NOTE – This group delay is a pre-distortion for the low-pass filter of the player.
 
-### 13.1.3 Pre-emphasis
+#### 13.1.3 Pre-emphasis
 
 The EFM signal prior to modulation shall have a pre-emphasis according to figure 24.
 
-### 13.1.4 High-pass filter
+#### 13.1.4 High-pass filter
 
 The EFM signal prior to modulation shall be filtered by a high-pass filter according to figure 24.
 
-### 13.1.5 Modulation of the filtered EFM signal
+#### 13.1.5 Modulation of the filtered EFM signal
 
 The filtered EFM signal shall be a symmetrical double edge pulse width modulated on the main carrier.
 
 The level of this modulated EFM signal in the recorded frequency spectrum shall be -27 dB ± 1 dB with respect to the unmodulated main carrier when no audio signal is present during digital silence (see figure 25).
 
-### 13.1.6 Block error rate (BLER)
+#### 13.1.6 Block error rate (BLER)
 
-#### 13.1.6.1 Definitions
+##### 13.1.6.1 Definitions
 
 See IEC 60908, section three, subclause 11.1.1.
 
-#### 13.1.6.2 Specification of random errors
+##### 13.1.6.2 Specification of random errors
 
 BLER averaged over any 10 s shall be ≤ 8 × 10⁻² with a recommendation of ≤ 3 × 10⁻².
 
@@ -404,7 +404,7 @@ VBW 30 kHz
 
 *Figure 25 – Level of EFM signal.*
 
-# Appendix A
+## Appendix A
 
 Replace the existing text by the following new text:
 
@@ -428,11 +428,11 @@ Replace the existing figure B.3 by the following new figure B.3:
 
 *Figure B.3 – Block diagram encoder (bilingual), lower portion.*
 
-# Appendix C
+## Appendix C
 
 Replace the existing clause C.1 by the following new clause:
 
-## C.1 Definition of the data in programme status code
+### C.1 Definition of the data in programme status code
 
 $$
 8 \frac {D C}{B A} X _ {3}, X _ {4}, X _ {5}

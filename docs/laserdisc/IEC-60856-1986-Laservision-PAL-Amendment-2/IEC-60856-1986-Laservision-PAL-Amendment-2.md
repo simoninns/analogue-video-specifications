@@ -1,6 +1,6 @@
 # IEC 60856-1986 Laservision PAL Amendment 2
 
-# FOREWORD
+## FOREWORD
 
 This amendment has been prepared by subcommittee 100B: Recording, of IEC technical committee 100: Audio, video and multimedia systems and equipment.
 
@@ -16,9 +16,9 @@ CONTENTS
 
 Add the title of clause 13 as follows:
 
-## 13 Implementation of a digital audio signal
+### 13 Implementation of a digital audio signal
 
-## 4 Mechanical parameters
+### 4 Mechanical parameters
 
 Add, after subclause 4.1.2, the following new subclause 4.1.3:
 
@@ -69,7 +69,7 @@ Replace the existing subclause 4.21.1 by the following:
 |  8 in version | 0,18 |   |
 |  12 in version | 0,18 |   |
 
-## 5 Optical requirements
+### 5 Optical requirements
 
 Replace the existing subclause 5.2 by the following:
 
@@ -77,7 +77,7 @@ Replace the existing subclause 5.2 by the following:
 | --- | --- | --- |
 |  5.2 Birefringence of transparent disk (double pass) | 40° max. |   |
 
-## 6 Temperature and humidity requirements
+### 6 Temperature and humidity requirements
 
 Replace the text in the second column by the following new text:
 
@@ -85,21 +85,21 @@ Replace the text in the second column by the following new text:
 | --- |
 |  Must satisfy all requirements following exposure to any temperature within the range of 5 °C to 45 °C at any relative humidity within the range of 5 % to 90 % held constant for a period of four days  |
 
-## 9 Video parameters
+### 9 Video parameters
 
 Replace the existing subclauses 9.1.3 and 9.1.4 by the following:
 
-### 9.1.3 Vertical interval test signals (VITS)
+#### 9.1.3 Vertical interval test signals (VITS)
 
 Vertical interval test signals according to ITU-R Recommendation 473-5, annex I (see figures 7 to 10) may be inserted in the lines 19, 13 or 20, 332 and 326 or 333. The lines 22 and 335 shall be blanked before optical recording, to enable disk noise measurements to be made.
 
-### 9.1.4 Address signals
+#### 9.1.4 Address signals
 
 In the video signal, lines 6 through 18 and 319 through 331 are reserved for address or data signals. For signal specification, see clause 10. The lines that are not specified have a video content set at blanking level and are reserved for future applications. Lines 20, 21 and 333, 334 may contain subtitle data signals; in that case there are no VITS (see 9.1.3) on lines 20 and 333.
 
 When additional capacity is needed for subtitle data signals, lines 14, 15, 327 and 328 may be used.
 
-### 10.1.10 CLV picture number
+#### 10.1.10 CLV picture number
 
 Replace the text of subclause 10.1.10 by the following new text:
 
@@ -119,7 +119,7 @@ The CLV picture number shall be inserted into line 16 or 329 depending on which 
 
 The start of the programme time code is zero hour and zero minute, and that of CLV picture number is zero second and zero picture at the beginning of the active programme.
 
-### 11.1.2 Numerical aperture
+#### 11.1.2 Numerical aperture
 
 Replace the text of subclause 11.1.2 by the following new text:
 
@@ -127,17 +127,17 @@ The numerical aperture of the lens of the readout beam is:
 
 NA = 0,40 ± 0,01.
 
-## 12 Operational parameters
+### 12 Operational parameters
 
 Add, after clause 12, the following new clause 13:
 
-## 13 Implementation of a digital audio signal
+### 13 Implementation of a digital audio signal
 
 This clause specifies the implementation of a digital audio signal as an optional addition to the laser vision system (LV). See sections three and four of IEC 60908.
 
-### 13.1 Signal modulation
+#### 13.1 Signal modulation
 
-#### 13.1.1 General
+##### 13.1.1 General
 
 The EFM signal, as defined in IEC 60908, prior to modulation, is filtered by a low-pass filter with a frequency response as detailed in 13.1.2, a high-pass filter with a response as shown in figure 25, and shall have a pre-emphasis as detailed in figure 25. The digital signal is a symmetrical double edge pulse width modulated onto the main carrier and recorded on the disk as shown in figure 23.
 
@@ -196,29 +196,29 @@ $$F_{\mathrm{S}} = \frac{1764}{625} \times F_{\mathrm{H}} \quad (44,1\ \mathrm{k
 
 $F_{\mathrm{H}}$ is the line frequency corresponding to the video signal (50 Hz/625 lines – PAL system).
 
-## 13.3 Compensation of time delay
+### 13.3 Compensation of time delay
 
 Since the digital audio decoder delays the audio signal by 15,3 ms, it is recommended to advance the audio signals, modulated into the EFM signal, relative to the related video signal.
 
-## 13.4 Analogue audio subcarriers
+### 13.4 Analogue audio subcarriers
 
 The analogue audio subcarriers shall not be recorded (status code 0010, see appendix C).
 
-## 13.5 Control and display of the compact disk system (subcode)
+### 13.5 Control and display of the compact disk system (subcode)
 
-### 13.5.1 Subcode
+#### 13.5.1 Subcode
 
 The subcode conforms with IEC 60908, section four, clause 17, with the following modifications:
 
-#### 13.5.1.1 ADR
+##### 13.5.1.1 ADR
 
 Change "0001: ADR 1, mode 1 for DATA-Q" to "0100: ADR 4, mode 4 for DATA-Q".
 
-#### 13.5.1.2 Subclause 17.5.1
+##### 13.5.1.2 Subclause 17.5.1
 
 Change title "Mode 1 for DATA-Q" to "Mode 4 for DATA-Q". In the first line, change "ADR = 1 = (0001)" to "ADR = 4 = (0100)" and, in the third line, change "mode 1" to mode 4".
 
-### 13.5.2 Table of content (TOC)
+#### 13.5.2 Table of content (TOC)
 
 The repetitive TOC shall be recorded in such a way that, at the end of the lead-in area, the table of content can be ended with any value of point.
 
@@ -228,17 +228,17 @@ P frame is 22 = PAL "LV disk" with digital stereo sound
 
 P frame is 23 = PAL "LV disk" with digital bilingual sound.
 
-#### 13.5.2.1 Position lead-in subcode of compact disk
+##### 13.5.2.1 Position lead-in subcode of compact disk
 
-##### 13.5.2.1.1 Start of CD lead-in subcode in accordance with start lead-in code LV in this standard.
+###### 13.5.2.1.1 Start of CD lead-in subcode in accordance with start lead-in code LV in this standard.
 
-##### 13.5.2.1.2 Length of CD lead-in subcode in accordance with this standard.
+###### 13.5.2.1.2 Length of CD lead-in subcode in accordance with this standard.
 
-#### 13.5.2.2 Position lead-out subcode of compact disk
+##### 13.5.2.2 Position lead-out subcode of compact disk
 
-##### 13.5.2.2.1 Start of CD lead-out subcode in accordance with start lead-out code LV in this standard.
+###### 13.5.2.2.1 Start of CD lead-out subcode in accordance with start lead-out code LV in this standard.
 
-##### 13.5.2.2.2 Length of CD lead-out subcode in accordance with this standard.
+###### 13.5.2.2.2 Length of CD lead-out subcode in accordance with this standard.
 
 13.5.3 Relation between track number (CD) and chapter number (LV)
 
@@ -395,11 +395,11 @@ Replace the existing figure B.3 by the following:
 
 *Figure B.3 – Block diagram encoder (bilingual).*
 
-# Appendix C
+## Appendix C
 
 Replace the existing clause C.1 by the following new clause:
 
-## C.1 Definition of the data in programme status code
+### C.1 Definition of the data in programme status code
 
 $$
 8 \frac {\mathrm {D C}}{\mathrm {B A}} X _ {3}, X _ {4}, X _ {5}

@@ -1,6 +1,6 @@
 # IEC 60856-1986 Laservision PAL Amendment 1
 
-# PREFACE
+## PREFACE
 
 This amendment has been prepared by Sub-Committee 60B: Video recording, of IEC Technical Committee No. 60: Recording.
 
@@ -14,21 +14,21 @@ Full information on the voting for the approval of this amendment can be found i
 
 ---
 
-# INTRODUCTION
+## INTRODUCTION
 
 IEC Publication 856 which is the current standard for "Laser vision" does not contain a specification for a push-pull radial differential signal. For future applications of the video disk, it is desirable to specify this signal and to add this specification to the current standard.
 
 The specified amplitude variation of the signal represents the state of the art of LV-disk production.
 
-## 12. Operational parameters
+### 12. Operational parameters
 
 Add, after subclause 12.1.3.1, the following new subclauses:
 
-### 12.1.4 Push-pull radial differential signal (clause 11 does not apply to the case under consideration)
+#### 12.1.4 Push-pull radial differential signal (clause 11 does not apply to the case under consideration)
 
 A slightly off-track position of the scanning light spot results in a diffraction pattern that is asymmetrical in the radial direction of the disk. The radial differential (RD) signal is defined as the difference of the optical powers diffracted into the two halves (positioned at opposite sides of the track) of the aperture of the objective lens.
 
-#### 12.1.4.1 Requirements for the measuring pick-up
+##### 12.1.4.1 Requirements for the measuring pick-up
 
 The optical pick-up to be used for disk measurement shall comply with the following requirements:
 

@@ -1,6 +1,6 @@
 # IEC 60857-1986 Laservision NTSC
 
-# FOREWORD
+## FOREWORD
 
 1) The formal decisions or agreements of the I E C on technical matters, prepared by Technical Committees on which all the National Committees having a special interest therein are represented, express, as nearly as possible, an international consensus of opinion on the subjects dealt with.
 
@@ -8,7 +8,7 @@
 
 3) In order to promote international unification, the I E C expresses the wish that all National Committees should adopt the text of the I E C recommendation for their national rules in so far as national conditions will permit. Any divergence between the I E C recommendation and the corresponding national rules should, as far as possible, be clearly indicated in the latter.
 
-# PREFACE
+## PREFACE
 
 This standard has been prepared by Sub-Committee 60B: Video recording, of I E C Technical Committee No. 60: Recording.
 
@@ -20,11 +20,11 @@ The text of this standard is based on the following documents:
 
 Further information can be found in the Report on Voting indicated in the table above.
 
-# PRE-RECORDED OPTICAL REFLECTIVE VIDEODISK SYSTEM
+## PRE-RECORDED OPTICAL REFLECTIVE VIDEODISK SYSTEM
 
-## "Laser vision" 60 Hz/525 lines — M/NTSC
+### "Laser vision" 60 Hz/525 lines — M/NTSC
 
-## INTRODUCTION
+### INTRODUCTION
 
 The optical videodisk system functions as follows:
 
@@ -42,17 +42,17 @@ In the CAV format each revolution corresponds to one complete recorded video fra
 
 In the CLV format the velocity of the information track relative to the readout beam is constant. Therefore the angular velocity decreases as the readout beam proceeds along the spiral track to the outside. A disk recorded in this way yields a longer playing time. Features such as still pictures, however, are not possible.
 
-## SECTION ONE — GENERAL
+### SECTION ONE — GENERAL
 
-### 1. Scope
+#### 1. Scope
 
 This standard applies to pre-recorded optical reflective videodisks compatible with 60 Hz/525 lines CCIR monochrome and colour coding M/NTSC systems, and defines those parameters that effect the interchangeability of the disks, excluding limitations of the programming material and source.
 
-### 2. Object
+#### 2. Object
 
 To serve as a reference for manufacturers intending to make disks or players compatible with the optical system described herein.
 
-# 3. Standard atmospheric conditions for testing
+## 3. Standard atmospheric conditions for testing
 
 Measurements and mechanical checks shall be carried out at any combination of temperature, humidity and air pressure within the following limits unless otherwise specified for certain parameters elsewhere in this standard:
 
@@ -61,9 +61,9 @@ Relative humidity: 45% to 75%
 Air pressure: 86 kPa to 106 kPa
 Samples shall be conditioned in the testing environment for 24 h before testing.
 
-## SECTION TWO — DISK PARAMETERS
+### SECTION TWO — DISK PARAMETERS
 
-### 4. Mechanical parameters
+#### 4. Mechanical parameters
 
 |  Characteristics to be specified | Requirements | Method and/or conditions of measurement  |
 | --- | --- | --- |
@@ -158,11 +158,11 @@ max. 2 μm |   |
 | --- | --- | --- |
 |  6. Temperature and humidity requirements | Must satisfy all requirements following exposure to a temperature range of 5 °C to 45 °C at a relative humidity within the range of 5% to 90% for a period of 4 days | Parameters to be measured at 20 ± 1 °C and 48% to 52% relative humidity after a recovery of 24 hours following exposure to the specified environment  |
 
-# SECTION THREE — RECORDED PARAMETERS
+## SECTION THREE — RECORDED PARAMETERS
 
-## 7. Audio parameters
+### 7. Audio parameters
 
-### 7.1 Channel applications
+#### 7.1 Channel applications
 
 The disk shall contain two independent audio channels. This offers the possibility of:
 
@@ -171,17 +171,17 @@ b) Monophonic sound — two independent audio programmes
 c) Monophonic sound — one audio programme on both channels
 d) Future use of one or both channels for control or cueing information.
 
-### 7.2 Audio subcarrier modulation of main carrier
+#### 7.2 Audio subcarrier modulation of main carrier
 
-#### 7.2.1 Type of modulation
+##### 7.2.1 Type of modulation
 
 The audio subcarrier shall be symmetrical double-edge pulsewidth modulated on the main carrier. (See Philips F. Panter: Modulation, Noise and Spectral Analysis, page 542.)
 
-#### 7.2.2 Audio subcarrier amplitude
+##### 7.2.2 Audio subcarrier amplitude
 
 The level of the audio subcarriers, in the recorded frequency spectrum, shall be $-26 \pm 1$ dB with respect to the unmodulated main carrier.
 
-## 8. Audio subcarrier frequencies
+### 8. Audio subcarrier frequencies
 
 Channel I (left channel in stereo)
 
@@ -195,53 +195,53 @@ $$
 f = 178.75 \times f_{\mathrm{H}} = 2812499 \ \mathrm{Hz} \ (\text{nominal})
 $$
 
-### 8.1 Type of modulation
+#### 8.1 Type of modulation
 
 The audio signal shall be frequency modulated on the subcarriers with a maximum deviation of $\pm 100\ \mathrm{kHz}$ for $100\%$ modulation. The instantaneous peak deviation at all times shall be less than $\pm 150\ \mathrm{kHz}$.
 
-## 8.2 Polarity of modulation
+### 8.2 Polarity of modulation
 
 Both audio subcarriers shall have the same polarity of modulation which may be positive or negative.
 
-## 8.3 Pre-emphasis
+### 8.3 Pre-emphasis
 
 The audio signal prior to modulation shall have a pre-emphasis according to Figure 5, page 37.
 
-## 8.4 Audio compression
+### 8.4 Audio compression
 
 The audio signal before pre-emphasis may be compressed at the option of the programme maker. In case of compression the system described in Appendix B shall be used.
 
-## 9. Video parameters
+### 9. Video parameters
 
-### 9.1 Video signal
+#### 9.1 Video signal
 
-#### 9.1.1 Video signal standards
+##### 9.1.1 Video signal standards
 
 The recorded video signal is monochrome or colour M/NTSC signal according to CCIR Report 624 (1974) and further specified by EIA Television Systems Bulletin No. 4: Recommended practice for horizontal synchronisation; horizontal blanking and burst timing in television broadcasting.
 
-#### 9.1.2 Video signal pilot burst
+##### 9.1.2 Video signal pilot burst
 
 Standard EIA recommended burst (see EIA Television Bulletin No. 4) is always present in both monochrome and colour video signals. The colour burst should also be present during the vertical interval (see Figures 6a, page 37).
 
-#### 9.1.3 Vertical interval reference signals (VIRS)
+##### 9.1.3 Vertical interval reference signals (VIRS)
 
 The video signal shall contain on lines 19 and 282 a VIR signal as per FCC Recommendation 73-699 and CCIR Recommendation 314-4 (see Figure 6b, page 39). The VIR signal will not be present in monochrome video.
 
-#### 9.1.4 International test signals (ITS)
+##### 9.1.4 International test signals (ITS)
 
 It is recommended that the video signal shall contain on line 20 a composite test signal and on line 283 a combination test signal, both as per NTC Report No. 7 or CCIR Recommendation 473-2 (see Figure 7, page 41).
 
-#### 9.1.5 Address signal
+##### 9.1.5 Address signal
 
 In the video signal, lines 10 through 18 and 273 through 281 are reserved for address or data signals, see also CCIR Recommendation 314-4. For signal specification, see Clause 10. The lines that are not specified have a video content set at the blanking level and are reserved for future applications. Lines 21 and the first half of 284 may contain a handicapped caption data signal as per PBS Report E7709.
 
-## 9.1.6 Maximum video level
+### 9.1.6 Maximum video level
 
 The maximum luminance level of the video signal will not exceed 110 IRE units and the maximum chroma saturation will not exceed 100%.
 
 *Note.* — For 525-lines systems, the signal amplitude is expressed in IRE units. By convention, 100 IRE units correspond to the amplitude comprised between the blanking level and the white level.
 
-## 9.1.7 Group delay pre-distortion
+### 9.1.7 Group delay pre-distortion
 
 To equalize the group delay distortion of the playback low-pass filter, the video group delay shall be pre-distorted as follows (see Figure 8, page 43):
 
@@ -253,25 +253,25 @@ To equalize the group delay distortion of the playback low-pass filter, the vide
 |  f = 4 MHz | t_{d} = -135 ± 30 ns  |
 |  f = 4.2 MHz | t_{d} = -200 ± 50 ns  |
 
-## 9.2 Video signal modulation
+### 9.2 Video signal modulation
 
-### 9.2.1 Type of modulation
+#### 9.2.1 Type of modulation
 
 The video signal shall be frequency modulated on the main carrier with positive modulation.
 
-### 9.2.2 Blanking level frequency
+#### 9.2.2 Blanking level frequency
 
 The main carrier frequency corresponding to the blanking level (0 IRE) shall be 8.1 MHz ± 50 kHz.
 
-### 9.2.3 Main carrier deviation
+#### 9.2.3 Main carrier deviation
 
 The bottom of sync (-40 IRE) to white level (+100 IRE) carrier deviation shall be 1.7 MHz ± 35 kHz. White level is the highest frequency.
 
-### 9.2.4 Video pre-emphasis
+#### 9.2.4 Video pre-emphasis
 
 The video signal, prior to modulation, shall have a pre-emphasis as shown in Figure 9, page 45.
 
-## 10. Vertical interval control and address signals
+### 10. Vertical interval control and address signals
 
 The code signals on the videodisk provide special information, which can be utilized by the player to control special functions and provide picture frame or time information.
 
@@ -296,31 +296,31 @@ On CLV format the codes are:
 7. Programme status code
 8. User code
 
-## 10.1 24-bit biphase coded signal
+### 10.1 24-bit biphase coded signal
 
 This signal is inserted in selected video lines during the vertical interval. It is subdivided into 6 groups of 4 bits and each group can be any hexadecimal word (see Figure 10, page 45). The first group of 4 bits is the key and starts with a 1 logic. Each bit cell is $2\mu s$ long with the digital level between 0 and 100 IRE (see Figure 11, page 47).
 
-### 10.1.1 Lead-in
+#### 10.1.1 Lead-in
 
 The lead-in code indicates the start of the programme (see Sub-clause 4.9). The 24-bit biphase lead-in code with a hexadecimal value of “88FFFF” is inserted into lines 17, 18, 280 and 281 during at least a number of tracks corresponding to $1.5\mathrm{mm}$ prior to the active programme start.
 
-### 10.1.2 Lead-out
+#### 10.1.2 Lead-out
 
 The lead-out code indicates the end of the programme (see Sub-clause 4.13). The 24-bit biphase lead-out code with a hexadecimal value of “80EEEE” is inserted into lines 17, 18, 280 and 281 during at least $2\mathrm{mm}$ tracks after the end of the active programme (see Sub-clause 4.14).
 
-### 10.1.3 Picture numbers
+#### 10.1.3 Picture numbers
 
 The picture numbers shall be present during the active programme on CAV disks. They are unique and in a normal count sequence starting with number 1 at the beginning of the active programme.
 
 The picture numbers shall be inserted into lines 17 and 18 or into lines 280 and 281, depending on which field is the first of the picture. The hexadecimal value is: $\mathbf{FX}_1\mathbf{X}_2\mathbf{X}_3\mathbf{X}_4\mathbf{X}_5$. $\mathbf{X}_1$ through $\mathbf{X}_5$ represent the picture number, $\mathbf{X}_5$ being the least significant digit. The maximum available picture number is 79999.
 
-### 10.1.4 Picture stop code
+#### 10.1.4 Picture stop code
 
 On CAV disks, the picture stop code enables the playback equipment to switch automatically to the still picture mode from normal speed or slow motion. The 24-bit biphase picture stop code with a hexadecimal value of “82CFFF” is inserted into lines 16 and 17 or 279 and 280 of the field immediately following the field in which the 24-bit picture number was inserted to enable stopping on the selected picture. On CLV disks there is no picture stop.
 
 *Note.* — During the first years after introduction, a picture stop is indicated twice: first as indicated above and also by the value of the first bit of $\mathbf{X}_1$ in the picture number code $\mathrm{FX}_1\mathrm{X}_2\mathrm{X}_3\mathrm{X}_4\mathrm{X}_5$. A “0” corresponds to a picture stop and “1” to a picture number without a picture stop.
 
-## 10.1.5 Chapter numbers
+### 10.1.5 Chapter numbers
 
 Chapter numbers indicate the parts of the programme regarded as a chapter and are optional. They are unique and in a normal count sequence starting with a selectable number at the beginning of the active programme (i.e. number “0” or “1” or a preset number consecutive to the last number of a previous disk with the same programme content). The 24-bit biphase coded chapter numbers, if present, are inserted into lines 17, 18 and 280, 281 in the fields of the whole active programme area which do not have an insertion of picture numbers on CAV disks. However, for lines 17 and 280, picture stop code has priority.
 
@@ -332,7 +332,7 @@ The hexadecimal value is “8X₁X₂DDD”. X₁ and X₂ are the chapter numbe
 
 On disks with chapters shorter than 800 tracks the stop bit of each chapter number shall have the logic value “one”. The minimum length of a chapter will be 30 tracks.
 
-## 10.1.6 Programme time code
+### 10.1.6 Programme time code
 
 The programme time code is always present on CLV disks during the active programme and indicates the running time (expressed in hours and minutes).
 
@@ -342,13 +342,13 @@ X₁ indicates the hours
 
 X₂ and X₃ indicate the minutes.
 
-## 10.1.7 Constant linear velocity code
+### 10.1.7 Constant linear velocity code
 
 The CLV code is always present in the active programme on a CLV disk.
 
 It indicates the CLV format. The 24-bit CLV code with a hexadecimal value of “87FFFF” is inserted into line 280 or 17 in the fields of the whole active programme area which do not have an insertion of programme time code and CLV picture number.
 
-## 10.1.8 Programme status code
+### 10.1.8 Programme status code
 
 The programme status code identifies the use of the audio and video channels and will be inserted in the active programme area.
 
@@ -360,7 +360,7 @@ On CAV disks the insertion is: lines 16 and 279.
 
 Note. — Picture stop code has priority to the programme status code.
 
-## 10.1.9 Users code
+### 10.1.9 Users code
 
 The users code is intended for filing and identification and can be inserted as an option in the lead-in and lead-out area. The data content is up to the disk manufacturer.
 
@@ -370,7 +370,7 @@ X1 = 0 through 7; X3, X4, X5 = 0 through F.
 
 Insertion in lead-in and/or lead-out area in the lines 16, 279.
 
-## 10.1.10 CLV picture number
+### 10.1.10 CLV picture number
 
 On the CLV disk the CLV picture number identifies each video frame and can also be used to detect hang-ups.
 
@@ -386,7 +386,7 @@ X4 = 0 through 2 et X5 = 0 through 9.
 
 The CLV picture number shall be inserted into line 16 or 279 depending on which field is the first field of the picture.
 
-## 10.2 40-bit FM coded signal
+### 10.2 40-bit FM coded signal
 
 This coding format consists of signals which are also inserted in selected video lines during the vertical interval. One of these signals is a 100 IRE level white flag (see Figure 12, page 47). The others are a 40-bit FM coded digital signal. Each bit cell has a digital level between 0 and 100 IRE (see Figure 13, page 49). This signal provides television field information, 20 data bits and a parity bit. The remaining bits are used for clock synchronizing and valid data recognition.
 
@@ -394,19 +394,19 @@ On CAV disks, the 40-bit codes provide picture number information.
 
 On CLV disks, the 40-bit codes provide the programme time, and CLV information.
 
-## 10.2.1 Lead-in
+### 10.2.1 Lead-in
 
 The lead-in code indicates the start of the programme (see Sub-clause 4.9).
 
 The lead-in code, a white flag on line 11, is present at least a number of tracks corresponding to 1.5 mm prior to the active programme start.
 
-## 10.2.2 Lead-out
+### 10.2.2 Lead-out
 
 The lead-out code indicates the end of the programme (see Sub-clause 4.13).
 
 The lead-out code, a white flag on lines 11 and 274, is present at least 600 tracks after the active programme stops.
 
-## 10.2.3 Picture numbers
+### 10.2.3 Picture numbers
 
 The picture numbers are always present on CAV disks. They are unique and in normal count sequence, starting with the number 1 at the beginning of the active programme. The maximum available picture number is 99 999.
 
@@ -416,11 +416,11 @@ The picture number is always updated on the second field of each new picture. Du
 
 The data is arranged as follows: $\mathbf{X}_1\mathbf{X}_2\mathbf{X}_3\mathbf{X}_4\mathbf{X}_5$, with $\mathbf{X}_5$ the least significant digit.
 
-## 10.2.4 First field white flag
+### 10.2.4 First field white flag
 
 The white flag is utilized to indicate the position of a complete picture during the active programme material on the videodisk. This white flag is inserted on either line 11 or 274 and is manually selected on video originated material. If there are two or more fields scanned from the same photographic picture, or if there are two fields which are made equal by electronic processing the line position is automatically controlled by the transfer equipment to ensure that the flag occurs on the first field of the next picture.
 
-## 10.2.5 Programme time code
+### 10.2.5 Programme time code
 
 The programme time code is always present on CLV disks during the active programme and indicates the running time (expressed in minutes and seconds). The 40-bit FM code is inserted in lines 10 and 273. The data are arranged in $\mathbf{X}_1\mathbf{X}_2\mathbf{X}_3\mathbf{X}_4\mathbf{X}_5$.
 
@@ -441,21 +441,21 @@ During lead-in, the programme time is preset to 0 min and 0 s.
 
 During lead-out, the time is frozen to that of the end of the active programme.
 
-## SECTION FOUR — OPERATIONAL SIGNALS
+### SECTION FOUR — OPERATIONAL SIGNALS
 
-## 11. Definition of playback measurement system
+### 11. Definition of playback measurement system
 
-### 11.1 Optical stylus
+#### 11.1 Optical stylus
 
-#### 11.1.1 Wavelength
+##### 11.1.1 Wavelength
 
 The wavelength of the used light is: $\lambda = 6328\,\mathrm{\AA}$.
 
-#### 11.1.2 Numerical aperture
+##### 11.1.2 Numerical aperture
 
 The numerical aperture of the readout beam is: $\mathrm{NA} = 0.40 \pm 0.01$.
 
-#### 11.1.3 Readout beam
+##### 11.1.3 Readout beam
 
 The readout beam has a circular cross-section and a Gaussian intensity profile.
 
@@ -737,9 +737,9 @@ in the trajects $\mathbf{B} \rightarrow \mathbf{C}$, $\mathbf{D} \rightarrow \ma
 
 The resulting angular acceleration should not exceed $-0.32 \, \text{rad/s}^2$.
 
-# APPENDIX A
+## APPENDIX A
 
-## LIST OF ABBREVIATIONS
+### LIST OF ABBREVIATIONS
 
 - CAV: Constant Angular Velocity
 - CCIR: International Radio Consultative Committee
@@ -750,17 +750,17 @@ The resulting angular acceleration should not exceed $-0.32 \, \text{rad/s}^2$.
 - PBS: Public Broadcasting Service
 - VIRS: Vertical Interval Reference Signal
 
-# APPENDIX B
+## APPENDIX B
 
-## AUDIO COMPRESSION SYSTEM
+### AUDIO COMPRESSION SYSTEM
 
-### B1. General
+#### B1. General
 
 To improve the dynamic range of the audio programme of the videodisk, an optional companding technique is recommended. This technique has been developed by CBS Technology Center and is known as CX. The technique is compatible in that the programme, if encoded in the CX format, can be played back on a decoding player or a non-decoding player. If played on a decoding player the full benefit of 14 dB noise reduction will be achieved.
 
 Playback on a non-decoding player will be completely satisfactory but will not yield noise reduction improvement.
 
-### B2. Definition of the parameters of blocks in Figures B2 and B3 (Pages 63 and 65)
+#### B2. Definition of the parameters of blocks in Figures B2 and B3 (Pages 63 and 65)
 
 1) The cut-off frequency of the high-pass filter with 6 dB/oct
 
@@ -808,9 +808,9 @@ $$
 
 *Figure B3 - Block diagram encoder (bilingual).*
 
-# APPENDIX C
+## APPENDIX C
 
-## PROGRAMME STATUS CODE
+### PROGRAMME STATUS CODE
 
 C1. Definition of the data in programme status code 8 $\frac{\mathrm{DC}}{\mathrm{BA}} \mathrm{X}_3, \mathrm{X}_4, \mathrm{X}_5$
 
@@ -863,7 +863,7 @@ X52 is the parity with X41, X43 and X44
 
 X53 is the parity with X42, X43 and X44
 
-# C2. Hamming Code
+## C2. Hamming Code
 
 Information vector  $\mathbf{X}_4\colon A = \left[a_1,a_2,a_3,a_4\right]$
 - Check vector  $\mathbf{X}_5\colon C = \left[c_1, c_2, c_3\right]$

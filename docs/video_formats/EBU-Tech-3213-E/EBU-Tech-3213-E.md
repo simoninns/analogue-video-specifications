@@ -1,10 +1,10 @@
-E.B.U. STANDARD FOR CHROMATICITY TOLERANCES FOR STUDIO MONITORS
+# E.B.U. STANDARD FOR CHROMATICITY TOLERANCES FOR STUDIO MONITORS
 
 Tech. 3213-E
 
 August 1975
 
-# Introduction
+## Introduction
 
 During the transmission of colour television signals, unwanted changes in the fidelity of colour reproduction can occur causing undesirable changes of hue on the domestic receiver screen. In any colour-television system such changes may be the effect of a multiplicity of causes, but one particularly important cause may be differences between nominally identical cameras used in the same studio, or in different studios; when programmes are made up partly of local signals and partly of signals from a foreign country, the problem becomes one of international significance. In order to minimise these unwanted changes in the fidelity of colour reproduction due to signal source, it is most desirable that the colour-reproducing characteristics of the colour picture tubes used in studio monitors should be standardised. In this way, all studios would be working to the same standard of colour reproduction.
 
@@ -20,11 +20,11 @@ Studies on this subject have been carried out in the United Kingdom which have l
 
 A method is also proposed for ensuring that the combined result of the individual phosphor tolerances does not produce an unacceptable variation in the reproduction of skin tone. These tolerances and this method are mentioned in C.C.I.R. Report 476-1. They were approved in April 1975 by the Technical Committee of the E.B.U. which recommended that they should be adopted for television monitors in colour studios by any television organisation using a 625-line/50-field colour-television system. The essential details of the recommendation follow.
 
-# Summary of existing standards
+## Summary of existing standards
 
 Existing standards for the colorimetry of studio monitors in 625-line/50-field systems are related to the reference white obtained when all three types of phosphors are equally excited and to the primary colours obtained from each type of phosphor separately.
 
-## 1. Reference white
+### 1. Reference white
 
 Reference white, for which the three primary-colour signals $\mathrm{E}_{\mathrm{R}}'$, $\mathrm{E}_{\mathrm{G}}'$ and $\mathrm{E}_{\mathrm{R}}'$ are equal, is illuminant $\mathrm{D}_{65}$ which has been standardised by the International Commission on Illumination (C.I.E.). In the C.I.E. 1960 system, its chromaticity co-ordinates are:
 
@@ -40,7 +40,7 @@ $$
 
 Illuminant $\mathrm{D}_{65}$ represents a particular spectral distribution of daylight and corresponds to a correlated colour temperature of approximately $6504\,\mathrm{K}$.
 
-## 2. Primary colours
+### 2. Primary colours
 
 The chromaticity of each of the primary phosphors as seen on a monitor screen should have the following values:
 
@@ -62,9 +62,9 @@ In the C.I.E. 1931 system:
 
 These values were established in 1970 after a thorough examination of the colorimetric characteristics of phosphors available at that time and after discussions with the manufacturers on likely technical developments.
 
-# Tolerances recommended by the E.B.U.
+## Tolerances recommended by the E.B.U.
 
-## 1. General principles
+### 1. General principles
 
 The chromaticities of primary phosphors as seen on a television monitor screen may not be rigorously held to the foregoing values. They will, however, be considered acceptable if they meet simultaneously the following two conditions:
 
@@ -78,7 +78,7 @@ The permissible tolerance for skin-tones is much smaller than that applicable to
 
 It is possible to measure the variations of chromaticity obtained for colours other than skin-tones. For example, this test could be carried out on C.I.E. test colours or on test colours produced by the B.B.C. The general principles of the method are described in [6], but only skin-tones will be considered here as these are the most critical colours to be reproduced by a television system.
 
-# 2. Intrinsic tolerances
+## 2. Intrinsic tolerances
 
 The magnitude of the intrinsic tolerance area on the C.I.E. 1960 uniform chromaticity scale diagram is shown in Fig. 1. An enlargement of each of these zones appears in Fig. 2.
 
@@ -116,7 +116,7 @@ In the C.I.E. 1931 system:
 
 *Figure 2 – Details of the intrinsic chromaticity tolerances, part 3.*
 
-## 3. Tolerances for skin-tones
+### 3. Tolerances for skin-tones
 
 When making an acceptance test on a picture tube for a television studio monitor, it is not enough to check that the chromaticities of the red, green and blue phosphors fall within the quadrilaterals shown in Fig. 2. It must also be checked that the combination of primary chromaticities produces a skin-tone chromaticity within 0.003 $u, v$ units of the original skin-tone being reproduced.
 
@@ -144,7 +144,7 @@ An example of the use of these charts is appended.
 
 *Figure 5 – Errors in the reproduction of skin tone resulting from variations in the chromaticity of the blue phosphor.*
 
-# Summary of the recommendations
+## Summary of the recommendations
 
 The EBU. recommends that broadcasting organisations using PAL or SECAM signals, based on standards B, G, H, I, D, K, Kl and L, should ensure that the colour monitors installed in their studios are such that the chromaticities of the primary colours lie within the quadrilaterals shown in Fig. 2.
 
@@ -154,7 +154,7 @@ $$
 \sqrt{(\Delta u)^2 + (\Delta v)^2} = 0.003
 $$
 
-# Appendix
+## Appendix
 
 It is desired to check whether a monitor displaying primary colours with the following chromaticities satisfies conditions (a) and (b) on page 7:
 
@@ -170,7 +170,7 @@ Reference to Fig. 2 shows that the "intrinsic tolerances" on page 8 are not exce
 
 *Figure 6 – Determination of the resultant error in the example.*
 
-# Bibliographical references
+## Bibliographical references
 
 [1] Colorimetric analysis characteristics of colour television cameras. E.B.U. Technical Centre : Appendix 1 to document Com.T.(C) 7, September 1970
 
