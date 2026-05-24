@@ -75,3 +75,8 @@ GitHub Actions publishes the site to GitHub Pages on pushes to the `main` branch
 
 - [IEC 60857:1986 Amendment 2 - Laservision NTSC](docs/laserdisc/IEC-60857-1986-Laservision-NTSC-Amendment-2/IEC-60857-1986-Laservision-NTSC-Amendment-2.md)  
 	Updates NTSC Laservision mechanical and optical requirements and adds provisions related to digital audio implementation. Covers NTSC LaserDisc disc construction and extended format details.
+
+### VHS
+
+- [JVC Video Technical Guide VTG82063](docs/vhs/JVC-Video-Technical-Guide-VTG82063/JVC-Video-Technical-Guide-VTG82063.md)  
+	Technical guide covering VHS and S-VHS format operation, recording and playback systems, mechanism descriptions, servo and signal processing circuits, tuner and audio sections, and related service reference material.
