@@ -1,0 +1,5 @@
+@media screen and (min-width: 60em) {
+  .md-main__inner.md-grid {
+    max-width: 76.25rem;
+  }
+}
