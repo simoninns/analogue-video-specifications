@@ -48,5 +48,14 @@ nav:
       - IEC 60857:1986 Amendment 1: laserdisc/IEC-60857-1986-Laservision-NTSC-Amendment-1/IEC-60857-1986-Laservision-NTSC-Amendment-1.md
       - IEC 60857:1986 Amendment 2: laserdisc/IEC-60857-1986-Laservision-NTSC-Amendment-2/IEC-60857-1986-Laservision-NTSC-Amendment-2.md
   - VHS:
-      - JVC Video Technical Guide VTG82063: vhs/JVC-Video-Technical-Guide-VTG82063/JVC-Video-Technical-Guide-VTG82063.md
+      - JVC Video Technical Guide VTG82063:
+        - Overview: vhs/JVC-Video-Technical-Guide-VTG82063/index.md
+        - Section 1 - VHS Basics Technology: vhs/JVC-Video-Technical-Guide-VTG82063/section-1.md
+        - Section 2 - Mechanism Description: vhs/JVC-Video-Technical-Guide-VTG82063/section-2.md
+        - Section 3 - Video Circuit: vhs/JVC-Video-Technical-Guide-VTG82063/section-3.md
+        - Section 4 - Servo Circuit: vhs/JVC-Video-Technical-Guide-VTG82063/section-4.md
+        - Section 5 - Microprocessor Systems: vhs/JVC-Video-Technical-Guide-VTG82063/section-5.md
+        - Section 6 - Tuner Circuit: vhs/JVC-Video-Technical-Guide-VTG82063/section-6.md
+        - Section 7 - Audio Circuit: vhs/JVC-Video-Technical-Guide-VTG82063/section-7.md
+        - Section 8 - Appendix: vhs/JVC-Video-Technical-Guide-VTG82063/section-8.md
 

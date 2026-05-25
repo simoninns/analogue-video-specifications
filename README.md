@@ -78,5 +78,5 @@ GitHub Actions publishes the site to GitHub Pages on pushes to the `main` branch
 
 ### VHS
 
-- [JVC Video Technical Guide VTG82063](docs/vhs/JVC-Video-Technical-Guide-VTG82063/JVC-Video-Technical-Guide-VTG82063.md)  
+- [JVC Video Technical Guide VTG82063](docs/vhs/JVC-Video-Technical-Guide-VTG82063/index.md)  
 	Technical guide covering VHS and S-VHS format operation, recording and playback systems, mechanism descriptions, servo and signal processing circuits, tuner and audio sections, and related service reference material.
