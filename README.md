@@ -56,6 +56,11 @@ GitHub Actions publishes the site to GitHub Pages on pushes to the `main` branch
 - [SMPTE 244M-2003 - Bit-parallel digital interface for NTSC composite video signals](docs/video_formats/SMPTE-244M-2003/SMPTE-244M-2003.md)  
 	Defines a bit-parallel digital interface and sampling structure for encoded NTSC composite video. Covers 525-line, 59.94 Hz NTSC systems sampled at four times colour subcarrier frequency.
 
+### Video metadata
+
+- [ANSI/CTA-608-E S-2019 - Line 21 Data Services](docs/video_metadata/ANSI-CTA-608-E-S-2019/ANSI-CTA-608-E-S-2019.md)  
+	Specifies Line 21 closed captioning, text, and Extended Data Services (XDS) data formats, signal characteristics, packet definitions, encoder/decoder behavior, and related regulatory and implementation guidance.
+
 ### LaserDisc and Laservision
 
 - [IEC 60856:1986 - Laservision PAL](docs/laserdisc/IEC-60856-1986-Laservision-PAL/IEC-60856-1986-Laservision-PAL.md)  

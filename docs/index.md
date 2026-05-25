@@ -7,4 +7,6 @@ Use the navigation to browse the available specifications by document family.
 ## Collections
 
 - Television and video formats
+- Video metadata
 - LaserDisc and Laservision
+- VHS
