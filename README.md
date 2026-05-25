@@ -61,6 +61,9 @@ GitHub Actions publishes the site to GitHub Pages on pushes to the `main` branch
 - [ANSI/CTA-608-E S-2019 - Line 21 Data Services](docs/video_metadata/ANSI-CTA-608-E-S-2019/ANSI-CTA-608-E-S-2019.md)  
 	Specifies Line 21 closed captioning, text, and Extended Data Services (XDS) data formats, signal characteristics, packet definitions, encoder/decoder behavior, and related regulatory and implementation guidance.
 
+- [IEC 60461:2010 - Time and control code](docs/video_metadata/IEC-60461-2010-Time-and-control-code/IEC-60461-2010-Time-and-control-code.md)  
+	Specifies time address, flag bits, binary groups, and linear and vertical interval transport structures for time and control code across television, film, and audio systems.
+
 ### LaserDisc and Laservision
 
 - [IEC 60856:1986 - Laservision PAL](docs/laserdisc/IEC-60856-1986-Laservision-PAL/IEC-60856-1986-Laservision-PAL.md)  
