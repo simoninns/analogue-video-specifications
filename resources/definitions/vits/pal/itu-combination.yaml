@@ -1,0 +1,95 @@
+schema_version: 2
+id: "itu-combination"
+description: "PAL VITS Line 331 — Field 2 Chrominance Amplitude Staircase Test Signal"
+format: "PAL"
+levels_unit: "mV"
+timing_reference: "sync_edge"  # all time positions measured from the H-sync leading edge
+y_rise_time_us: 0.20
+c_rise_time_us: 0.40
+
+# Overview:
+# Recommended placement: VBI line 331, field 2 (not enforced by this VITS definition).
+# VITS 331 is the field 2 counterpart to VITS 18, inserted on line 331 of the
+# second field in 625-line PAL. Unlike VITS 18 (multi-burst), VITS 331 instead
+# provides a chrominance amplitude staircase at PAL subcarrier (4.433 MHz).
+# The three-step amplitude staircase (Comp1–3: 70, 210, 350 mV) allows verification
+# of chrominance level linearity, and the long reference burst (Comp4) provides
+# a sustained 60% chrominance reference over the remainder of active video.
+#
+# All burst components have composite DC offset = 0 (ch1); the Y-channel amplitude
+# (ch2) encodes the chroma staircase steps and reference level.
+
+primitives:
+  - id: grey_pedestal
+    type: "colour_bar"
+    label: "Grey Pedestal (50% Level Background)"
+    window_us: { start: 12.0, end: 62.0 }
+    channel: y
+    combine: replace
+    level_mv: 350.0
+    rise_time_us: 0.235
+
+  - id: chroma_step_1
+    type: "burst"
+    label: "Chrominance Staircase — 20% Level (Step 1)"
+    window_us: { start: 14.0, end: 18.0 }
+    channel: c
+    combine: add
+    continuity_group: chroma_staircase
+    dc_offset_mv: 0.0
+    component_amplitude_mv: 70.0
+    rise_time_us: 1.000
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 60.660
+    transition_out: { join_policy: crossfade, duration_us: 1.000 }
+
+  - id: chroma_step_2
+    type: "burst"
+    label: "Chrominance Staircase — 60% Level (Step 2)"
+    window_us: { start: 18.0, end: 22.0 }
+    channel: c
+    combine: add
+    continuity_group: chroma_staircase
+    dc_offset_mv: 0.0
+    component_amplitude_mv: 210.0
+    rise_time_us: 1.000
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 60.660
+    transition_out: { join_policy: crossfade, duration_us: 1.000 }
+
+  - id: chroma_step_3
+    type: "burst"
+    label: "Chrominance Staircase — 100% Level (Step 3 / Reference)"
+    window_us: { start: 22.0, end: 28.0 }
+    channel: c
+    combine: add
+    continuity_group: chroma_staircase
+    dc_offset_mv: 0.0
+    component_amplitude_mv: 350.0
+    rise_time_us: 1.000
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 60.660
+
+  - id: sustained_reference
+    type: "burst"
+    label: "Chrominance Reference Burst — 60% Level (Sustained)"
+    window_us: { start: 34.0, end: 60.0 }
+    channel: c
+    combine: add
+    dc_offset_mv: 0.0
+    component_amplitude_mv: 210.0
+    rise_time_us: 1.000
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 60.660
+
+composites:
+  - id: chroma_staircase_group
+    mode: serial
+    children: [chroma_step_1, chroma_step_2, chroma_step_3]
+    continuity_group: chroma_staircase
+    baseline_anchor: grey_pedestal
+
+render_tree:
+  - grey_pedestal
+  - chroma_staircase_group
+  - sustained_reference

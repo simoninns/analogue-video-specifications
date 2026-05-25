@@ -1,0 +1,78 @@
+schema_version: 2
+id: "itu-composite"
+description: "PAL VITS Line 330 — Field 2 Luminance and Chrominance Test Signal"
+format: "PAL"
+levels_unit: "mV"
+timing_reference: "sync_edge"  # all time positions measured from the H-sync leading edge
+y_rise_time_us: 0.20
+c_rise_time_us: 0.40
+
+# Overview:
+# Recommended placement: VBI line 330, field 2 (not enforced by this VITS definition).
+# VITS 330 is the field 2 counterpart to VITS 17, inserted on line 330 of the
+# second field in 625-line PAL. It provides the same diagnostic capability
+# (luminance/chrominance distortion measurement) on field 2, enabling monitoring
+# on both fields of interlaced video.
+#
+# The 2T pulse and the chrominance burst reference (Comp0 and Comp3) are
+# represented here using normalized microsecond timings for consistency with the
+# rounded PAL documentation values.
+
+primitives:
+  - id: white_reference
+    type: "colour_bar"
+    label: "100% White Reference Bar"
+    window_us: { start: 12.0, end: 22.0 }
+    channel: y
+    combine: replace
+    level_mv: 700.0
+    rise_time_us: 0.200
+
+  - id: pulse_2t
+    type: "sin_squared_pulse"
+    label: "2T Luminance Sine-Squared Pulse"
+    window_us: { start: 25.8, end: 26.2 }
+    channel: y
+    combine: replace
+    amplitude_mv: 700.0
+    rise_time_us: 0.200
+
+  - id: chroma_reference
+    type: "burst"
+    label: "Chrominance Phase Reference Burst (4.433 MHz)"
+    window_us: { start: 30.0, end: 60.0 }
+    channel: c
+    combine: add
+    dc_offset_mv: 0.0
+    component_amplitude_mv: 140.0
+    rise_time_us: 1.000
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 60.660
+
+  - id: staircase
+    type: "staircase"
+    label: "5-Step Luminance Staircase"
+    window_us: { start: 40.0, end: 60.0 }
+    channel: y
+    combine: replace
+    top_level_mv: 700.0
+    rise_time_us: 0.235
+    steps: 5
+
+  - id: black_reference
+    type: "colour_bar"
+    label: "End-of-Line Reference Bar"
+    window_us: { start: 60.0, end: 62.0 }
+    channel: y
+    combine: replace
+    level_mv: 700.0
+    rise_time_us: 0.235
+
+composites: []
+
+render_tree:
+  - white_reference
+  - pulse_2t
+  - chroma_reference
+  - staircase
+  - black_reference

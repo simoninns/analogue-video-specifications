@@ -1,0 +1,68 @@
+# VITS Index and Metadata
+#
+# This file indexes all available Vertical Interval Test Signals (VITS)
+# organized by format. Each VITS entry includes:
+#   - id: unique identifier (must match YAML file id field)
+#   - format: PAL or NTSC
+#   - recommended_frame_line: suggested placement (informational; can be overridden per project)
+#   - description: short description of the VITS purpose
+
+vits:
+  # NTSC VITS (5 total)
+  
+  - id: "NTC7-COMPOSITE"
+    format: "NTSC"
+    recommended_frame_line: 17
+    description: "NTC-7 Composite Insertion Test Signal (VBI Line 17, Field 1)"
+  
+  - id: "fcc-multiburst"
+    format: "NTSC"
+    recommended_frame_line: 18
+    description: "FCC Multi-Burst Insertion Test Signal (VBI Line 18, Field 1)"
+  
+  - id: "VIRS"
+    format: "NTSC"
+    recommended_frame_line: null  # No fixed recommendation; use free VBI line (e.g., 19 or 20)
+    description: "Video Index Reference Signal (assignment-dependent placement)"
+  
+  - id: "NTC7-COMBINATION"
+    format: "NTSC"
+    recommended_frame_line: 280
+    description: "NTC-7 Combination Insertion Test Signal (VBI Line 280, Field 2)"
+  
+  - id: "fcc-composite"
+    format: "NTSC"
+    recommended_frame_line: 281
+    description: "FCC Composite Insertion Test Signal (VBI Line 281, Field 2)"
+  
+  # PAL VITS (6 total)
+  
+  - id: "VITS17"
+    format: "PAL"
+    recommended_frame_line: 17
+    description: "PAL VITS Line 17 — Luminance and Chrominance Distortion Test (VBI Line 17, Field 1)"
+  
+  - id: "itu-multiburst"
+    format: "PAL"
+    recommended_frame_line: 18
+    description: "PAL VITS Line 18 — Multi-Burst Chrominance Bandwidth Test (VBI Line 18, Field 1)"
+  
+  - id: "uk-national"
+    format: "PAL"
+    recommended_frame_line: 19
+    description: "PAL VITS Line 19 — UK ITS-1 Insertion Test Signal (VBI Line 19, Field 1)"
+  
+  - id: "VITS20"
+    format: "PAL"
+    recommended_frame_line: 20
+    description: "PAL VITS Line 20 — UK ITS-2 Chrominance Reference Signal (VBI Line 20, Field 1)"
+  
+  - id: "itu-composite"
+    format: "PAL"
+    recommended_frame_line: 330
+    description: "PAL VITS Line 330 — Field 2 Luminance and Chrominance Test (VBI Line 330, Field 2)"
+  
+  - id: "itu-combination"
+    format: "PAL"
+    recommended_frame_line: 331
+    description: "PAL VITS Line 331 — Field 2 Chrominance Amplitude Staircase Test (VBI Line 331, Field 2)"

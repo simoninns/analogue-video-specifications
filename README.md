@@ -64,6 +64,9 @@ GitHub Actions publishes the site to GitHub Pages on pushes to the `main` branch
 - [IEC 60461:2010 - Time and control code](docs/video_metadata/IEC-60461-2010-Time-and-control-code/IEC-60461-2010-Time-and-control-code.md)  
 	Specifies time address, flag bits, binary groups, and linear and vertical interval transport structures for time and control code across television, film, and audio systems.
 
+- [Vertical Interval Test Signals - NTSC and PAL definitions](docs/video_metadata/VITS/index.md)  
+	Documents NTSC and PAL VITS waveforms, including NTC-7, FCC, VIRS, ITU, and UK national insertion test signals. Diagrams are generated from YAML definitions in `resources/definitions/vits/` using `scripts/generate-vits-diagrams`.
+
 ### LaserDisc and Laservision
 
 - [IEC 60856:1986 - Laservision PAL](docs/laserdisc/IEC-60856-1986-Laservision-PAL/IEC-60856-1986-Laservision-PAL.md)  

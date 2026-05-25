@@ -1,0 +1,133 @@
+schema_version: 2
+id: "itu-multiburst"
+description: "PAL VITS Line 18 — Multi-Burst Chrominance Bandwidth Test Signal"
+format: "PAL"
+levels_unit: "mV"
+timing_reference: "sync_edge"  # all time positions measured from the H-sync leading edge
+y_rise_time_us: 0.20
+c_rise_time_us: 0.40
+
+# Overview:
+# Recommended placement: VBI line 18, field 1 (not enforced by this VITS definition).
+# VITS 18 is the EBU/CCIR multi-burst test signal for field 1 of 625-line PAL.
+# It carries six RF burst packets at increasing frequencies (0.5, 1, 2, 4, 4.8, 5.8 MHz)
+# to measure the frequency response and bandwidth of the transmission path.
+# The grey pedestal and amplitude reference bars at the start of the line provide
+# a known amplitude scale against which burst amplitudes are compared at the receiver.
+# Bursts at 4.8 and 5.8 MHz use specific phase offsets to avoid aliasing with PAL
+# line-alternating subcarrier phase.
+
+primitives:
+  - id: positive_reference_boost
+    type: "colour_bar"
+    label: "Positive Amplitude Reference Bar"
+    window_us: { start: 12.0, end: 16.0 }
+    channel: y
+    combine: add
+    continuity_group: reference_bars
+    amplitude_mv: 210.0
+    rise_time_us: 0.350
+    transition_out:
+      join_policy: linear
+      duration_us: 0.350
+
+  - id: grey_pedestal
+    type: "colour_bar"
+    label: "Grey Pedestal (Background Level)"
+    window_us: { start: 12.0, end: 62.0 }
+    channel: y
+    combine: replace
+    level_mv: 350.0
+    rise_time_us: 0.350
+
+  - id: negative_reference_boost
+    type: "colour_bar"
+    label: "Negative Amplitude Reference Bar"
+    window_us: { start: 16.0, end: 20.0 }
+    channel: y
+    combine: add
+    continuity_group: reference_bars
+    amplitude_mv: -210.0
+    rise_time_us: 0.350
+
+  - id: burst_0_5
+    type: "burst"
+    label: "0.5 MHz Burst"
+    window_us: { start: 24.0, end: 28.0 }
+    channel: c
+    combine: add
+    amplitude_mv: 210.0
+    rise_time_us: 0.200
+    freq_mhz: 0.500
+    phase_deg: 0.0
+
+  - id: burst_1_0
+    type: "burst"
+    label: "1.0 MHz Burst"
+    window_us: { start: 30.0, end: 35.0 }
+    channel: c
+    combine: add
+    amplitude_mv: 210.0
+    rise_time_us: 0.200
+    freq_mhz: 1.000
+    phase_deg: 0.0
+
+  - id: burst_2_0
+    type: "burst"
+    label: "2.0 MHz Burst"
+    window_us: { start: 36.0, end: 41.0 }
+    channel: c
+    combine: add
+    amplitude_mv: 210.0
+    rise_time_us: 0.200
+    freq_mhz: 2.000
+    phase_deg: 0.0
+
+  - id: burst_4_0
+    type: "burst"
+    label: "4.0 MHz Burst"
+    window_us: { start: 42.0, end: 47.0 }
+    channel: c
+    combine: add
+    amplitude_mv: 210.0
+    rise_time_us: 0.200
+    freq_mhz: 4.000
+    phase_deg: 0.0
+
+  - id: burst_4_8
+    type: "burst"
+    label: "4.8 MHz Burst"
+    window_us: { start: 48.0, end: 53.0 }
+    channel: c
+    combine: add
+    amplitude_mv: 210.0
+    rise_time_us: 0.200
+    freq_mhz: 4.800
+    phase_deg: 144.0
+
+  - id: burst_5_8
+    type: "burst"
+    label: "5.8 MHz Burst"
+    window_us: { start: 54.0, end: 60.0 }
+    channel: c
+    combine: add
+    amplitude_mv: 210.0
+    rise_time_us: 0.200
+    freq_mhz: 5.800
+    phase_deg: -144.0
+
+composites:
+  - id: reference_bar_pair
+    mode: serial
+    children: [positive_reference_boost, negative_reference_boost]
+    continuity_group: reference_bars
+    baseline_anchor: grey_pedestal
+
+  - id: burst_train
+    mode: serial
+    children: [burst_0_5, burst_1_0, burst_2_0, burst_4_0, burst_4_8, burst_5_8]
+
+render_tree:
+  - grey_pedestal
+  - reference_bar_pair
+  - burst_train

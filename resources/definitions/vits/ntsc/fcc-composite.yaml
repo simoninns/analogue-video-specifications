@@ -1,0 +1,108 @@
+schema_version: 2
+id: "fcc-composite"
+description: "NTSC FCC Composite Insertion Test Signal (VBI Line 281)"
+format: "NTSC"
+levels_unit: "IRE"
+timing_reference: "sync_edge"  # all time positions measured from the H-sync leading edge
+y_rise_time_us: 0.20
+c_rise_time_us: 0.40
+
+# Overview:
+# Recommended placement: VBI line 281, field 2 (not enforced by this VITS definition).
+# fcc-composite is the FCC-specified composite test signal inserted on VBI line 281.
+# It is the companion line to fcc-multiburst and follows the same field 2 VBI line as
+# the NTC-7 Combination ITS. The signal combines:
+#   - A chrominance burst over the first zone (differential phase measurement)
+#   - A 5-step luminance staircase (differential gain measurement)
+#   - A 2T sine-squared pulse (luminance group delay)
+#   - A modulated 12.5T sine-squared pulse (chrominance-to-luminance timing)
+#   - A 100 IRE white bar as a level reference
+# All amplitudes are represented in IRE for schema consistency across formats.
+# Burst amplitude convention: amplitude_ire / component_amplitude_ire = carrier peak
+# (one-sided, = 1/2 peak-to-peak). A burst with amplitude_ire N swings ±N IRE around
+# its dc_offset_ire; when overlaid on another element, the total waveform is that
+# element's level plus the burst term.
+
+primitives:
+  - id: chroma_reference_zone
+    type: "burst"
+    label: "Chrominance Reference Burst Zone (differential phase)"
+    window_us: { start: 9.500, end: 28.000 }
+    channel: c
+    combine: add
+    dc_offset_ire: 0.0
+    component_amplitude_ire: 20.0
+    rise_time_us: 0.400
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 180.0
+
+  - id: staircase
+    type: "staircase"
+    label: "5-Step Luminance Staircase"
+    window_us: { start: 13.000, end: 28.000 }
+    channel: y
+    combine: replace
+    top_level_ire: 80.0
+    rise_time_us: 0.250
+    steps: 5
+
+  - id: staircase_terminus
+    type: "colour_bar"
+    label: "Staircase Terminus Reference Bar"
+    window_us: { start: 28.000, end: 30.000 }
+    channel: y
+    combine: replace
+    level_ire: 80.0
+    rise_time_us: 0.250
+
+  - id: pulse_2t
+    type: "sin_squared_pulse"
+    label: "2T Luminance Sine-Squared Pulse"
+    window_us: { start: 35.250, end: 35.750 }
+    channel: y
+    combine: replace
+    amplitude_ire: 100.0
+    rise_time_us: 0.200
+
+  - id: modulated_y
+    type: "sin_squared_pulse"
+    label: "12.5T Luminance Component (Y part of modulated pulse)"
+    window_us: { start: 37.900, end: 41.100 }
+    channel: y
+    combine: replace
+    amplitude_ire: 50.0
+    rise_time_us: 0.200
+
+  - id: modulated_c
+    type: "composite_pulse"
+    label: "12.5T Chrominance Component (C part of modulated pulse)"
+    window_us: { start: 37.900, end: 41.100 }
+    channel: c
+    combine: add
+    dc_offset_ire: 0.0
+    component_amplitude_ire: 50.0
+    rise_time_us: 0.400
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 180.0
+
+  - id: white_reference
+    type: "colour_bar"
+    label: "100 IRE White Reference Bar"
+    window_us: { start: 43.900, end: 62.000 }
+    channel: y
+    combine: replace
+    level_ire: 100.0
+    rise_time_us: 0.200
+
+composites:
+  - id: modulated_pulse
+    mode: parallel
+    children: [modulated_y, modulated_c]
+
+render_tree:
+  - chroma_reference_zone
+  - staircase
+  - staircase_terminus
+  - pulse_2t
+  - modulated_pulse
+  - white_reference

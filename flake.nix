@@ -18,6 +18,9 @@
           pygments
           pymdown-extensions
           ghp-import
+          pyyaml
+          numpy
+          matplotlib
         ]);
       in {
         devShells.default = pkgs.mkShell {

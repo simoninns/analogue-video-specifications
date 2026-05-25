@@ -1,0 +1,73 @@
+schema_version: 2
+id: "VIRS"
+description: "NTSC Video Index Reference Signal (VIRS) — SMPTE RP 168 / EIA RS-498"
+format: "NTSC"
+levels_unit: "IRE"
+timing_reference: "sync_edge"   # TimingRef=1: time positions relative to H-sync edge
+                                 # Note: differs from other NTSC templates which use blanking_edge
+y_rise_time_us: 0.20
+c_rise_time_us: 0.40
+
+# Overview:
+# Recommended placement: assignment-dependent (not enforced by this VITS definition).
+# The VIRS (Video Index Reference Signal) is defined in SMPTE RP 168 as a reference
+# signal inserted in the VBI of NTSC recordings to identify the tape format and
+# provide amplitude reference levels for playback calibration.
+# It consists of two luminance bars at different levels (68 and 46 IRE) with a
+# sustained chrominance burst at NTSC subcarrier (3.58 MHz, 180°) centred on 68 IRE,
+# overlapping the first bar zone.
+# The relative amplitudes of the two bars and the burst level encode format identity.
+# Burst amplitude convention: amplitude_ire / component_amplitude_ire = carrier peak
+# (one-sided, = 1/2 peak-to-peak). A burst with amplitude_ire N swings ±N IRE around
+# its dc_offset_ire; when overlaid on another element, the total waveform is that
+# element's level plus the burst term.
+
+primitives:
+  - id: virs_first_zone
+    type: "colour_bar"
+    label: "68 IRE Reference Bar (first zone)"
+    window_us: { start: 9.150, end: 35.500 }
+    channel: y
+    combine: replace
+    level_ire: 68.0
+    rise_time_us: 0.250
+
+  - id: virs_chroma_ref
+    type: "burst"
+    label: "Chrominance Reference Burst (3.58 MHz, 180°; centred 68 IRE)"
+    window_us: { start: 10.100, end: 34.500 }
+    channel: c
+    combine: add
+    dc_offset_ire: 0.0
+    component_amplitude_ire: 22.0
+    rise_time_us: 1.000
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 180.0
+
+  - id: virs_second_zone
+    type: "colour_bar"
+    label: "46 IRE Reference Bar (second zone)"
+    window_us: { start: 35.500, end: 48.700 }
+    channel: y
+    combine: replace
+    level_ire: 46.0
+    rise_time_us: 0.250
+
+  - id: virs_post_blank
+    type: "colour_bar"
+    label: "Post-VIRS Blanking Level"
+    window_us: { start: 48.700, end: 62.000 }
+    channel: y
+    combine: replace
+    level_ire: 0.0
+    rise_time_us: 0.250
+
+composites:
+  - id: virs_zone_1
+    mode: parallel
+    children: [virs_first_zone, virs_chroma_ref]
+
+render_tree:
+  - virs_zone_1
+  - virs_second_zone
+  - virs_post_blank

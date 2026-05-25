@@ -1,0 +1,118 @@
+schema_version: 2
+id: "fcc-multiburst"
+description: "NTSC FCC Multi-Burst Insertion Test Signal (VBI Line 18)"
+format: "NTSC"
+levels_unit: "IRE"
+timing_reference: "sync_edge"  # all time positions measured from the H-sync leading edge
+y_rise_time_us: 0.20
+c_rise_time_us: 0.40
+
+# Overview:
+# Recommended placement: VBI line 18, field 1 (not enforced by this VITS definition).
+# fcc-multiburst is the FCC-specified multi-burst test signal inserted on VBI line 18.
+# It provides six RF burst packets at increasing frequencies (0.5, 1.25, 2, 3, 3.58, 4.1 MHz)
+# to measure the frequency response of the television transmission path.
+# The +60 IRE white-reference boost at the beginning rides on the 40 IRE grey
+# pedestal, producing an apparent 100 IRE amplitude reference.
+# A colour reference burst is embedded in the sync back porch (Sync1/ch2) for receiver
+# colour subcarrier locking.
+# Burst amplitude convention: amplitude_ire / component_amplitude_ire = carrier peak
+# (one-sided, = 1/2 peak-to-peak). A burst with amplitude_ire N swings ±N IRE around
+# its dc_offset_ire; when overlaid on another element, the total waveform is that
+# element's level plus the burst term.
+
+primitives:
+  - id: white_reference_boost
+    type: "colour_bar"
+    label: "White Reference Boost"
+    window_us: { start: 9.200, end: 15.700 }
+    channel: y
+    combine: add
+    amplitude_ire: 60.0
+    rise_time_us: 0.250
+
+  - id: grey_pedestal
+    type: "colour_bar"
+    label: "Grey Pedestal (Background Level)"
+    window_us: { start: 9.200, end: 62.000 }
+    channel: y
+    combine: replace
+    level_ire: 40.0
+    rise_time_us: 0.250
+
+  - id: burst_0_5
+    type: "burst"
+    label: "0.5 MHz Burst"
+    window_us: { start: 18.200, end: 26.700 }
+    channel: c
+    combine: add
+    amplitude_ire: 30.0
+    rise_time_us: 0.200
+    freq_mhz: 0.500
+    phase_deg: 0.0
+
+  - id: burst_1_25
+    type: "burst"
+    label: "1.25 MHz Burst"
+    window_us: { start: 28.200, end: 34.200 }
+    channel: c
+    combine: add
+    amplitude_ire: 30.0
+    rise_time_us: 0.200
+    freq_mhz: 1.250
+    phase_deg: 0.0
+
+  - id: burst_2_0
+    type: "burst"
+    label: "2.0 MHz Burst"
+    window_us: { start: 35.200, end: 40.200 }
+    channel: c
+    combine: add
+    amplitude_ire: 30.0
+    rise_time_us: 0.200
+    freq_mhz: 2.000
+    phase_deg: 0.0
+
+  - id: burst_3_0
+    type: "burst"
+    label: "3.0 MHz Burst"
+    window_us: { start: 41.200, end: 46.200 }
+    channel: c
+    combine: add
+    amplitude_ire: 30.0
+    rise_time_us: 0.200
+    freq_mhz: 3.000
+    phase_deg: 0.0
+
+  - id: burst_3_58
+    type: "burst"
+    label: "3.58 MHz Burst (NTSC Subcarrier)"
+    window_us: { start: 47.200, end: 52.200 }
+    channel: c
+    combine: add
+    amplitude_ire: 30.0
+    rise_time_us: 0.200
+    freq_mhz: 3.580
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 0.0
+
+  - id: burst_4_1
+    type: "burst"
+    label: "4.1 MHz Burst"
+    window_us: { start: 53.200, end: 58.200 }
+    channel: c
+    combine: add
+    amplitude_ire: 30.0
+    rise_time_us: 0.200
+    freq_mhz: 4.100
+    phase_deg: 0.0
+
+composites:
+  - id: burst_train
+    mode: serial
+    children: [burst_0_5, burst_1_25, burst_2_0, burst_3_0, burst_3_58, burst_4_1]
+
+render_tree:
+  - grey_pedestal
+  - white_reference_boost
+  - burst_train

@@ -1,0 +1,996 @@
+#!/usr/bin/env python3
+"""Render VITS waveform diagrams from YAML and insert them into markdown docs."""
+
+from __future__ import annotations
+
+import argparse
+import math
+import re
+from copy import deepcopy
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any, Dict, Iterable, List, Tuple
+
+import matplotlib.pyplot as plt
+import numpy as np
+import yaml
+
+MV_PER_100_IRE = 714.3
+NTSC_SYNC_TO_BLANKING_US = 9.2
+PAL_SYNC_WIDTH_US = 4.7
+NTSC_SYNC_WIDTH_US = 4.7
+PAL_BURST_START_US = 5.6
+PAL_BURST_END_US = 7.85
+NTSC_BURST_START_US = 5.3
+NTSC_BURST_END_US = 7.8
+
+DOC_MARKER_RE = re.compile(
+    r"<!--\s*vits-diagram:\s*([A-Za-z0-9\-]+)\s*-->(?:\n!\[[^\]]*\]\([^\)]+\))?"
+)
+
+
+@dataclass
+class RenderResult:
+    marker_id: str
+    image_path: Path
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--yaml-root",
+        type=Path,
+        default=Path("resources/definitions/vits"),
+        help="Root folder containing PAL and NTSC YAML definitions.",
+    )
+    parser.add_argument(
+        "--image-root",
+        type=Path,
+        default=Path("docs/video_metadata/VITS/assets/vits-diagrams"),
+        help="Output root for generated PNG diagrams.",
+    )
+    parser.add_argument(
+        "--docs",
+        type=Path,
+        nargs="+",
+        default=[Path("docs/video_metadata/VITS/NTSC-VITS.md"), Path("docs/video_metadata/VITS/PAL-VITS.md")],
+        help="Markdown docs where diagram placeholders will be replaced.",
+    )
+    parser.add_argument(
+        "--dpi",
+        type=int,
+        default=170,
+        help="PNG rendering DPI.",
+    )
+    parser.add_argument(
+        "--skip-doc-insert",
+        action="store_true",
+        help="Render images only; do not modify markdown files.",
+    )
+    return parser.parse_args()
+
+
+def sync_origin_offset_us(spec: Dict[str, Any]) -> float:
+    timing_reference = str(spec.get("timing_reference", "")).lower()
+    if timing_reference != "blanking_edge":
+        return 0.0
+
+    sync_starts: List[float] = []
+    for elem in spec.get("sync_elements", []):
+        start, _ = element_start_end_us(spec, elem, normalize=False)
+        if start < 0.0:
+            sync_starts.append(start)
+
+    if sync_starts:
+        return -min(sync_starts)
+
+    return NTSC_SYNC_TO_BLANKING_US
+
+
+def normalize_time_us(spec: Dict[str, Any], time_us: float) -> float:
+    return float(time_us) + sync_origin_offset_us(spec)
+
+
+def element_start_end_us(
+    spec: Dict[str, Any], element: Dict[str, Any], normalize: bool = True
+) -> Tuple[float, float]:
+    if "window_us" in element and isinstance(element["window_us"], dict):
+        window = element["window_us"]
+        start = float(window.get("start", 0.0))
+        end = float(window.get("end", start))
+    elif "start_us" in element:
+        start = float(element["start_us"])
+    elif "center_us" in element:
+        half = float(element.get("half_duration_us", 0.0))
+        start = float(element["center_us"]) - half
+    else:
+        start = 0.0
+
+    if "window_us" in element and isinstance(element["window_us"], dict):
+        pass
+    elif "end_us" in element:
+        end = float(element["end_us"])
+    elif "center_us" in element:
+        half = float(element.get("half_duration_us", 0.0))
+        end = float(element["center_us"]) + half
+    else:
+        end = start
+
+    if end < start:
+        start, end = end, start
+
+    if normalize:
+        start = normalize_time_us(spec, start)
+        end = normalize_time_us(spec, end)
+
+    return start, end
+
+
+def center_us(spec: Dict[str, Any], element: Dict[str, Any]) -> float:
+    if "center_us" in element:
+        return normalize_time_us(spec, float(element["center_us"]))
+    start, end = element_start_end_us(spec, element)
+    return 0.5 * (start + end)
+
+
+def validate_microsecond_timing_only(spec: Dict[str, Any]) -> None:
+    sample_keys = {
+        "center_samples",
+        "start_samples",
+        "end_samples",
+        "position_unit",
+        "start_position_unit",
+        "end_position_unit",
+        "sample_rate_mhz",
+    }
+
+    offenders: List[str] = []
+    signal_id = str(spec.get("id", "<unknown>"))
+
+    for section_name in ("elements", "primitives"):
+        section = spec.get(section_name, [])
+        if not isinstance(section, list):
+            continue
+        for idx, elem in enumerate(section):
+            if not isinstance(elem, dict):
+                continue
+            bad = sorted(k for k in sample_keys if k in elem)
+            if bad:
+                elem_index = elem.get("index", idx)
+                offenders.append(f"{section_name}[{elem_index}]: {', '.join(bad)}")
+
+    if "sample_rate_mhz" in spec:
+        offenders.append("top-level: sample_rate_mhz")
+
+    if offenders:
+        joined = "; ".join(offenders)
+        raise ValueError(
+            f"Signal {signal_id} uses sample-based timing fields, which are no longer supported. "
+            f"Convert all timing to microseconds (center_us/start_us/end_us). Offenders: {joined}"
+        )
+
+
+def unit_value(spec: Dict[str, Any], element: Dict[str, Any], ire_key: str, mv_key: str) -> float | None:
+    base = str(spec.get("levels_unit", "IRE")).upper()
+
+    if ire_key in element:
+        value = float(element[ire_key])
+        if base == "MV":
+            return value * MV_PER_100_IRE / 100.0
+        return value
+
+    if mv_key in element:
+        value = float(element[mv_key])
+        if base == "IRE":
+            return value * 100.0 / MV_PER_100_IRE
+        return value
+
+    return None
+
+
+def pick_amplitude(spec: Dict[str, Any], element: Dict[str, Any]) -> float:
+    for ire_key, mv_key in (
+        ("level_ire", "level_mv"),
+        ("amplitude_ire", "amplitude_mv"),
+        ("component_amplitude_ire", "component_amplitude_mv"),
+        ("top_level_ire", "top_level_mv"),
+    ):
+        value = unit_value(spec, element, ire_key, mv_key)
+        if value is not None:
+            return value
+    return 0.0
+
+
+def element_frequency_mhz(spec: Dict[str, Any], element: Dict[str, Any]) -> float:
+    if "freq_mhz" in element:
+        return float(element["freq_mhz"])
+    if "subcarrier_freq_mhz" in element:
+        return float(element["subcarrier_freq_mhz"])
+
+    mult = element.get("subcarrier_lock_multiple")
+    if mult is None:
+        return 0.0
+
+    fmt = str(spec.get("format", "")).upper()
+    base = 4.43361875 if fmt.startswith("PAL") else 3.579545
+    return float(mult) * base
+
+
+def pick_dc_offset(spec: Dict[str, Any], element: Dict[str, Any]) -> float:
+    value = unit_value(spec, element, "dc_offset_ire", "dc_offset_mv")
+    return value if value is not None else 0.0
+
+
+def smooth_window(t: np.ndarray, start: float, end: float, rise_time: float) -> np.ndarray:
+    if end <= start:
+        return np.zeros_like(t)
+
+    if rise_time <= 0.0:
+        return ((t >= start) & (t <= end)).astype(float)
+
+    up = np.clip((t - start) / rise_time, 0.0, 1.0)
+    down = np.clip((end - t) / rise_time, 0.0, 1.0)
+    ramp = np.minimum(up, down)
+    return 0.5 - 0.5 * np.cos(math.pi * ramp)
+
+
+def burst_window(
+    t: np.ndarray,
+    start: float,
+    end: float,
+    rise_time: float,
+    taper_left: bool,
+    taper_right: bool,
+) -> np.ndarray:
+    """Raised-cosine burst window with optional taper per edge."""
+    if end <= start:
+        return np.zeros_like(t)
+
+    active = ((t >= start) & (t < end)).astype(float)
+    if rise_time <= 0.0:
+        return active
+
+    env = active.copy()
+
+    if taper_left:
+        left_end = min(start + rise_time, end)
+        left = (t >= start) & (t < left_end)
+        env[left] *= 0.5 - 0.5 * np.cos(math.pi * (t[left] - start) / rise_time)
+
+    if taper_right:
+        right_start = max(end - rise_time, start)
+        right = (t >= right_start) & (t < end)
+        env[right] *= 0.5 - 0.5 * np.cos(math.pi * (end - t[right]) / rise_time)
+
+    return env
+
+
+def staircase_profile(
+    t: np.ndarray,
+    start: float,
+    end: float,
+    steps: int,
+    top: float,
+    rise_time: float,
+    taper_right: bool = True,
+) -> np.ndarray:
+    """Render a staircase with optional raised-cosine edge and step transitions."""
+    if end <= start or steps <= 0:
+        return np.zeros_like(t)
+
+    boundaries = np.linspace(start, end, steps + 1)
+    levels = top * (np.arange(steps) + 1) / steps
+    y = np.zeros_like(t)
+
+    # Base piecewise-constant staircase.
+    for i in range(steps):
+        s = boundaries[i]
+        e = boundaries[i + 1]
+        y[(t >= s) & (t < e)] = levels[i]
+
+    if rise_time <= 0.0:
+        return y
+
+    # Leading edge: ramp from blanking (0) to first step level.
+    lead_end = min(start + rise_time, end)
+    lead = (t >= start) & (t < lead_end)
+    if np.any(lead):
+        alpha = 0.5 - 0.5 * np.cos(math.pi * (t[lead] - start) / max(lead_end - start, 1e-12))
+        y[lead] = levels[0] * alpha
+
+    # Internal boundaries: cosine crossfade between adjacent step levels.
+    half = rise_time / 2.0
+    for i in range(1, steps):
+        t_b = boundaries[i]
+        cf_start = max(t_b - half, start)
+        cf_end = min(t_b + half, end)
+        if cf_end <= cf_start:
+            continue
+        mask = (t >= cf_start) & (t < cf_end)
+        if not np.any(mask):
+            continue
+        a = levels[i - 1]
+        b = levels[i]
+        alpha = 0.5 - 0.5 * np.cos(math.pi * (t[mask] - cf_start) / (cf_end - cf_start))
+        y[mask] = a + (b - a) * alpha
+
+    if taper_right:
+        # Trailing edge: ramp from final step level back to blanking.
+        tail_start = max(end - rise_time, start)
+        tail = (t >= tail_start) & (t < end)
+        if np.any(tail):
+            alpha = 0.5 - 0.5 * np.cos(math.pi * (end - t[tail]) / max(end - tail_start, 1e-12))
+            y[tail] = levels[-1] * alpha
+
+    return y
+
+
+def _is_close_us(a: float, b: float, eps_us: float = 1e-3) -> bool:
+    return abs(a - b) <= eps_us
+
+
+def has_contiguous_successor(
+    spec: Dict[str, Any],
+    elements: List[Dict[str, Any]],
+    idx: int,
+    allowed_types: set[str],
+) -> bool:
+    _, end = element_start_end_us(spec, elements[idx])
+    for j in range(len(elements)):
+        if j == idx:
+            continue
+        nxt = elements[j]
+        ntype = str(nxt.get("type", "")).lower()
+        if ntype not in allowed_types:
+            continue
+        nstart, _ = element_start_end_us(spec, nxt)
+        if not _is_close_us(nstart, end):
+            continue
+        return True
+    return False
+
+
+def has_contiguous_predecessor(
+    spec: Dict[str, Any],
+    elements: List[Dict[str, Any]],
+    idx: int,
+    allowed_types: set[str],
+) -> bool:
+    start, _ = element_start_end_us(spec, elements[idx])
+    for j in range(len(elements)):
+        if j == idx:
+            continue
+        prev = elements[j]
+        ptype = str(prev.get("type", "")).lower()
+        if ptype not in allowed_types:
+            continue
+        _, pend = element_start_end_us(spec, prev)
+        if not _is_close_us(pend, start):
+            continue
+        return True
+    return False
+
+
+def _burst_signature(spec: Dict[str, Any], elem: Dict[str, Any]) -> Tuple[float, float, float]:
+    freq = element_frequency_mhz(spec, elem)
+    phase = float(elem.get("phase_deg", 0.0))
+    dc = pick_dc_offset(spec, elem)
+    return (round(freq, 6), round(phase, 6), round(dc, 6))
+
+
+def find_contiguous_burst_groups(
+    spec: Dict[str, Any], elements: List[Dict[str, Any]], eps_us: float = 1e-3
+) -> Tuple[Dict[int, int], List[List[int]]]:
+    """
+    Identify runs of adjacent burst elements that share the same carrier signature
+    and have contiguous (touching) time boundaries.
+
+    Returns:
+      group_of: dict mapping element index -> group_id (-1 if not in any group)
+      groups:   list of groups, each group is a list of element indices in order
+
+    Only groups with 2+ members are returned; singleton bursts are left as-is
+    (group_of[i] == -1).
+    """
+    group_of: Dict[int, int] = {i: -1 for i in range(len(elements))}
+    groups: List[List[int]] = []
+
+    i = 0
+    while i < len(elements):
+        elem = elements[i]
+        if str(elem.get("type", "")).lower() != "burst":
+            i += 1
+            continue
+
+        # Try to extend a run starting at i
+        run = [i]
+        j = i + 1
+        while j < len(elements):
+            nxt = elements[j]
+            if str(nxt.get("type", "")).lower() != "burst":
+                break
+            if _burst_signature(spec, nxt) != _burst_signature(spec, elements[j - 1]):
+                break
+            _, prev_end = element_start_end_us(spec, elements[j - 1])
+            next_start, _ = element_start_end_us(spec, nxt)
+            if abs(next_start - prev_end) > eps_us:
+                break
+            run.append(j)
+            j += 1
+
+        if len(run) >= 2:
+            gid = len(groups)
+            groups.append(run)
+            for idx in run:
+                group_of[idx] = gid
+
+        i = j if len(run) >= 2 else i + 1
+
+    return group_of, groups
+
+
+def render_burst_group(
+    t: np.ndarray,
+    group_indices: List[int],
+    elements: List[Dict[str, Any]],
+    spec: Dict[str, Any],
+) -> np.ndarray:
+    """
+    Render a contiguous group of burst elements with:
+      - raised-cosine rise at the group's leading edge
+      - cosine-crossfade at each internal amplitude boundary (amplitude A→B without
+        dipping to pedestal or stepping abruptly)
+      - raised-cosine fall at the group's trailing edge
+
+    All elements in the group must share the same carrier (freq, phase, dc).
+    """
+    if not group_indices:
+        return np.zeros_like(t)
+
+    elems = [elements[i] for i in group_indices]
+    elem0 = elems[0]
+
+    freq = element_frequency_mhz(spec, elem0)
+    phase_rad = math.radians(float(elem0.get("phase_deg", 0.0)))
+    dc = pick_dc_offset(spec, elem0)
+    rise = float(elem0.get("rise_time_us", spec.get("y_rise_time_us", 0.0)))
+
+    group_start, _ = element_start_end_us(spec, elems[0])
+    _, group_end = element_start_end_us(spec, elems[-1])
+
+    # 1. Build piecewise-constant amplitude envelope for each segment
+    amp_env = np.zeros_like(t)
+    for elem in elems:
+        s, e = element_start_end_us(spec, elem)
+        amp = pick_amplitude(spec, elem)
+        amp_env[(t >= s) & (t < e)] = amp
+
+    # 2. Apply cosine crossfades at each internal boundary (A→B transition)
+    #    Crossfade spans [t_b - rise/2, t_b + rise/2] across the boundary.
+    for k in range(len(elems) - 1):
+        _, t_b = element_start_end_us(spec, elems[k])
+        amp_before = pick_amplitude(spec, elems[k])
+        amp_after = pick_amplitude(spec, elems[k + 1])
+        if amp_before == amp_after:
+            continue
+        half = rise / 2.0
+        cf_start = t_b - half
+        cf_end = t_b + half
+        cf_mask = (t >= cf_start) & (t < cf_end)
+        if not np.any(cf_mask):
+            continue
+        alpha = 0.5 - 0.5 * np.cos(math.pi * (t[cf_mask] - cf_start) / rise)
+        amp_env[cf_mask] = amp_before + (amp_after - amp_before) * alpha
+
+    # 3. Apply outer raised-cosine shape envelope (rise at group start, fall at group end)
+    shape = np.zeros_like(t)
+    inside = (t >= group_start) & (t < group_end)
+    shape[inside] = 1.0
+
+    if rise > 0.0:
+        rise_end = min(group_start + rise, group_end)
+        rm = (t >= group_start) & (t < rise_end)
+        shape[rm] = 0.5 - 0.5 * np.cos(math.pi * (t[rm] - group_start) / rise)
+
+        fall_start = max(group_end - rise, group_start)
+        fm = (t >= fall_start) & (t < group_end)
+        shape[fm] = 0.5 - 0.5 * np.cos(math.pi * (group_end - t[fm]) / rise)
+
+    carrier = np.sin(2.0 * math.pi * freq * t + phase_rad)
+    return dc * shape + amp_env * shape * carrier
+
+
+def composite_key_us(spec: Dict[str, Any], elem: Dict[str, Any]) -> Tuple[int, int]:
+    c_us = center_us(spec, elem)
+    h_us = float(elem.get("half_duration_us", 0.0))
+    if h_us <= 0.0:
+        start, end = element_start_end_us(spec, elem)
+        h_us = max((end - start) / 2.0, 0.0)
+    return (round(c_us * 1000), round(h_us * 1000))
+
+
+def infer_composite_amplitudes(
+    spec: Dict[str, Any], elements: Iterable[Dict[str, Any]]
+) -> Dict[Tuple[int, int], float]:
+    sine_lookup: Dict[Tuple[int, int], float] = {}
+    for elem in elements:
+        if str(elem.get("type", "")) != "sin_squared_pulse":
+            continue
+        amp = pick_amplitude(spec, elem)
+        key = composite_key_us(spec, elem)
+        sine_lookup[key] = amp
+
+    inferred: Dict[Tuple[int, int], float] = {}
+    for elem in elements:
+        if str(elem.get("type", "")) != "composite_pulse":
+            continue
+        amp = pick_amplitude(spec, elem)
+        key = composite_key_us(spec, elem)
+        if amp != 0.0:
+            inferred[key] = amp
+            continue
+        inferred[key] = sine_lookup.get(key, 20.0)
+
+    return inferred
+
+
+def synthetic_sync_elements(spec: Dict[str, Any]) -> List[Dict[str, Any]]:
+    fmt = str(spec.get("format", "")).upper()
+    base_unit = str(spec.get("levels_unit", "IRE")).upper()
+
+    if fmt == "PAL" or fmt.startswith("PAL"):
+        sync_width = PAL_SYNC_WIDTH_US
+        burst_start = PAL_BURST_START_US
+        burst_end = PAL_BURST_END_US
+        burst_freq = 4.434
+        burst_phase = 135.0
+        sync_mv = -300.0
+        burst_peak_mv = 150.0
+        if base_unit == "IRE":
+            sync_amp = sync_mv * 100.0 / MV_PER_100_IRE
+            burst_amp = burst_peak_mv * 100.0 / MV_PER_100_IRE
+            sync_key = "amplitude_ire"
+            burst_key = "component_amplitude_ire"
+            dc_key = "dc_offset_ire"
+        else:
+            sync_amp = sync_mv
+            burst_amp = burst_peak_mv
+            sync_key = "amplitude_mv"
+            burst_key = "component_amplitude_mv"
+            dc_key = "dc_offset_mv"
+    elif fmt == "NTSC" or fmt.startswith("NTSC"):
+        sync_width = NTSC_SYNC_WIDTH_US
+        burst_start = NTSC_BURST_START_US
+        burst_end = NTSC_BURST_END_US
+        burst_freq = 3.58
+        burst_phase = 180.0
+        sync_ire = -40.0
+        burst_peak_ire = 20.0
+        if base_unit == "IRE":
+            sync_amp = sync_ire
+            burst_amp = burst_peak_ire
+            sync_key = "amplitude_ire"
+            burst_key = "component_amplitude_ire"
+            dc_key = "dc_offset_ire"
+        else:
+            sync_amp = sync_ire * MV_PER_100_IRE / 100.0
+            burst_amp = burst_peak_ire * MV_PER_100_IRE / 100.0
+            sync_key = "amplitude_mv"
+            burst_key = "component_amplitude_mv"
+            dc_key = "dc_offset_mv"
+    else:
+        signal_id = str(spec.get("id", "<unknown>"))
+        raise ValueError(
+            f"Unknown format '{fmt}' for signal {signal_id}; cannot synthesize sync elements."
+        )
+
+    sync_elem = {
+        "index": -100,
+        "type": "sync",
+        "label": "Reference Sync Pulse",
+        "start_us": 0.0,
+        "end_us": sync_width,
+        "rise_time_us": 0.14,
+        sync_key: sync_amp,
+    }
+    burst_elem = {
+        "index": -101,
+        "type": "burst",
+        "label": "Reference Colour Burst",
+        "start_us": burst_start,
+        "end_us": burst_end,
+        "rise_time_us": 0.25,
+        "freq_mhz": burst_freq,
+        "phase_deg": burst_phase,
+        dc_key: 0.0,
+        burst_key: burst_amp,
+    }
+    return [sync_elem, burst_elem]
+
+
+def _flatten_schema_v2_primitives(spec: Dict[str, Any]) -> List[Dict[str, Any]]:
+    primitives = spec.get("primitives", [])
+    composites = spec.get("composites", [])
+    render_tree = spec.get("render_tree", [])
+
+    if not isinstance(primitives, list) or not isinstance(render_tree, list):
+        return []
+
+    prim_by_id: Dict[str, Dict[str, Any]] = {}
+    for p in primitives:
+        if not isinstance(p, dict):
+            continue
+        pid = str(p.get("id", "")).strip()
+        if pid:
+            prim_by_id[pid] = p
+
+    comp_by_id: Dict[str, Dict[str, Any]] = {}
+    if isinstance(composites, list):
+        for c in composites:
+            if not isinstance(c, dict):
+                continue
+            cid = str(c.get("id", "")).strip()
+            if cid:
+                comp_by_id[cid] = c
+
+    resolving: set[str] = set()
+
+    def resolve_node(node_id: str) -> List[Dict[str, Any]]:
+        if node_id in prim_by_id:
+            return [deepcopy(prim_by_id[node_id])]
+
+        comp = comp_by_id.get(node_id)
+        if comp is None:
+            signal_id = str(spec.get("id", "<unknown>"))
+            raise ValueError(
+                f"Signal {signal_id} render_tree references unknown node '{node_id}'."
+            )
+
+        if node_id in resolving:
+            signal_id = str(spec.get("id", "<unknown>"))
+            raise ValueError(f"Signal {signal_id} composites contain a cycle at '{node_id}'.")
+
+        resolving.add(node_id)
+        out: List[Dict[str, Any]] = []
+        children = comp.get("children", [])
+        if not isinstance(children, list):
+            signal_id = str(spec.get("id", "<unknown>"))
+            raise ValueError(
+                f"Signal {signal_id} composite '{node_id}' has non-list children."
+            )
+        for child in children:
+            out.extend(resolve_node(str(child)))
+        resolving.remove(node_id)
+        return out
+
+    flattened: List[Dict[str, Any]] = []
+    for root in render_tree:
+        flattened.extend(resolve_node(str(root)))
+
+    return flattened
+
+
+def build_display_elements(spec: Dict[str, Any]) -> List[Dict[str, Any]]:
+    elements = [deepcopy(elem) for elem in spec.get("elements", [])]
+    if not elements:
+        elements = _flatten_schema_v2_primitives(spec)
+    return synthetic_sync_elements(spec) + elements
+
+
+def choose_time_span(spec: Dict[str, Any], elements: Iterable[Dict[str, Any]]) -> Tuple[float, float]:
+    points: List[float] = []
+
+    for elem in elements:
+        start, end = element_start_end_us(spec, elem)
+        points.extend([start, end])
+
+    if not points:
+        return -10.0, 65.0
+
+    t_min = math.floor(min(points) - 1.0)
+    t_max = math.ceil(max(points) + 1.0)
+
+    if min(points) >= 0.0:
+        t_min = max(0.0, t_min)
+
+    if t_max - t_min < 20.0:
+        t_max = t_min + 20.0
+
+    return float(t_min), float(t_max)
+
+
+def waveform_range_in_ire(spec: Dict[str, Any], y: np.ndarray) -> Tuple[float, float]:
+    unit = str(spec.get("levels_unit", "IRE")).upper()
+    y_min = float(np.min(y))
+    y_max = float(np.max(y))
+    if unit == "IRE":
+        return y_min, y_max
+    scale = 100.0 / MV_PER_100_IRE
+    return y_min * scale, y_max * scale
+
+
+def warn_if_unreasonable_scale(spec: Dict[str, Any], y: np.ndarray) -> None:
+    """Emit a warning for obviously implausible video levels.
+
+    This catches unit-mismatch regressions (for example mV interpreted as IRE)
+    without aborting rendering.
+    """
+    y_min_ire, y_max_ire = waveform_range_in_ire(spec, y)
+    if y_min_ire < -200.0 or y_max_ire > 500.0:
+        signal_id = str(spec.get("id", "<unknown>"))
+        print(
+            "WARNING: "
+            f"{signal_id} waveform range looks implausible: "
+            f"min={y_min_ire:.2f} IRE, max={y_max_ire:.2f} IRE"
+        )
+
+
+def render_waveform(spec: Dict[str, Any], output_file: Path, dpi: int) -> None:
+    elements = build_display_elements(spec)
+    t_min, t_max = choose_time_span(spec, elements)
+    t = np.arange(t_min, t_max, 0.005)
+    y = np.zeros_like(t)
+
+    comp_amp_map = infer_composite_amplitudes(spec, elements)
+    group_of, burst_groups = find_contiguous_burst_groups(spec, elements)
+
+    # Pre-render all contiguous burst groups
+    for grp_indices in burst_groups:
+        y += render_burst_group(t, grp_indices, elements, spec)
+
+    for i, elem in enumerate(elements):
+        etype = str(elem.get("type", "")).lower()
+        rise = float(elem.get("rise_time_us", spec.get("y_rise_time_us", 0.0)))
+        start, end = element_start_end_us(spec, elem)
+
+        if etype == "colour_bar":
+            amp = pick_amplitude(spec, elem)
+            if rise > 0.0:
+                taper_left = not has_contiguous_predecessor(
+                    spec, elements, i, {"colour_bar", "staircase"}
+                )
+                taper_right = not has_contiguous_successor(
+                    spec, elements, i, {"colour_bar", "staircase"}
+                )
+                y += amp * burst_window(
+                    t, start, end, rise, taper_left=taper_left, taper_right=taper_right
+                )
+            else:
+                y += amp * ((t >= start) & (t < end)).astype(float)
+            continue
+
+        if etype == "sync":
+            amp = pick_amplitude(spec, elem)
+            y += amp * smooth_window(t, start, end, rise)
+            continue
+
+        if etype == "staircase":
+            steps = int(elem.get("steps", 5))
+            top = unit_value(spec, elem, "top_level_ire", "top_level_mv")
+            if top is None:
+                top = pick_amplitude(spec, elem)
+            taper_right = not has_contiguous_successor(
+                spec, elements, i, {"colour_bar", "staircase"}
+            )
+            y += staircase_profile(t, start, end, steps, top, rise, taper_right=taper_right)
+            continue
+
+        if etype == "sin_squared_pulse":
+            amp = pick_amplitude(spec, elem)
+            c_us = center_us(spec, elem)
+            half = float(elem.get("half_duration_us", 0.0))
+            if half <= 0.0:
+                half = max((end - start) / 2.0, 0.0)
+            if half <= 0:
+                continue
+            u = (t - c_us) / half
+            inside = np.abs(u) <= 1.0
+            pulse = np.zeros_like(t)
+            pulse[inside] = amp * np.cos(0.5 * math.pi * u[inside]) ** 2
+            y += pulse
+            continue
+
+        if etype in {"burst", "composite_pulse"}:
+            if etype == "composite_pulse":
+                amp = comp_amp_map.get(composite_key_us(spec, elem), pick_amplitude(spec, elem))
+                c_us = center_us(spec, elem)
+                half = float(elem.get("half_duration_us", 0.0))
+                if half <= 0.0:
+                    half = max((end - start) / 2.0, 0.0)
+                if half <= 0.0:
+                    continue
+                phase_x = np.clip((t - (c_us - half)) / (2 * half), 0.0, 1.0)
+                env = np.zeros_like(t)
+                inside = np.abs((t - c_us) / half) <= 1.0
+                env[inside] = np.sin(math.pi * phase_x[inside]) ** 2
+            else:
+                amp = pick_amplitude(spec, elem)
+                if group_of.get(i, -1) != -1:
+                    continue  # handled by render_burst_group above
+                env = burst_window(t, start, end, rise, taper_left=True, taper_right=True)
+
+            dc = pick_dc_offset(spec, elem)
+            freq = element_frequency_mhz(spec, elem)
+            phase = math.radians(float(elem.get("phase_deg", 0.0)))
+            carrier = np.sin(2.0 * math.pi * freq * t + phase)
+            y += dc * env + amp * carrier * env
+            continue
+
+    warn_if_unreasonable_scale(spec, y)
+
+    fmt = str(spec.get("format", "")).upper()
+    unit = str(spec.get("levels_unit", "IRE")).upper()
+    unit_label = "IRE" if unit == "IRE" else "mV"
+
+    fig, ax = plt.subplots(figsize=(14.5, 5.4), facecolor="black")
+    ax.set_facecolor("#000000")
+
+    ax.plot(t, y, color="#F1F1F1", linewidth=1.2)
+    ax.axhline(0.0, color="#AAAAAA", linewidth=0.9, alpha=0.8)
+
+    y_min = float(np.min(y))
+    y_max = float(np.max(y))
+    y_span = max(y_max - y_min, 1.0)
+    ax.set_xlim(t_min, t_max)
+    ax.set_ylim(y_min - 0.14 * y_span, y_max + 0.17 * y_span)
+
+    ax.grid(which="major", color="#3A3A3A", linestyle="-", linewidth=0.55, alpha=0.9)
+    ax.grid(which="minor", color="#232323", linestyle="-", linewidth=0.35, alpha=0.9)
+    ax.minorticks_on()
+
+    ax.set_xlabel("Time (us)", color="white", fontsize=11, labelpad=8)
+    ax.set_ylabel(f"Level ({unit_label})", color="white", fontsize=11, labelpad=8)
+
+    title = str(spec.get("id", output_file.stem))
+    subtitle = str(spec.get("description", ""))
+    fig.suptitle(title, x=0.065, y=0.945, ha="left", color="white", fontsize=19)
+    if subtitle:
+        fig.text(
+            0.065,
+            0.868,
+            subtitle,
+            color="#D9D9D9",
+            fontsize=9,
+            ha="left",
+            va="bottom",
+        )
+
+    for spine in ax.spines.values():
+        spine.set_color("#F1F1F1")
+        spine.set_linewidth(1.0)
+    ax.tick_params(colors="white", which="both")
+
+    if unit == "IRE":
+        sec = ax.secondary_yaxis(
+            "right",
+            functions=(lambda ire: ire * MV_PER_100_IRE / 100.0, lambda mv: mv * 100.0 / MV_PER_100_IRE),
+        )
+        sec.set_ylabel("Level (mV)", color="#7FDBFF", fontsize=11, labelpad=8)
+    else:
+        sec = ax.secondary_yaxis(
+            "right",
+            functions=(lambda mv: mv * 100.0 / MV_PER_100_IRE, lambda ire: ire * MV_PER_100_IRE / 100.0),
+        )
+        sec.set_ylabel("Level (IRE)", color="#7FDBFF", fontsize=11, labelpad=8)
+    sec.tick_params(colors="#7FDBFF")
+    sec.spines["right"].set_color("#7FDBFF")
+
+    marks = set()
+    for elem in elements:
+        start, end = element_start_end_us(spec, elem)
+        marks.add(round(start, 1))
+        marks.add(round(end, 1))
+        if elem.get("type") == "staircase":
+            steps = int(elem.get("steps", 5))
+            width = end - start
+            for i in range(1, steps):
+                m = round(start + i * width / steps, 1)
+                marks.add(m)
+        if "center_us" in elem:
+            marks.add(round(center_us(spec, elem), 1))
+
+    ordered_marks = sorted(marks)
+
+    top = ax.get_ylim()[1]
+    label_y = top - 0.04 * y_span
+    for tm in ordered_marks:
+        if tm < t_min or tm > t_max:
+            continue
+        ax.vlines(tm, label_y - 0.03 * y_span, label_y, color="#D4D4D4", linewidth=0.8, alpha=0.85)
+        ax.text(
+            tm,
+            label_y + 0.006 * y_span,
+            f"{tm:g}",
+            color="white",
+            fontsize=8,
+            rotation=90,
+            ha="center",
+            va="bottom",
+            bbox={"facecolor": "black", "edgecolor": "none", "pad": 0.2},
+        )
+
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    fig.tight_layout(rect=(0.0, 0.0, 1.0, 0.90))
+    fig.savefig(output_file, dpi=dpi, facecolor=fig.get_facecolor())
+    plt.close(fig)
+
+
+def insert_diagrams_in_doc(doc_path: Path, marker_to_relpath: Dict[str, str]) -> int:
+    text = doc_path.read_text(encoding="utf-8")
+    replacements = 0
+
+    def _replace(match: re.Match[str]) -> str:
+        nonlocal replacements
+        marker_id = match.group(1).strip().lower()
+        rel = marker_to_relpath.get(marker_id)
+        if not rel:
+            return match.group(0)
+        replacements += 1
+        alt = f"{marker_id} waveform diagram"
+        return f"<!-- vits-diagram: {marker_id} -->\n![{alt}]({rel})"
+
+    updated = DOC_MARKER_RE.sub(_replace, text)
+    if updated != text:
+        doc_path.write_text(updated, encoding="utf-8")
+    return replacements
+
+
+def render_all(yaml_root: Path, image_root: Path, dpi: int) -> List[RenderResult]:
+    results: List[RenderResult] = []
+    yaml_files = sorted(yaml_root.glob("**/*.yaml"))
+    if not yaml_files:
+        raise FileNotFoundError(f"No YAML files found under {yaml_root}")
+
+    for yaml_file in yaml_files:
+        with yaml_file.open("r", encoding="utf-8") as fh:
+            spec = yaml.safe_load(fh)
+        if not isinstance(spec, dict):
+            continue
+
+        # Repository roots may include metadata YAML files (for example
+        # resources/definitions/vits/index.yaml) that are not line-signal
+        # definitions. Skip anything that does not look like a renderable VITS
+        # signal document.
+        has_v1 = "elements" in spec and isinstance(spec.get("elements"), list)
+        has_v2 = isinstance(spec.get("primitives"), list) and isinstance(spec.get("render_tree"), list)
+        if "id" not in spec or "format" not in spec or not (has_v1 or has_v2):
+            continue
+
+        validate_microsecond_timing_only(spec)
+
+        marker_id = str(spec.get("id", yaml_file.stem)).strip().lower()
+        family = str(spec.get("format", yaml_file.parent.name)).strip().lower()
+
+        output_file = image_root / family / f"{marker_id}.png"
+        render_waveform(spec, output_file, dpi=dpi)
+        results.append(RenderResult(marker_id=marker_id, image_path=output_file))
+
+    return results
+
+
+def main() -> int:
+    args = parse_args()
+
+    rendered = render_all(args.yaml_root, args.image_root, args.dpi)
+    print(f"Rendered {len(rendered)} diagram(s) to {args.image_root}")
+
+    if args.skip_doc_insert:
+        return 0
+
+    marker_to_path: Dict[str, Path] = {result.marker_id: result.image_path for result in rendered}
+
+    for doc in args.docs:
+        doc_dir = doc.parent
+        marker_to_relpath = {
+            marker: path.relative_to(doc_dir).as_posix() if path.is_relative_to(doc_dir) else path.as_posix()
+            for marker, path in marker_to_path.items()
+        }
+
+        replaced = insert_diagrams_in_doc(doc, marker_to_relpath)
+        print(f"Updated {doc} with {replaced} diagram link(s)")
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

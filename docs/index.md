@@ -8,5 +8,6 @@ Use the navigation to browse the available specifications by document family.
 
 - Television and video formats
 - Video metadata
+	- Vertical Interval Test Signals
 - LaserDisc and Laservision
 - VHS

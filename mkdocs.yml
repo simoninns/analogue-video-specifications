@@ -43,6 +43,10 @@ nav:
   - Video metadata:
       - ANSI/CTA-608-E S-2019 Line 21 Data Services: video_metadata/ANSI-CTA-608-E-S-2019/ANSI-CTA-608-E-S-2019.md
       - IEC 60461:2010 Time and control code: video_metadata/IEC-60461-2010-Time-and-control-code/IEC-60461-2010-Time-and-control-code.md
+      - Vertical Interval Test Signals:
+        - Overview: video_metadata/VITS/index.md
+        - NTSC VITS Definitions: video_metadata/VITS/NTSC-VITS.md
+        - PAL VITS Definitions: video_metadata/VITS/PAL-VITS.md
   - LaserDisc and Laservision:
       - IEC 60856:1986 Laservision PAL: laserdisc/IEC-60856-1986-Laservision-PAL/IEC-60856-1986-Laservision-PAL.md
       - IEC 60856:1986 Amendment 1: laserdisc/IEC-60856-1986-Laservision-PAL-Amendment-1/IEC-60856-1986-Laservision-PAL-Amendment-1.md

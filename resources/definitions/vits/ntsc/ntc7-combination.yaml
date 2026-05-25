@@ -1,0 +1,167 @@
+schema_version: 2
+id: "NTC7-COMBINATION"
+description: "NTSC NTC-7 Combination Insertion Test Signal (VBI Line 280)"
+format: "NTSC"
+levels_unit: "IRE"
+timing_reference: "sync_edge"  # all time positions measured from the H-sync leading edge
+y_rise_time_us: 0.20
+c_rise_time_us: 0.40
+
+# Overview:
+# Recommended placement: VBI line 280, field 2 (not enforced by this VITS definition).
+# NTC7 Combination is the NTC-7 Combination ITS, inserted on VBI line 280 of field 2.
+# It carries a +50 IRE initial reference boost over a 50 IRE grey pedestal, the
+# multi-burst frequency sweep (0.5–4.2 MHz), and a chrominance
+# signal at the end of the line used for evaluating chroma bandwidth and
+# chrominance amplitude linearity. Three chrominance burst zones (Comp8–10) form
+# a level staircase with boundary crossfades. This is represented as overlapping
+# additive bursts (Comp8 46–60 µs ±10 IRE, Comp9 50–60 µs ±10 IRE, Comp10
+# 54–60 µs ±20 IRE); modelled here as non-overlapping segments at their net
+# composite amplitudes: Zone 1 ±10 IRE (40–60 IRE), Zone 2 ±20 IRE (30–70 IRE),
+# Zone 3 ±40 IRE (10–90 IRE). All zones remain within the 0–100 IRE range.
+# Burst amplitude convention: component_amplitude_ire = carrier peak (one-sided,
+# = ½ peak-to-peak). A burst with component_amplitude_ire N swings ±N IRE around
+# its dc_offset_ire, yielding 2N IRE peak-to-peak.
+
+primitives:
+  - id: grey_reference_boost
+    type: "colour_bar"
+    label: "Grey Reference Boost (initial zone)"
+    window_us: { start: 12.000, end: 16.000 }
+    channel: y
+    combine: add
+    amplitude_ire: 50.0
+    rise_time_us: 0.250
+
+  - id: grey_background
+    type: "colour_bar"
+    label: "Grey Background Level (full line)"
+    window_us: { start: 12.000, end: 62.000 }
+    channel: y
+    combine: replace
+    level_ire: 50.0
+    rise_time_us: 0.250
+
+  - id: mb_0_5mhz
+    type: "burst"
+    label: "0.5 MHz Burst"
+    window_us: { start: 18.000, end: 23.000 }
+    channel: c
+    combine: add
+    amplitude_ire: 25.0
+    rise_time_us: 0.200
+    freq_mhz: 0.500
+    phase_deg: 0.0
+
+  - id: mb_1_0mhz
+    type: "burst"
+    label: "1.0 MHz Burst"
+    window_us: { start: 24.000, end: 27.000 }
+    channel: c
+    combine: add
+    amplitude_ire: 25.0
+    rise_time_us: 0.200
+    freq_mhz: 1.000
+    phase_deg: 0.0
+
+  - id: mb_2_0mhz
+    type: "burst"
+    label: "2.0 MHz Burst"
+    window_us: { start: 28.000, end: 31.000 }
+    channel: c
+    combine: add
+    amplitude_ire: 25.0
+    rise_time_us: 0.200
+    freq_mhz: 2.000
+    phase_deg: 0.0
+
+  - id: mb_3_0mhz
+    type: "burst"
+    label: "3.0 MHz Burst"
+    window_us: { start: 32.000, end: 35.000 }
+    channel: c
+    combine: add
+    amplitude_ire: 25.0
+    rise_time_us: 0.200
+    freq_mhz: 3.000
+    phase_deg: 0.0
+
+  - id: mb_3_58mhz
+    type: "burst"
+    label: "3.58 MHz Burst (NTSC Subcarrier)"
+    window_us: { start: 36.000, end: 39.000 }
+    channel: c
+    combine: add
+    amplitude_ire: 25.0
+    rise_time_us: 0.200
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 0.0
+
+  - id: mb_4_2mhz
+    type: "burst"
+    label: "4.2 MHz Burst"
+    window_us: { start: 40.000, end: 43.000 }
+    channel: c
+    combine: add
+    amplitude_ire: 25.0
+    rise_time_us: 0.200
+    freq_mhz: 4.200
+    phase_deg: 0.0
+
+  - id: chroma_zone_1
+    type: "burst"
+    label: "Chrominance Signal — Zone 1 (±10 IRE, 40–60 IRE)"
+    window_us: { start: 46.000, end: 50.000 }
+    channel: c
+    combine: add
+    continuity_group: chroma_stair
+    dc_offset_ire: 0.0
+    component_amplitude_ire: 10.0
+    rise_time_us: 1.000
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 90.0
+    transition_out: { join_policy: crossfade, duration_us: 1.000 }
+
+  - id: chroma_zone_2
+    type: "burst"
+    label: "Chrominance Signal — Zone 2 (±20 IRE, 30–70 IRE)"
+    window_us: { start: 50.000, end: 54.000 }
+    channel: c
+    combine: add
+    continuity_group: chroma_stair
+    dc_offset_ire: 0.0
+    component_amplitude_ire: 20.0
+    rise_time_us: 1.000
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 90.0
+    transition_out: { join_policy: crossfade, duration_us: 1.000 }
+
+  - id: chroma_zone_3
+    type: "burst"
+    label: "Chrominance Signal — Zone 3 (±40 IRE, 10–90 IRE)"
+    window_us: { start: 54.000, end: 60.000 }
+    channel: c
+    combine: add
+    continuity_group: chroma_stair
+    dc_offset_ire: 0.0
+    component_amplitude_ire: 40.0
+    rise_time_us: 1.000
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 90.0
+
+composites:
+  - id: multiburst_sweep
+    mode: serial
+    children: [mb_0_5mhz, mb_1_0mhz, mb_2_0mhz, mb_3_0mhz, mb_3_58mhz, mb_4_2mhz]
+
+  - id: chroma_staircase
+    mode: serial
+    children: [chroma_zone_1, chroma_zone_2, chroma_zone_3]
+    continuity_group: chroma_stair
+    baseline_anchor: grey_background
+
+render_tree:
+  - grey_background
+  - grey_reference_boost
+  - multiburst_sweep
+  - chroma_staircase

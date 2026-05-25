@@ -1,0 +1,58 @@
+schema_version: 2
+id: "VITS20"
+description: "PAL VITS Line 20 — UK ITS-2 Chrominance Reference Signal (IBA/EBU)"
+format: "PAL"
+levels_unit: "mV"
+timing_reference: "sync_edge"  # all time positions measured from the H-sync leading edge
+y_rise_time_us: 0.20
+c_rise_time_us: 0.40
+
+# Overview:
+# Recommended placement: VBI line 20, field 1 (not enforced by this VITS definition).
+# VITS 20 is the IBA/EBU UK ITS Line 20 signal, used alongside VITS 19 in UK
+# 625-line PAL transmissions. It carries two chrominance burst zones at PAL
+# subcarrier frequency (4.433 MHz) on a grey pedestal, providing amplitude
+# reference levels for chrominance decoding calibration.
+# The burst components have zero composite DC offset (dc_offset_mv: 0.0), with
+# the Y-channel amplitude encoded in component_amplitude_mv.
+
+primitives:
+  - id: grey_pedestal
+    type: "colour_bar"
+    label: "Grey Pedestal (50% Level Reference Bar)"
+    window_us: { start: 12.0, end: 32.0 }
+    channel: y
+    combine: replace
+    level_mv: 350.0
+    rise_time_us: 0.235
+
+  - id: chroma_reference_full
+    type: "burst"
+    label: "Chrominance Reference Burst — 100% Level Zone"
+    window_us: { start: 14.0, end: 28.0 }
+    channel: c
+    combine: add
+    dc_offset_mv: 0.0
+    component_amplitude_mv: 350.0
+    rise_time_us: 1.000
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 60.660
+
+  - id: chroma_reference_low
+    type: "burst"
+    label: "Chrominance Reference Burst — 43% Level Zone"
+    window_us: { start: 34.0, end: 62.0 }
+    channel: c
+    combine: add
+    dc_offset_mv: 0.0
+    component_amplitude_mv: 150.0
+    rise_time_us: 1.000
+    subcarrier_lock_multiple: 1.0
+    phase_deg: 60.660
+
+composites: []
+
+render_tree:
+  - grey_pedestal
+  - chroma_reference_full
+  - chroma_reference_low
