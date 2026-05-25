@@ -2169,8 +2169,6 @@ Note: The following table is just a reference for the present JVC models.
 |  EM | 120/220V | HTSC | M | USA | 2 ~ 44 (54 ~ 102) | A3 ~ 13 (102 ~ 216) | J ~ W (216 ~ 300) | W+1 ~ W+30 (300 ~ 488) | USA | 14 ~ 60 (488 ~ 606) W+20 ~ W+64 | M | 3/4  |
 |  T | 110V | HTSC | M | USA | 2 ~ 43 (54 ~ 108) | A3 ~ 13 (108 ~ 216) | J ~ W (216 ~ 300) | W+1 ~ W+10 (300 ~ 360) | USA | 14 ~ 60 (470 ~ 600) | M | 13  |
 
-( )EWIT:MBo
-8-51 8-51
 
 8.3.2 TV broadcasting standards of country
 
@@ -2389,12 +2387,14 @@ N13C(U) N13C(U)
 |  HR-D2350 | 8320 | '83/10 | VHS NTSC (SP/EP) | 120 V~, 60 Hz 35 W | 4HD | 2 normal audio | VST | CH (#4, #5) | CH (#2) | - | CH (#3) | 12-hour(AW/PM) FDP indication | AC line | 14-day/8-event programmable timer | -  |
 |  HR-D7250 | 8321 | '84/02 | VHS NTSC (SP/EP) Hi-Fi audio | 120 V~, 60 Hz 40 W (50 W with camera) | DA4 + 2A | 2 Hi-Fi audio 2 normal audio | PST | CH (#1) | CH (#2) | CATV (#14) | CH (#3) | 12-hour(AW/PM) FDP with tape remaining indication | Crystal | 14-day programmable timer 8 programs with repeat function. | 60 min.  |
 
-Note: #1 VHF channels 2 - 13.
-#2 UHF channels 14 - 83.
-#3 Channel 3 or 4 (switchable; preset to channel 3 when skipped).
-75 ohms, unbalanced.
-#4 VHF channels VL 2 - 6.
-#5 VHF channels VH A - 1, 7 - 13, J - W.
+Note:
+
+- \#1 VHF channels 2 - 13.
+- \#2 UHF channels 14 - 83.
+- \#3 Channel 3 or 4 (switchable; preset to channel 3 when skipped).
+  75 ohms, unbalanced.
+- \#4 VHF channels VL 2 - 6.
+- \#5 VHF channels VH A - 1, 7 - 13, J - W.
 
 NTSC(U) NTSC(U)
 
@@ -2409,16 +2409,16 @@ NTSC(U) NTSC(U)
 |  HH-D555U | 8383 | '85/01 | VHS NTSC (SP/EP) Hi-Fi audio | 120 V~, 60 Hz 37 W | DA4 + 2A | 2 Hi-Fi audio 1 normal audio | VST | CH (#4, #5) | CH (#2) | - | CH (#3) | 12-hour(AM/PM) FDP with tape remaining indication | Crystal | 14-day programmable timer 8 programs with repeat | -  |
 |  HH-D140U | 8392 | '85/03 | VHS NTSC (SP/EP) | 120 V~, 60 Hz 28 W | 4HD | 1 normal audio | VST | CH (#1) | CH (#2) | - | CH (#3) | 12-hour(AM/PM) FDP indication | AC line | 14-day/1-event timer | -  |
 
-Note: #1 VHF channels 2 - 13.
-#2 UHF channels 14 - 83.
-#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+Note:
+
+- \#1 VHF channels 2 - 13.
+- \#2 UHF channels 14 - 83.
+- \#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+
 75 ohms, unbalanced.
-#4 VHF channels VL 2 - 6.
-#5 VHF channels VH A - 1, 7 - 13, J - W.
-#14 CATV: 57 channels (mld, super and hyper).
-
-8-56 8-56
-
+- \#4 VHF channels VL 2 - 6.
+- \#5 VHF channels VH A - 1, 7 - 13, J - W.
+- \#14 CATV: 57 channels (mld, super and hyper).
 N130(0) N130(0)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Read Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :DRF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -2432,16 +2432,19 @@ N130(0) N130(0)
 |  HB-D180U | 8477 | '86/03 | VHS NTSC (SP/EP) | 120 V~, 60 Hz 28 W | 4BD | 1 normal audio | PST | CH (#1) | CH (#2) | CATV (#15) | CH (#3) | 12-hour(AM/FM) FDP with lap time counter indication | AC line | 14-day/ 4-event timer | -  |
 |  HB-D470U | 8449 | '86/05 | VHS NTSC (SP/EP with Bi-Fi audio only) | 120 V~, 60 Hz 36 W | DA4 + 2A | 2 Bi-Fi audio 1 normal audio | PST | CH (#1) | CH (#6) | CATV (#13) | CH (#3) | 12-hour(AM/FM) FDP indication | Crystal | 14-day programmable timer 8 programs with repeat | 60 min.  |
 
-Note: #1 VHF channels 2 - 13.
-#2 UHF channels 14 - 83.
-#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+Note:
+
+- \#1 VHF channels 2 - 13.
+- \#2 UHF channels 14 - 83.
+- \#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+
 75 ohms, unbalanced.
-#4 VHF channels VL 2 - 6.
-#5 VHF channels VH A - 1, 7 - 13, J - W.
-#7 VHF channels VH 7 - 13.
-#13 CATV: 113 channels.
-#15 CATV: 29 channels.
-#16 CATV: 25 channels (including 12 VHF channels).
+- \#4 VHF channels VL 2 - 6.
+- \#5 VHF channels VH A - 1, 7 - 13, J - W.
+- \#7 VHF channels VH 7 - 13.
+- \#13 CATV: 113 channels.
+- \#15 CATV: 29 channels.
+- \#16 CATV: 25 channels (including 12 VHF channels).
 
 867 867
 
@@ -2458,17 +2461,17 @@ NTSC(U) NTSC(U)
 |  HR-D500U | 82004 | '87/05 | VHS NTSC (SP/EP) Hi-Fi audio | 120 V~, 60 Hz 33 W | DA4 + 2A | 2 Hi-Fi audio 1 normal audio | PST | CH (#1) | CH (#6) | CATV (#13) | CH (#3) | 12-hour(AW/PM) FDF with tape remaining indication | Crystal | 14-day programmable timer 8 programs with repeat | 10 min.  |
 |  HR-D217U | 82005 | '87/06 | VHS NTSC (SP/EP) | 120 V~, 60 Hz 27 W | 2HD | 1 normal audio | PST | CH (#1) | CH (#2) | CATV (#11) | CH (#3) | 12-hour(AW/PM) FDF with lap time counter indication | Crystal | 14-day/ 4-event timer | 10 sec.  |
 
-Note: #1 VHF channels 2 - 13.
-#2 UHF channels 14 - 83.
-#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+Note:
+
+- \#1 VHF channels 2 - 13.
+- \#2 UHF channels 14 - 83.
+- \#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+
 75 ohms, unbalanced.
-#6 UHF channels 14 - 69.
-#11 CATV: 39 channels.
-#13 CATV: 113 channels.
-#15 CATV: 29 channels.
-
-8-58 8-58
-
+- \#6 UHF channels 14 - 69.
+- \#11 CATV: 39 channels.
+- \#13 CATV: 113 channels.
+- \#15 CATV: 29 channels.
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CB Coverage :VHF | CB Coverage :CHF | CB Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HR-0237U | 82006 | '87/06 | VHS NTSC (SP/EP) | 120 V~, 60 Hz 28 W | 4HD | 1 normal audio | PST | CH (#1) | CH (#2) | CATV (#11) | CH (#3) | 12-hour(AW/PM) FDP with tape remaining and lap time counter indication | AC line | 14-day/ 4-event timer | 10 sec.  |
@@ -2480,14 +2483,17 @@ Note: #1 VHF channels 2 - 13.
 |  HR-0310U | 82044 | '88/02 | VHS NTSC (SP/EP) | 120 V~, 60 Hz 26 W | 2HD | 1 normal audio | PST | CH (#1) | CH (#2) | CATV (#10) | CH (#3) | 12-hour(AW/PM) FDP with lap time counter indication | AC line | 14-day/ 4-event timer | -  |
 |  HR-0320U | 82045 | '88/03 | VHS NTSC (SP/EP) | 120 V~, 60 Hz 28 W | 2HD | 1 normal audio | VST | CH (#1) | CH (#2) | CATV (#11) | CH (#3) | 12-hour(AW/PM) FDP with lap time counter indication | AC line | 14-day/ 4-event timer | 10 sec.  |
 
-Note: #1 VHF channels 2 - 13.
-#2 UHF channels 14 - 83.
-#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+Note:
+
+- \#1 VHF channels 2 - 13.
+- \#2 UHF channels 14 - 83.
+- \#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+
 75 ohms, unbalanced.
-#6 UHF channels 14 - 69.
-#10 CATV: 2B channels.
-#11 CATV: 39 channels.
-#13 CATV: 113 channels.
+- \#6 UHF channels 14 - 69.
+- \#10 CATV: 2B channels.
+- \#11 CATV: 39 channels.
+- \#13 CATV: 113 channels.
 NTSC(U) NTSC(U)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Read Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :CHF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -2501,18 +2507,18 @@ NTSC(U) NTSC(U)
 |  HR-D7000 | 82062 | '88/06 | VHS NTSC (SP/EP) | 120 V~, 60 Hz 32 W | 4HD | 1 normal audio | FST | CH (#1) | CH (#2) | CATV (#11) | CH (#3) | 12-hour(AM/PM) FDF with real time counter indication | AC line | 14-day/ 4-event timer | 10 sec.  |
 |  HR-S50000 | 82065 | '88/07 | S-VHS/VHS NTSC(SP/EP) Hi-Fi audio | 120 V~, 60 Hz 42 W | DA4 + 2A + FE | 2 Hi-Fi audio 1 normal audio | FST | CH (#1) | CH (#6) | CATV (#12) | CH (#3) | 12-hour(AM/PM) FDF with real time counter indication | AC line | 14-day programmable timer 8 programs with repeat | 10 min.  |
 
-Note: #1 VHF channels 2 - 13.
-#2 UHF channels 14 - 83.
-#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+Note:
+
+- \#1 VHF channels 2 - 13.
+- \#2 UHF channels 14 - 83.
+- \#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+
 75 ohms, unbalanced.
-#6 UHF channels 14 - 68.
-#10 CATV: 28 channels.
-#11 CATV: 39 channels.
-#12 CATV: 87 channels (mid, super and hyper).
-#13 CATV: 113 channels.
-
-8-60 8-60
-
+- \#6 UHF channels 14 - 68.
+- \#10 CATV: 28 channels.
+- \#11 CATV: 39 channels.
+- \#12 CATV: 87 channels (mid, super and hyper).
+- \#13 CATV: 113 channels.
 NTSC(U) NTSC(U)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Read Type | Audio Channel | Tuning System | CH Coverage : VHF | CH Coverage : UHF | CH Coverage : CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -2526,15 +2532,15 @@ NTSC(U) NTSC(U)
 |  HB-0840U | 82122 | '89/06 | VHS NTSC | 120 V~, 60 Hz 30 W | DA4 + 2A | 2 Hi-Fi audio 1 normal audio | PST | CH (#1) | CH (#6) | CATV (#13) | CH (#9) | 12-hour (AM/PM) FDP with real time counter indication | AC line | 14-day programmable timer/5 programs | 10 sec.  |
 |  HB-0515U | 82129 | '89/07 | VHS NTSC (SP/EP) | 120 V~, 60 Hz 24 W | 2BD | 1 normal audio | PST | CH (#1) | CH (#6) | CATV (#13) | CH (#9) | 12-hour (AM/PM) FDP with real time counter indication | AC line | 14-day programmable timer/4 programs | 10 sec.  |
 
-Note: #1 VHF channels 2 - 13.
-#6 UHF channels 14 - 69.
-#9 Channel 3, 4 or OFF. (switchable; preset to channel 3 when shipped).
+Note:
+
+- \#1 VHF channels 2 - 13.
+- \#6 UHF channels 14 - 69.
+- \#9 Channel 3, 4 or OFF. (switchable; preset to channel 3 when shipped).
+
 75 ohms, umbalanced.
-#12 CATV: R7 channels (mid, super and hyper).
-#13 CATV: 113 channels.
-
-8-61 8-61
-
+- \#12 CATV: R7 channels (mid, super and hyper).
+- \#13 CATV: 113 channels.
 NTSC(U) NTSC(U)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :CATV | CH Coverage :ACTV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -2548,26 +2554,29 @@ NTSC(U) NTSC(U)
 |  HR-D540U | 82165 | '90/03 | VHS NTSC (SP/EP) | 120 V~, 60 Hz 19 W | 2HD | 1 normal audio | PST | CH (#1) | CH (#6) | CATV (#13) | CH (#9) | 12-hour(AM/PM) FDP with real time counter and tape remaining indication | AC line | 1-month programmable timer/8 programs | 10 sec.  |
 |  HR-SC1000U | 82175 | '90/04 | S-VHS/VHS NTSC(SP/EP) Hi-Fi audio | 120 V~, 60 Hz 30 W | DA4 + 2A + FE | 2 Hi-Fi audio 1 normal audio | PST | CH (#1) | CH (#6) | CATV (#13) | CH (#9) | 12-hour(AM/PM) FDP with real time counter and tape remaining indication | Crystal | 14-day programmable timer/8 programs | 60 sec.  |
 
-Note: #1 VHF channels 2 - 13.
-#6 UHF channels 14 - 69.
-#9 Channel 3, 4 or OFF. (switchable; preset to channel 3 when shipped).
+Note:
+
+- \#1 VHF channels 2 - 13.
+- \#6 UHF channels 14 - 69.
+- \#9 Channel 3, 4 or OFF. (switchable; preset to channel 3 when shipped).
+
 75 ohms, unbalanced.
-#12 CATV: 87 channels (mid, super and hyper).
-#13 CATV: 113 channels.
-
-8-62 8-62
-
+- \#12 CATV: 87 channels (mid, super and hyper).
+- \#13 CATV: 113 channels.
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CB Coverage :VHF | CB Coverage :DRP | CB Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HB-0550U | 82165 | '90/95 | VHS NTSC (SP/EP) | 120 V~, 60 Hz 19 W | 2BD | 1 normal audio | FST | CB (#1) | CB (#6) | CATV (#13) | CB (#9) | 12-hour(AM/PM) FDP with real time counter and tape remaining indication | AC line | 1-month programmable timer/8 programs | 10 sec.  |
 |  HB-0870U | 82170 | '90/95 | VHS NTSC (SP/EP) | 120 V~, 60 Hz 20 W | DA4 + 2A | 2 Hi-Fi audio 1 normal audio | FST | CB (#1) | CB (#6) | CATV (#13) | CB (#9) | 12-hour(AM/PM) FDP with real time counter and tape remaining indication | AC line | 1-month programmable timer/8 programs | 10 sec.  |
 |  HB-0680U | 82179 | '90/96 | VHS NTSC | 120 V~, 60 Hz 19 W | DA4 | 1 normal audio | FST | CB (#1) | CB (#6) | CATV (#13) | CB (#9) | 12-hour(AM/PM) FDP with real time counter and tape remaining indication | Crystal | 1-month programmable timer/8 programs | 10 sec.  |
 
-Note: #1 VHF channels 2 - 13.
-#6 UHF channels 14 - 69.
-#9 Channel 3, 4 or OFF. (switchable; preset to channel 3 when shipped).
+Note:
+
+- \#1 VHF channels 2 - 13.
+- \#6 UHF channels 14 - 69.
+- \#9 Channel 3, 4 or OFF. (switchable; preset to channel 3 when shipped).
+
 75 ohms. unbalanced.
-#13 CATV: 113 channels.
+- \#13 CATV: 113 channels.
 NTSC(UM) NTSC(UM)
 
 2. NTSC (UM)
@@ -2583,15 +2592,15 @@ NTSC(UM) NTSC(UM)
 |  HR-D140UM | 8402 | '85/08 | VHS NTSC (SP/EP) | 120/220 V~, 50/80 Hz 29 W | 4HD | 1 normal audio | VST | CH (#1) | CH (#2) | - | CH (#3) | 12-hour(AM/PM) FDP indication | AC line | 14-day/1-event timer | -  |
 |  HR-D151UM | 8423 | '85/09 | VHS NTSC (SP/EP) | 120/220 V~, 50/80 Hz 29 W | 4HD | 1 normal audio | VST | CH (#4, #5) | CH (#2) | - | CH (#3) | 12-hour(AM/PM) FDP indication | AC line | 14-day/4-event timer | -  |
 
-Note: #1 VHF channels 2 - 13.
-#2 UHF channels 14 - 83.
-#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+Note:
+
+- \#1 VHF channels 2 - 13.
+- \#2 UHF channels 14 - 83.
+- \#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+
 75 ohms. unbalanced.
-#4 VHF channels VL 2 - 6.
-#5 VHF channels VH A - 1, 7 - 13, J - W.
-
-S-64 8-64
-
+- \#4 VHF channels VL 2 - 6.
+- \#5 VHF channels VH A - 1, 7 - 13, J - W.
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Bead Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :DRF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HR-D566UM | 8412 | '85/09 | VHS NTSC (SP/EP) Hi-Fi audio | 120/220 V~, 50/60 Hz 40 W | DA4 + 2A | 2 Hi-Fi audio 1 normal audio | FST | CH (#4, #7) | CH (#6) | CATV (#13) | CH (#3) | 12-hour(AM/PM) FDP with tape remaining indication | Crystal | 14-day programmable timer/8 programs with repeat | -  |
@@ -2603,18 +2612,18 @@ S-64 8-64
 |  HR-D370UM | 8489 | '86/09 | VHS NTSC (SP/EP) Hi-Fi audio | 120/220 V~, 50/60 Hz 42 W | 2HD + 2A | 2 Hi-Fi audio 1 normal audio | FST | CH (#1) | CH (#2) | CATV (#15) | CH (#3) | 12-hour(AM/PM) FDP with tape remaining indication | Crystal | 14-day programmable timer/4 programs with repeat | 10 sec.  |
 |  HR-D470UM | 8487 | '86/09 | VHS NTSC (SP/EP) Hi-Fi audio | 120/220 V~, 50/60 Hz 36 W | DA4 + 2A | 2 Hi-Fi audio 1 normal audio | FST | CH (#1) | CH (#6) | CATV (#13) | CH (#3) | 12-hour(AM/PM) FDP indication | Crystal | 14-day programmable timer/8 programs with repeat | 80 min.  |
 
-Note: #1 VHF channels 2 - 13.
-#2 UHF channels 14 - 83.
-#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+Note:
+
+- \#1 VHF channels 2 - 13.
+- \#2 UHF channels 14 - 83.
+- \#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
+
 75 ohms, unbalanced.
-#4 VHF channels VL 2 - 6.
-#5 VHF channels VR A - 1, 7 - 13, J - W.
-#6 UHF channels 14 - 88.
-#7 VHF channels VR 7 - 13.
-#13 CATV: 113 channels
-
-8-65 8-65
-
+- \#4 VHF channels VL 2 - 6.
+- \#5 VHF channels VR A - 1, 7 - 13, J - W.
+- \#6 UHF channels 14 - 88.
+- \#7 VHF channels VR 7 - 13.
+- \#13 CATV: 113 channels
 NTSC(UM) NTSC(UM)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CB Coverage :VHF | CB Coverage :CATV | CB Coverage :ACT | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -2628,34 +2637,34 @@ NTSC(UM) NTSC(UM)
 |  HR-D1520UM | 82115 | '89/06 | VHS NTSC (SP/EP) | 120/220 V~,50/60 Hz 26 W | 2HD | 1 normal audio | FST | CB (#1) | CB (#6) | CATV (#13) | CB (#9) | 12-hour(AW/FM) FDP with real time counter indication | AC line | 14-day programmable timer/4 programs | 10 sec.  |
 |  HR-D1610UM | 82116 | '89/06 | VHS NTSC (SP/EP) | 120/220 V~,50/60 Hz 26 W | DA4 | 1 normal audio | FST | CB (#1) | CB (#6) | CATV (#13) | CB (#9) | 12-hour(AW/FM) FDP with real time counter indication | AC line | 14-day programmable timer/4 programs | 10 sec.  |
 
-Note: #1 VHF channels 2 - 13.
-#2 UHF channels 14 - 83.
-#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
-75 ohms, unbalanced.
-#6 UHF channels 14 - 69.
-#9 Channel 3, 4 or OFF. (switchable; preset to channel 3 when shipped).
-75 ohms, unbalanced.
-#10 CATV: 28 channels.
-#11 CATV: 39 channels.
-#12 CATV: 87 channels (mid, super and hyper).
-#13 CATV: 113 channels.
+Note:
 
-8-66 8-66
+- \#1 VHF channels 2 - 13.
+- \#2 UHF channels 14 - 83.
+- \#3 Channel 3 or 4 (switchable; preset to channel 3 when shipped).
 
+75 ohms, unbalanced.
+- \#6 UHF channels 14 - 69.
+- \#9 Channel 3, 4 or OFF. (switchable; preset to channel 3 when shipped).
+75 ohms, unbalanced.
+- \#10 CATV: 28 channels.
+- \#11 CATV: 39 channels.
+- \#12 CATV: 87 channels (mid, super and hyper).
+- \#13 CATV: 113 channels.
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :CHF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HR-D1640UM | 82130 | '89/07 | VHS NTSC (SP/EP) | 120/220 V~, 50/60 Hz 18 W | DA4 | 1 normal audio | FST | CH (#1) | CH (#6) | CATV (#13) | CH (#9) | 12-hour(AM/PM) FDP with real time counter indication | Crystal | 14-day programmable timer/4 programs | 10 sec.  |
 |  HR-D1630UM | 82133 | '89/08 | VHS NTSC (SP/EP) | 120/220 V~, 50/60 Hz 32 W | DA4 + 2A | 2 Hi-Fi audio 1 normal audio | FST | CH (#1) | CH (#6) | CATV (#13) | CH (#9) | 12-hour(AM/PM) FDP with real time counter indication | AC line | 14-day programmable timer/8 programs | 10 sec.  |
 |  HR-D1670UM | 82182 | '90/06 | VHS NTSC | 120/220 V~, 50/60 Hz 19 W | DA4 | 1 normal audio | FST | CH (#1) | CH (#6) | CATV (#13) | CH (#9) | 12-hour(AM/PM) FDP with real time counter and tape remaining indication | AC line | 1-month programmable timer/8 programs | 10 sec.  |
 
-Note: #1 VHF channels 2 - 13.
-#6 UHF channels 14 - 69.
-#9 Channel 3, 4 or OFF. (switchable; preset to channel 3 when shipped).
+Note:
+
+- \#1 VHF channels 2 - 13.
+- \#6 UHF channels 14 - 69.
+- \#9 Channel 3, 4 or OFF. (switchable; preset to channel 3 when shipped).
+
 75 ohms, unbalanced.
-#13 CATV: 113 channels.
-
-8-67 8-67
-
+- \#13 CATV: 113 channels.
 PAL (E) PAL (E)
 
 #### 8.3.4 PAL model
@@ -2673,18 +2682,17 @@ PAL (E) PAL (E)
 |  HR-D150E | 8387 | '85/02 | VHS PAL | 220 V~, 50/60 Hz 30 W | 2HD | 1 normal audio | VST | Band I, (*7) Band III, (*8) | Band IV/V, (*6) | - | UHF (*12) | 24-hour FDP with lap time counter indication | Crystal | 14-day/ 4-programme timer | -  |
 |  HR-D140E | 8390 | '85/06 | VHS PAL | 220 V~, 50/60 Hz 30 W | 2HD | 1 normal audio | VST | Band I, (*7) Band III, (*8) | Band IV/V, (*6) | - | UHF (*12) | 24-hour FDP with lap time counter indication | AC line | 14-day/ 1-programme timer | -  |
 
-Note: *1 VHF band I, channels 2 - 4.
-*2 VHF band III, channels 5 - 12.
-*3 UHF band IV/V, channels 21 - 69.
-*4 VHF band I, 47 - 118 MHz.
-*5 VHF band III, 118 - 300 MHz.
-*6 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
-*7 VHF band I, 47 - 111 MHz.
-*8 VHF band III, 111 - 300 MHz.
-*12 UHF channels 32 - 40 (adjustable).
+Note:
 
-8-68 8-68
-
+- \*1 VHF band I, channels 2 - 4.
+- \*2 VHF band III, channels 5 - 12.
+- \*3 UHF band IV/V, channels 21 - 69.
+- \*4 VHF band I, 47 - 118 MHz.
+- \*5 VHF band III, 118 - 300 MHz.
+- \*6 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
+- \*7 VHF band I, 47 - 111 MHz.
+- \*8 VHF band III, 111 - 300 MHz.
+- \*12 UHF channels 32 - 40 (adjustable).
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Read Type | Audio Channel | Tuning System | CB Coverage :VHF | CB Coverage :DRF | CB Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HR-D250E | 8409 | '85/08 | VHS PAL | 220 V~, 50/60 Hz 30 W 50 W with camera) | DA4 | 1 normal audio | VST | Band I, (#7) Band III, (#8) | Band IV/V, (#6) | - | UHF (#12) | 24-hour FDP with lap time counter indication | Crystal | 14-day/ 4-programme timer | -  |
@@ -2696,16 +2704,15 @@ Note: *1 VHF band I, channels 2 - 4.
 |  HR-D470E | 8465 | '86/09 | VHS PAL Hi-Fi audio (SP/LP Hi-Fi audio only) | 220 V~, 50/60 Hz 37 W | 2HD + 2A | 2 Hi-Fi audio 1 normal audio | FST | Band I, (#9) Band III, (#11) | Band IV/V, (#6) | - | UHF (#12) | 24-hour FDP with tape remaining indication | Crystal | Within one year/ 8 programmes | 60 min.  |
 |  HR-D755E | 8456 | '86/09 | VHS PAL (SP/LP) Hi-Fi audio | 220 V~, 50/60 Hz 40 W | DA4 + 2A | 2 Hi-Fi audio 1 normal audio | FST | Band I, (#9) Band III, (#11) | Band IV/V, (#6) | - | UHF (#12) | 24-hour FDP with day indication | Crystal | Within one year/ 8 programmes | -  |
 
-Note: #6 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
-#7 VHF band I, 47 - 111 MHz.
-#8 VHF band III, 111 - 300 MHz.
-#9 VHF band I, 47 - 89 MHz.
-#10 VHF band III, 104 - 470 MHz.
-#11 VHF band III, 104 - 300 MHz / 302 - 470 MHz.
-#12 UHF channels 32 - 40 (adjustable).
+Note:
 
-8-69 8-69
-
+- \#6 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
+- \#7 VHF band I, 47 - 111 MHz.
+- \#8 VHF band III, 111 - 300 MHz.
+- \#9 VHF band I, 47 - 89 MHz.
+- \#10 VHF band III, 104 - 470 MHz.
+- \#11 VHF band III, 104 - 300 MHz / 302 - 470 MHz.
+- \#12 UHF channels 32 - 40 (adjustable).
 PAL (E) PAL (E)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Read Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :UTF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -2719,13 +2726,12 @@ PAL (E) PAL (E)
 |  HR-D700E | 82061VD | '88/07 | VHS PAL | 220 V~, 50/60 Hz 35 W | 2HD | 1 normal audio | PST | Band 1, (#9) Band 111, (#11) | Band IV/V, (#6) | - | UHF (#12) | 24-hour FDP with real time counter indication | Crystal | 1-year/ 8-programme timer | -  |
 |  HR-D750E | 82067 | '88/08 | VHS PAL (SP/LP) Hi-Fi audio | 220 V~, 50/60 Hz 35 W | DA3 + 2A | 2 Hi-Fi audio 1 normal audio | PST | Band 1, (#9) Band 111, (#11) | Band IV/V, (#6) | - | UHF (#12) | 24-hour FDP with real time counter indication | Crystal | Within one year/ 8 programmes | -  |
 
-Note: #6 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
-#9 VHF band I, 47 - 89 MHz.
-#11 VHF band III, 104 - 300 MHz / 302 - 470 MHz.
-#12 UHF channels 32 - 40 (adjustable).
+Note:
 
-8-70 8-70
-
+- \#6 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
+- \#9 VHF band I, 47 - 89 MHz.
+- \#11 VHF band III, 104 - 300 MHz / 302 - 470 MHz.
+- \#12 UHF channels 32 - 40 (adjustable).
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Bead Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :CH | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HR-55000E | 82070 | '88/09 | 5-VHS/VHS PAL (SP/LP) Hi-Fi audio | 220 V~, 50/60 Hz 44 W | DA4 + 2A + FE | 2 Hi-Fi audio 1 normal audio | FST | Band I, (#9) Band III, (#11) | Band IV/V, (#6) | - | UHF (#12) | 24-hour FDP with day and date indication | Crystal | Within one year/ 8 programmes | -  |
@@ -2737,13 +2743,16 @@ Note: #6 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
 |  HR-55500E | 82137 | '89/09 | 5-VHS/VHS PAL (SP/LP) Hi-Fi audio | 220 V~, 50/60 Hz 45 W | DA4 + 2A + FE | 2 Hi-Fi audio 1 normal audio | FST | Band I, (#7) Band III, (#8) | Band IV/V, (#6) | - | UHF (#13) | 24-hour FDP with tape remaining indication | Crystal | 1-year/ 8 programme timer | Minimum 3 min.  |
 |  HR-D950E | 82144 | '89/10 | VHS PAL (SP/LP) Hi-Fi audio | 220 V~, 50/60 Hz 41 W | DA4 + 2A + FE | 2 Hi-Fi audio 1 normal audio | FST | Band I, (#7) Band III, (#8) | Band IV/V, (#6) | - | UHF (#13) | 24-hour FDP with real time counter indication | Crystal | 1-year/ 8-programme timer | Minimum 3 min.  |
 
-Note: #6 UHF band IV/V, 470 - 862 MHz (channels 21 - 89).
-#7 VHF band I, 47 - 111 MHz.
-#8 VHF band III, 111 - 300 MHz.
-#9 VHF band I, 47 - 89 MHz.
-#11 VHF band III, 104 - 300 MHz / 302 - 470 MHz.
-#12 UHF channels 32 - 40 (adjustable).
-#13 UHF channels 36 (adjustable 32 - 40).
+Note:
+
+- \#6 UHF band IV/V, 470 - 862 MHz (channels 21 - 89).
+- \#7 VHF band I, 47 - 111 MHz.
+- \#8 VHF band III, 111 - 300 MHz.
+- \#9 VHF band I, 47 - 89 MHz.
+- \#11 VHF band III, 104 - 300 MHz / 302 - 470 MHz.
+- \#12 UHF channels 32 - 40 (adjustable).
+- \#13 UHF channels 36 (adjustable 32 - 40).
+
 PAL(E) PAL(E)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :UHF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -2753,14 +2762,13 @@ PAL(E) PAL(E)
 |  HR-D960E | 82197 | '90/08 | VHS PAL Hi-Fi audio | 220 V~, 50/60 Hz 32 W | DA4 + 2A + FE | 2 Hi-Fi audio 1 normal audio | PST | Band I, (#7) Band III, (#14) | Band IV/V, (#6) | - | UHF (#13) | 24-hour FDP with real time counter and tape remaining indication | Crystal | 1-year/8-programme timer | 60 min.  |
 |  HR-PC100E | 82196 | '90/09 | VHS PAL | 220 V~, 50/60 Hz 30 W | DA4 | 1 normal audio | PST | Band I, (#7) Band III, (#14) | Band IV/V, (#6) | - | UHF (#13) | 24-hour FDP with real time counter and tape remaining indication | Crystal | 1-year/8-programme timer | 60 min.  |
 
-Note: #6 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
-#7 VHF band I, 47 - 111 MHz.
-#8 VHF band III, 111 - 300 MHz.
-#13 UHF channels 36 (adjustable 32 - 40).
-#14 VHF band III, 111 - 300 / 302 - 470 MHz.
+Note:
 
-8-72 8-72
-
+- \#6 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
+- \#7 VHF band I, 47 - 111 MHz.
+- \#8 VHF band III, 111 - 300 MHz.
+- \#13 UHF channels 36 (adjustable 32 - 40).
+- \#14 VHF band III, 111 - 300 / 302 - 470 MHz.
 PAL(EA) PAL(EA)
 
 2. PAL (EA)
@@ -2776,15 +2784,14 @@ PAL(EA) PAL(EA)
 |  HR-D225EA | 8330 | '83/12 | VHS PAL | 240 V~, 50/80 Hz 35 W | 2HD | 2 normal audio | VST | Band I, (*1) Band III, (*2) | Band IV/V, (*4) | - | VHF (*9) | 24-hour PDP with lap time counter indication | Crystal | Within 2 weeks/ 8 programmes | -  |
 |  HR-D110EA | 8348 | '84/06 | VHS PAL | 240 V~, 50/80 Hz 30 W | 2HD | 1 normal audio | VST | Band I, (*1) Band III, (*2) | Band IV/V, (*4) | - | VHF (*9) | 24-hour PDP with tape remaining indication | AC line | 14-day/ 1-programme timer | -  |
 
-Note: *1 VHF band I, channels 0 - 5.
-*2 VHF band III, channels 5A - 11.
-*3 UHF band IV/V, channels 21 - 68.
-*4 UHF band IV/V, channels 21 - 69.
-*8 VHF channels 3-4 (switchable).
-*9 VHF channels 0 or 1 (switchable preset to channel 1 when shipped).
+Note:
 
-8-73 8-73
-
+- \*1 VHF band I, channels 0 - 5.
+- \*2 VHF band III, channels 5A - 11.
+- \*3 UHF band IV/V, channels 21 - 68.
+- \*4 UHF band IV/V, channels 21 - 69.
+- \*8 VHF channels 3-4 (switchable).
+- \*9 VHF channels 0 or 1 (switchable preset to channel 1 when shipped).
 PAL(EA) PAL(EA)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Bead Type | Audio Channel | Tuning System | CH Coverage : VHF | CH Coverage : CATV | CH Coverage : ADF | AC Line | Crack Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -2798,13 +2805,12 @@ PAL(EA) PAL(EA)
 |  HR-D565EA | 8429 | '85/12 | VHS PAL Hi-Fi audio | 240 V~, 50/60 Hz 40 W | 2HD + 2A | 2 Hi-Fi audio 1 normal audio | VST | Band I, (*1) Band III, (*2) | Band IV/V, (*4) | - | VHF (*9) | 24-hour FDP with lap time counter indication | Crystal | Within one year/ 4 programmes | -  |
 |  HR-D566EA | 8447 | '86/02 | VHS PAL Hi-Fi audio | 240 V~, 50/60 Hz 40 W | 2HD + 2A | 2 Hi-Fi audio 1 normal audio | VST | Band I, (*1) Band III, (*2) | Band IV/V, (*4) | - | VHF (*9) | 24-hour FDP with lap time counter indication | Crystal | Within one year/ 4 programmes | -  |
 
-Note: *1 VHF band I, channels 0 - 5.
-*2 VHF band III, channels 5A - 11.
-*4 VHF band IV/V, channels 21 - 69.
-*9 VHF channels 0 or 1 (switchable preset to channel 1 when shipped).
+Note:
 
-8-74 8-74
-
+- \*1 VHF band I, channels 0 - 5.
+- \*2 VHF band III, channels 5A - 11.
+- \*4 VHF band IV/V, channels 21 - 69.
+- \*9 VHF channels 0 or 1 (switchable preset to channel 1 when shipped).
 PAL(EA) PAL(EA)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Read Type | Audio Channel | Tuning System | CH Coverage : VHF | CH Coverage : CATV | CH Coverage : C4TV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -2818,14 +2824,13 @@ PAL(EA) PAL(EA)
 |  HR-D230EA | 82027 | '88/01 | VHS PAL (SP/LP) | 240 V~, 50/60 Hz 31 W | 4HD | 1 normal audio | FST | Band I, (#5) Band III, (#6) | Band IV/V, (#7) | - | VHF (#10) | 24-hour FDP with tape remaining indication | AC line | 1-year/ 8-event timer | -  |
 |  HR-D300EA | 82040 | '88/01 | VHS PAL | 240 V~, 50/60 Hz 28 W | DA3 | 1 normal audio | VST | Band I, (#5) Band III, (#6) | Band IV/V, (#7) | - | VHF (#10) | 24-hour FDP with lap time counter indication | Crystal | 14-day/ 4-programme timer | -  |
 
-Note: #5 VHF band I: CH 0-5 (Australia) / CH 1-3 (New Zealand).
-#6 VHF band III: CH 5A-11 (Australia) / CH 4-11 (New Zealand).
-#7 UHF band IV/V: CH 28-69 (Australia) / CH 21-69 (New Zealand).
-#10 VHF channel 0 or 1 of the Australian channel system
-(Switchable, preset to channel 1 when shipped).
+Note:
 
-8-75 8-75
-
+- \#5 VHF band I: CH 0-5 (Australia) / CH 1-3 (New Zealand).
+- \#6 VHF band III: CH 5A-11 (Australia) / CH 4-11 (New Zealand).
+- \#7 UHF band IV/V: CH 28-69 (Australia) / CH 21-69 (New Zealand).
+- \#10 VHF channel 0 or 1 of the Australian channel system
+  (Switchable, preset to channel 1 when shipped).
 PAL(EA) PAL(EA)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement | Head Type | Audio Channel | Tuning System | CH Coverage : VHF | CH Coverage : SBF | CH Coverage : CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -2839,16 +2844,15 @@ PAL(EA) PAL(EA)
 |  HH-D830EA | 82159 | '90/01 | VHS PAL (SP/LP) Hi-Fi audio | 240 V~, 50/60 Hz 35 W | DA3 + 2A | 2 Hi-Fi audio 1 normal audio | PST | Band I, (*1) Band III, (*2) | Band IV/V, (*4) | - | VHF (*10) | 24-hour FDP with real time counter indication | Crystal | 1-year/ 8-programme timer | -  |
 |  HH-S5500EA | 82183 | '90/06 | S-VHS/VHS PAL (SP/LP) Hi-Fi audio | 240 V~, 50/60 Hz 46 W | DA4 + 2A + PE | 2 Hi-Fi audio 1 normal audio | PST | Band I, (*1) Band III, (*2) | Band IV/V, (*4) | - | VHF (*10) | 24-hour FDP with real time counter and tape remaining indication | Crystal | 1-year/ 8-programme timer | -  |
 
-Note: *1 VHF band I, channels 0 - 5.
-*2 VHF band III, channels 5A - 11.
-*5 VHF band I: CH 0-5 (Australia) / CH 1-3 (New Zealand).
-*6 VHF band III: CH 3A-11 (Australia) / CH 4-11 (New Zealand).
-*4 UHF band IV/V, channels 21 - 69.
-*7 UHF band IV/V: CH 28-69 (Australia) / CH 21-69 (New Zealand).
-*10 VHF channel 0 or 1 of the Australian channel system (Switchable, preset to channel 1 when shipped).
+Note:
 
-8-76 8-76
-
+- \*1 VHF band I, channels 0 - 5.
+- \*2 VHF band III, channels 5A - 11.
+- \*5 VHF band I: CH 0-5 (Australia) / CH 1-3 (New Zealand).
+- \*6 VHF band III: CH 3A-11 (Australia) / CH 4-11 (New Zealand).
+- \*4 UHF band IV/V, channels 21 - 69.
+- \*7 UHF band IV/V: CH 28-69 (Australia) / CH 21-69 (New Zealand).
+- \*10 VHF channel 0 or 1 of the Australian channel system (Switchable, preset to channel 1 when shipped).
 PAG(EB) PAG(EB)
 
 3. PAL (EB)
@@ -2864,21 +2868,21 @@ PAG(EB) PAG(EB)
 |  HR-D120EB | 8307 | '83/89 | VHS PAL | 220 V~, 50/60 Hz 30 W | 2HD | 1 normal audio | VST | Band I, (#7) Band III, (#8) | Band IV/V, (#4) | - | UHF (#9) | 24-hour FDP with lap time counter indication | AC line | 14-day/ 1-programme timer | -  |
 |  HR-D220EB | 8306 | '83/89 | VHS PAL | 220 V~, 50/60 Hz 32 W | 2HD | 1 normal audio | VST | Band I, (#7) Band III, (#8) | Band IV/V, (#4) | - | UHF (#9) | 24-hour FDP with day indication | Crystal | Within 2 weeks/ 8 programmes | -  |
 
-Note: #1 (to adjusted by your dealer)
-#2 VHF band I, Channels E2 - E4, S1 - S3, M1 (in Belgium)
+Note:
+
+- \#1 (to adjusted by your dealer)
+- \#2 VHF band I, Channels E2 - E4, S1 - S3, M1 (in Belgium)
+
 / Channels E2 - E4, X, Y, Z, S1 (in Switzerland).
-#3 VHF band III, Channels E5 - E12, M2 - M10, U1 - U9 (in Belgium)
+- \#3 VHF band III, Channels E5 - E12, M2 - M10, U1 - U9 (in Belgium)
 / Channels E5 - E12, S2 - S10, S11 - S19 (in Switzerland)
 / Channels D, E, F, G, H, H1, H2 (in Italy).
-#4 UHF band IV/V, 470 - 862 MHz, channels 21 - 69.
-#5 VHF band I, 47 - 89 MHz.
-#6 VHF band III, 104 - 300 MHz.
-#7 VHF band I, 47 - 118 MHz.
-#8 VHF band III, 118 - 300 MHz.
-#9 UHF channels 32 - 40 (adjustable).
-
-8-77 8-77
-
+- \#4 UHF band IV/V, 470 - 862 MHz, channels 21 - 69.
+- \#5 VHF band I, 47 - 89 MHz.
+- \#6 VHF band III, 104 - 300 MHz.
+- \#7 VHF band I, 47 - 118 MHz.
+- \#8 VHF band III, 118 - 300 MHz.
+- \#9 UHF channels 32 - 40 (adjustable).
 PAL(EB) PAL(EB)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :UHF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -2887,15 +2891,14 @@ PAL(EB) PAL(EB)
 |  HR-D725EB | 8356 | '84/06 | VHS PAL (SP/LP) Hi-Fi audio | 220 V~, 50/60 Hz 40 W (50 W with camera) | DA4 + 2A | 2 Hi-Fi audio 2 normal audio | VST | Hand I, (#7) Hand III, (#8) | Hand IV/V, (#4) | - | UHF (#9) | 24-hour FDP with tape remaining indication | Crystal | Within 2 weeks/ 8 programmes | -  |
 |  HR-D455EB | 8364 | '84/11 | VHS PAL (SP/LP) | 220 V~, 50/60 Hz 35 W | 4HD | 2 normal audio | VST | Hand I, (#10) Hand III, (#11) | Hand IV/V, (#4) | - | UHF (#9) | 24-hour FDP with lap time counter indication | Crystal | Within 2 weeks/ 8 programmes | -  |
 
-Note: #4 UHF band IV/V, 470 - 862 MHz. channels 21 - 69.
-#7 VHF band I, 47 - 118 MHz.
-#8 VHF band III, 118 - 300 MHz.
-#9 UHF channels 32 - 40 (adjustable).
-#10 VHF band I, 47 - 118 MHz (channels Belgium : E2 - E4 / S1 - S3 / M1 - M2, Switzerland : E2 - E4 / X / Y / Z / S1 - S2).
-#11 VHF band III, 118 - 300 MHz (channels Belgium : M3 - M10 / E5 - E12 / U1 / U10, Switzerland / West Germany : S3 - S10 / E5 - E12 / S11 / S20).
+Note:
 
-8-78 8-78
-
+- \#4 UHF band IV/V, 470 - 862 MHz. channels 21 - 69.
+- \#7 VHF band I, 47 - 118 MHz.
+- \#8 VHF band III, 118 - 300 MHz.
+- \#9 UHF channels 32 - 40 (adjustable).
+- \#10 VHF band I, 47 - 118 MHz (channels Belgium : E2 - E4 / S1 - S3 / M1 - M2, Switzerland : E2 - E4 / X / Y / Z / S1 - S2).
+- \#11 VHF band III, 118 - 300 MHz (channels Belgium : M3 - M10 / E5 - E12 / U1 / U10, Switzerland / West Germany : S3 - S10 / E5 - E12 / S11 / S20).
 PAL(EE) PAL(EE)
 
 4. PAL (EE)
@@ -2911,16 +2914,15 @@ PAL(EE) PAL(EE)
 |  HR-0321EE | 82089 | '89/04 | VHS PAL | 220 V~, 50/60 Hz 28 W | 2HD | 1 normal audio | VST | Band I, (*3) Band III, (*4) | Band IV/V, (*6) | - | UHF (*7) | 24-hour FDP with lap time counter indication | Crystal | 14-day/ 4-programme timer | -  |
 |  HR-0750EE | 82111 | '89/04 | VHS PAL (SP/LP) Hi-Fi audio | 220 V~, 50/60 Hz 35 W | DA3 + 2A | 2 Hi-Fi audio 1 normal audio | VST | Band I, (*5) Band III, (*4) | Band IV/V, (*6) | - | UHF (*7) | 24-hour FDP with real time counter indication | Crystal | Within one year/ 8 programmes | -  |
 
-Note: *1 VHF band I, 47 - 111 MHz.
-*2 VHF band III, 111 - 300 MHz.
-*3 VHF band I, 47 - 100 MHz.
-*4 VHF band III, 104 - 300 MHz.
-*5 VHF band I, 47 - 89 MHz.
-*6 UHF band IV/V, 470 - 862 MHz.
-*7 UHF channels 32 - 40 (adjustable).
+Note:
 
-8-79 8-79
-
+- \*1 VHF band I, 47 - 111 MHz.
+- \*2 VHF band III, 111 - 300 MHz.
+- \*3 VHF band I, 47 - 100 MHz.
+- \*4 VHF band III, 104 - 300 MHz.
+- \*5 VHF band I, 47 - 89 MHz.
+- \*6 UHF band IV/V, 470 - 862 MHz.
+- \*7 UHF channels 32 - 40 (adjustable).
 PAL(EE) PAL(EE)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage : VHF | CH Coverage : VHF | CH Coverage : CATV | Anrial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -2929,13 +2931,12 @@ PAL(EE) PAL(EE)
 |  HH-D521EE | 82147 | '89/11 | VHS PAL | 220 V~, 50/60 Hz 37 W | 2HD | 1 normal audio | VST | Band I, (*1) Band III, (*2) | Band IV/V, (*6) | - | UHF (*8) | 24-hour FDP with real time counter indication | Crystal | 1-year/8-programme timer | 60 min.  |
 |  HH-D525EE | 82171 | '90/04 | VHS PAL | 220 V~, 50/60 Hz 30 W | 2HD | 1 normal audio | VST | Band I, (*1) Band III, (*2) | Band IV/V, (*6) | - | UHF (*8) | 24-hour FDP with real time counter indication | Crystal | 1-year/8-programme timer | 60 min.  |
 
-Note: *1 VHF band I, 47 - 111 MHz.
-*2 VHF band III, 111 - 300 MHz.
-*6 UHF band IV/V, 470 - 867 MHz.
-*8 UHF channels 36 (adjustable 32 - 40).
+Note:
 
-8-80 8-80
-
+- \*1 VHF band I, 47 - 111 MHz.
+- \*2 VHF band III, 111 - 300 MHz.
+- \*6 UHF band IV/V, 470 - 867 MHz.
+- \*8 UHF channels 36 (adjustable 32 - 40).
 PAL(EG) PAL(EG)
 
 6. PAL (EG)
@@ -2951,18 +2952,17 @@ PAL(EG) PAL(EG)
 |  HR-7650EG | 8230 | '82 | VHS PAL | 110/127/220/240 V~ 50/60 Hz 50 W (65 W with camera) | 2BD | 2 normal audio | VST | Band 1, (#2) Band III, (#3) | Band IV/V, (#4) | - | UHF (#9) | 24-hour FDP with day indication | Crystal | Within 2 weeks/ 8-programmes | -  |
 |  HR-7655EG | 8262 | '83 | VHS PAL (SP/LP) | 110/127/220/240 V~ 50/60 Hz 50 W | 4BD | 2 normal audio | VST | Band 1, (#2) Band III, (#3) | Band IV/V, (#4) | - | UHF (#9) | 24-hour FDP with day indication | Crystal | Within 2 weeks/ 8-programmes | -  |
 
-Note: #1 (to be adjusted by your dealer).
-#2 VHF band I, channels 2 - 4.
-#3 VHF band III, channels, 5 - 12.
-#4 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
-#5 VHF channels 43 - 47 (adjustable).
-#6 VHF band I, 47 - 86 MHz.
-#7 VHF band III, 104 - 300 MHz.
-#8 UHF band IV/V, 470 - 862 MHz.
-#9 UHF channels 32 - 40 (adjustable).
+Note:
 
-8-81 8-81
-
+- \#1 (to be adjusted by your dealer).
+- \#2 VHF band I, channels 2 - 4.
+- \#3 VHF band III, channels, 5 - 12.
+- \#4 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
+- \#5 VHF channels 43 - 47 (adjustable).
+- \#6 VHF band I, 47 - 86 MHz.
+- \#7 VHF band III, 104 - 300 MHz.
+- \#8 UHF band IV/V, 470 - 862 MHz.
+- \#9 UHF channels 32 - 40 (adjustable).
 PAL(EG) PAL(EG)
 
 |  Model Name | MOL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage : VHF | CH Coverage : CRTV | CH Coverage : CCTV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -2976,17 +2976,19 @@ PAL(EG) PAL(EG)
 |  HR-D455EG | 8364 | '84/11 | VHS PAL (SP/LP) | 220 V~, 50/60 Hz 35 W | 4HD | 2 normal audio | VST | Band 1, (#15) Band 111, (#16) | Band 1V/V, (#4) | - | UHF (#9) | 24-hour FDP with lap time counter indication | Crystal | Within 2 weeks/ 8-programmes | -  |
 |  HR-S10EG/ TO-S10EG | 8370 | '84/11 | VHS PAL | 12 V DC/ 220 V~, 50/60 Hz 6 W/ 29W | 2HD | 1 normal audio | VST | Band 1, (#13) Band 111, (#14) | Band 1V/V, (#4) | - | UHF (#9) | 24-hour FDP with day indication | Crystal | Within 2 weeks/ 8-programmes | -  |
 
-Note: #2 VHF band 1, channels 2 - 4.
-#3 VHF band 111, channels, 5 - 12.
-#4 UHF band 1V/V, 470 - 862 MHz (channels 21 - 69).
-#9 UHF channel 32 - 40 (adjustable).
-#10 VHF band 1, channels E2 - E4 / S1 - S2 / S21 - S23.
-#11 VHF band 111, channels S3 - S10 / E5 - E12 / S11 - S20.
-#12 UHF band 1V/V, channels 21 - 69.
-#13 VHF band 1, 47 - 118 MHz.
-#14 VHF band 111, 118 - 300 MHz.
-#15 VHF band 1, 47 - 118 MHz (channels West Germany : E2 - E4 / S21 - S23 / S1 - S2).
-#16 VHF band 111, 118 - 300 MHz (channels Belgium : M0 - M10 / E5 - E12 / U1, - U10,
+Note:
+
+- \#2 VHF band 1, channels 2 - 4.
+- \#3 VHF band 111, channels, 5 - 12.
+- \#4 UHF band 1V/V, 470 - 862 MHz (channels 21 - 69).
+- \#9 UHF channel 32 - 40 (adjustable).
+- \#10 VHF band 1, channels E2 - E4 / S1 - S2 / S21 - S23.
+- \#11 VHF band 111, channels S3 - S10 / E5 - E12 / S11 - S20.
+- \#12 UHF band 1V/V, channels 21 - 69.
+- \#13 VHF band 1, 47 - 118 MHz.
+- \#14 VHF band 111, 118 - 300 MHz.
+- \#15 VHF band 1, 47 - 118 MHz (channels West Germany : E2 - E4 / S21 - S23 / S1 - S2).
+- \#16 VHF band 111, 118 - 300 MHz (channels Belgium : M0 - M10 / E5 - E12 / U1, - U10,
 
 Switzerland / West Germany : S3 - S10 / E5 - E12 / S11 - S20).
 
@@ -3001,17 +3003,16 @@ Switzerland / West Germany : S3 - S10 / E5 - E12 / S11 - S20).
 |  HR-D180EG | 8457 | '86/06 | VHS PAL (SP/LP) | 220 V~, 50/60 Hz 30 W | 4HD | 1 normal audio | FST | Band I. (#6) Band III. (#17) | Band IV/V. (#4) | - | UHF (#9) | 24-hour FDP with tape remaining indication | Crystal | 1-year/ 8-event timer | -  |
 |  HR-D170EG | 8451 | '86/06 | VHS PAL | 220 V~, 50/60 Hz 30 W | 2HD | 1 normal audio | FST | Band I. (#16) Band III. (#19) | Band IV/V. (#4) | - | UHF (#9) | 24-hour FDP with lap time counter indication | Crystal | 14-day/ 4-programme timer | -  |
 
-Note: #4 UHF band IV/V. 470 - 862 MHz (channels 21 - 69).
-#6 VHF band I. 47 - 89 MHz.
-#9 UHF channel 32 - 40 (adjustable).
-#13 VHF band I. 47 - 118 MHz.
-#14 VHF band III. 118 - 300 MHz.
-#17 VHF band III. 104 - 300 MHz / 302 - 470 MHz.
-#18 VHF band I. 47 - 69 MHz.
-#19 VHF band III. 104 - 470 MHz.
+Note:
 
-8-83 8-83
-
+- \#4 UHF band IV/V. 470 - 862 MHz (channels 21 - 69).
+- \#6 VHF band I. 47 - 89 MHz.
+- \#9 UHF channel 32 - 40 (adjustable).
+- \#13 VHF band I. 47 - 118 MHz.
+- \#14 VHF band III. 118 - 300 MHz.
+- \#17 VHF band III. 104 - 300 MHz / 302 - 470 MHz.
+- \#18 VHF band I. 47 - 69 MHz.
+- \#19 VHF band III. 104 - 470 MHz.
 PAL(EG) PAL(EG)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Read Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :CHF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -3025,13 +3026,12 @@ PAL(EG) PAL(EG)
 |  HR-D300EG | 82033 | '87/10 | VHS PAL | 220 V~, 50/80 Hz 28 W | DA3 | 1 normal audio | VST | Band I, (*6) Band III, (*20) | Band IV/V, (*4) | - | UHF (*9) | 24-hour FDP with lap time counter indication | Crystal | 14-day/ 4-programme timer | 10 sec.  |
 |  HR-D530EG | 82025 | '88/01 | VHS PAL Hi-Fi audio | 220 V~, 50/80 Hz 41 W | DA4 + 2A | 2 Hi-Fi audio 1 normal audio | PST | Band I, (*6) Band III, (*20) | Band IV/V, (*4) | - | UHF (*9) | 24-hour FDP with real time counter indication | Crystal | Within one year/ 8-programmes | -  |
 
-Note: *6 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
-*6 VHF band I, 47 - 89 MHz.
-*9 UHF channel 32 - 40 (adjustable).
-*20 VHF band III, 104 - 300 MHz / 302 - 470 MHz.
+Note:
 
-8-84 8-84
-
+- \*6 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
+- \*6 VHF band I, 47 - 89 MHz.
+- \*9 UHF channel 32 - 40 (adjustable).
+- \*20 VHF band III, 104 - 300 MHz / 302 - 470 MHz.
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :CHV | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HR-D320EG | 82046 | '88/03 | VHS PAL | 220 V~, 50/60 Hz 28 W | 2HD | 1 normal audio | VST | Band 1, (#4) Band III, (#20) | Band IV/V, (#4) | - | UHF (#9) | 24-hour FDP with real time counter indication | AC line | 14-day/ 4-programme timer | Minimum 3 min.  |
@@ -3043,15 +3043,14 @@ Note: *6 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
 |  HR-D520EG | 82105 | '89/03 | VHS PAL | 220 V~, 50/60 Hz 43 W | 2HD | 1 normal audio | FST | Band 1, (#21) Band III, (#22) | Band IV/V, (#4) | - | UHF (#9) | 24-hour FDP with real time counter indication | AC line | 1-year/ 8-programme timer | 3 - 5 min.  |
 |  HR-D620EG | 82113 | '89/06 | VHS PAL | 220 V~, 50/60 Hz 45 W | DA3 | 1 normal audio | FST | Band 1, (#21) Band III, (#22) | Band IV/V, (#4) | - | UHF (#9) | 24-hour FDP with real time counter indication | Crystal | 1-year/ 8-programme timer | 3 - 5 min.  |
 
-Note: #4 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
-#6 VHF band I, 47 - 89 MHz.
-#9 UHF channel 32 - 40 (adjustable).
-#20 VHF band III, 104 - 300 MHz / 302 - 470 MHz.
-#21 VHF band I, 47 - 111 MHz.
-#22 VHF band III, 111 - 300 MHz.
+Note:
 
-8-85 8-85
-
+- \#4 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
+- \#6 VHF band I, 47 - 89 MHz.
+- \#9 UHF channel 32 - 40 (adjustable).
+- \#20 VHF band III, 104 - 300 MHz / 302 - 470 MHz.
+- \#21 VHF band I, 47 - 111 MHz.
+- \#22 VHF band III, 111 - 300 MHz.
 PAL(EG) PAL(EG)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :CHF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -3065,10 +3064,13 @@ PAL(EG) PAL(EG)
 |  HR-D980EG | 82197 | '90/08 | VHS PAL Hi-Fi audio | 220 V~, 50/80 Hz 32 W | DA4 + 2A + FE | 2 Hi-Fi audio 1 normal audio | FST | Band I, (#21) Band III, (#22) | Band IV/V, (#4) | - | UHF (#9) | 24-hour FDP with real time counter and tape remaining indication | Crystal | 1-year/ 8-programme timer | Minimum 3 min.  |
 |  HR-PC100EG | 82196 | '90/09 | VHS PAL | 220 V~, 50/80 Hz 30 W | DA4 | 1 normal audio | FST | Band I, (#21) Band III, (#22) | Band IV/V, (#4) | - | UHF (#9) | 24-hour FDP with real time counter and tape remaining indication | Crystal | 1-year/ 8-programme timer | Minimum 3 min.  |
 
-Note: #4 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
-#9 UHF channel 32 - 40 (adjustable).
-#21 VHF band I, 47 - 111 MHz.
-#22 VHF band III, 111 - 300 MHz.
+Note:
+
+- \#4 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
+- \#9 UHF channel 32 - 40 (adjustable).
+- \#21 VHF band I, 47 - 111 MHz.
+- \#22 VHF band III, 111 - 300 MHz.
+
 PAL(EN) PAL(EN)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Read Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :CHV | Serial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -3080,17 +3082,16 @@ PAL(EN) PAL(EN)
 |  HR-S5000EH | 82087 | '88/11 | S-VHS/VHS PAL (SP/LP) Hi-Fi audio | 220 V~ 50/60 Hz 25 W | D44 + 2A + FE | 2 Hi-Fi audio 1 normal audio | FST | Band I, (#2) Band III, (#3) | Band IV/V, (#6) | - | UHF (#7) | 24-hour FDP with real time counter and tape remaining indication | Crystal | Within one year / 8 programmes  |
 |  HR-S5500EH | 82149 | '89/11 | S-VHS/VHS PAL (SP/LP) Hi-Fi audio | 110/220 V~ 50/60 Hz 28 W | D44 + 2A + FE | 2 Hi-Fi audio 1 normal audio | FST | Band I, (#4) Band III, (#5) | Band IV/V, (#6) | - | UHF (#8) | 24-hour FDP with real time counter and tape remaining indication | Crystal | 1-year / 8 programme timer  |
 
-Note: #1 (to be adjusted by your dealer)
-#2 VHF band I, 44 - 89 MHz.
-#3 VHF band III, 104 - 300 MHz, 302 - 470 MHz.
-#4 VHF band I, 44 - 115 MHz.
-#5 VHF band III, 111 - 300 MHz, 302 - 470 MHz.
-#6 UHF band IV/V, 470 - 882 MHz.
-#7 UHF channels 32 - 40 (adjustable).
-#8 UHF channels 36 (adjustable 32 - 40).
+Note:
 
-8-87 8-87
-
+- \#1 (to be adjusted by your dealer)
+- \#2 VHF band I, 44 - 89 MHz.
+- \#3 VHF band III, 104 - 300 MHz, 302 - 470 MHz.
+- \#4 VHF band I, 44 - 115 MHz.
+- \#5 VHF band III, 111 - 300 MHz, 302 - 470 MHz.
+- \#6 UHF band IV/V, 470 - 882 MHz.
+- \#7 UHF channels 32 - 40 (adjustable).
+- \#8 UHF channels 36 (adjustable 32 - 40).
 PAL (EK) PAL (EK)
 
 7. PAL (EK)
@@ -3106,14 +3107,13 @@ PAL (EK) PAL (EK)
 |  HR-7300EK | 8204 | '82 | VHS PAL | 220/240 V~ 50/60 Hz 40 W | 2HD | 1 normal audio | Pre-set | - | Band IV/V, (#2) | - | UHF (#4) | - | - | 14-day/ 8-programme timer | -  |
 |  HR-7350EK | 8249 | '82 | VHS PAL | 220/240 V~ 50/60 Hz 40 W | 2HD | 2 normal audio | Pre-set | - | Band IV/V, (#2) | - | UHF (#4) | - | - | 14-day/ 8-programme timer | -  |
 
-Note: #1 (to be adjusted by your dealer)
-#2 UHF band IV/V, 470 - 882 MHz (channels 21 - 69).
-#3 UHF channels 43 - 47 (adjustable).
-#4 UHF channels 32 - 40 (adjustable, preset to UHF channel 36 when shipped).
-#5 UHF channels 36 - 40 (adjustable, preset to UHF channel 36 when shipped).
+Note:
 
-8-88 8-88
-
+- \#1 (to be adjusted by your dealer)
+- \#2 UHF band IV/V, 470 - 882 MHz (channels 21 - 69).
+- \#3 UHF channels 43 - 47 (adjustable).
+- \#4 UHF channels 32 - 40 (adjustable, preset to UHF channel 36 when shipped).
+- \#5 UHF channels 36 - 40 (adjustable, preset to UHF channel 36 when shipped).
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Bead Type | Audio Channel | Tuning System | CH Coverage : VHF | CH Coverage : UHF | CH Coverage : CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HR-7650EX | 8233 | '82 | VHS PAL | 220/240 V~ 50/60 Hz 50 W (16 W with camera) | 2HD | 2 normal audio | VST | - | Hand IV/V, (#2) | - | UHF (#4) | 24-hour PDP with day indication | Crystal | Within 2 weeks/ 8 programmes | -  |
@@ -3125,10 +3125,13 @@ Note: #1 (to be adjusted by your dealer)
 |  HR-D725EX | 8356 | '84/06 | VHS PAL (SP/LP) Hi-Fi audio | 240 V~, 50/60 Hz 40 W (50 W with camera) | DA4 + 2A | 2 Hi-Fi audio 2 normal audio | VST | - | Hand IV/V, (#2) | - | UHF (#4) | 24-hour PDP with tape remaining indication | Crystal | Within 2 weeks/ 8 programmes | -  |
 |  HR-S10EX/ TU-S10EX | 8370 | '84/11 | VHS PAL | 12 V DC / 240 V~ 50/60 Hz 6 W / 25 W (16 W with camera) | 2HD | 1 normal audio | VST | - | Hand IV/V, (#2) | - | UHF (#5) | 24-hour PDP indication | Crystal | Within 2 weeks/ 8 programmes | -  |
 
-Note: #2 UHF hand IV/V, 470 - 882 MHz (channels 21 - 69).
-#3 UHF channels 43 - 47 (adjustable).
-#4 UHF channels 32 - 40 (adjustable, preset to UHF channel 36 when shipped).
-#5 UHF channels 38 - 40 (adjustable, preset to UHF channel 36 when shipped).
+Note:
+
+- \#2 UHF hand IV/V, 470 - 882 MHz (channels 21 - 69).
+- \#3 UHF channels 43 - 47 (adjustable).
+- \#4 UHF channels 32 - 40 (adjustable, preset to UHF channel 36 when shipped).
+- \#5 UHF channels 38 - 40 (adjustable, preset to UHF channel 36 when shipped).
+
 PAL (EK) PAL (EK)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :URF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -3142,13 +3145,12 @@ PAL (EK) PAL (EK)
 |  HR-D180EK | 8457 | '86/06 | VHS PAL (SP/LP) | 240 V~, 50/60 Hz 33 W | 4HD | 1 normal audio | FST | - | Band IV/V, (#2) | - | UHF (#4) | 24-hour FDP with tape remaining indication | Crystal | 1-year/ 8-event timer | 60 min.  |
 |  HR-D370EK | 8460 | '86/08 | VHS PAL (SP/LP) Hi-Fi audio | 240 V~, 50/60 Hz 36 W | 2HD + 2A | 2 Hi-Fi audio 1 normal audio | FST | - | Band IV/V, (#2) | - | UHF (#4) | 24-hour FDP with tape remaining indication | Crystal | Within one year/ 8 programmes | 60 min.  |
 
-Note: #2 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
-#3 UHF channels 43 - 47 (adjustable).
-#4 UHF channels 32 - 40 (adjustable, preset to UHF channel 36 when shipped).
-#5 UHF channels 36 - 40 (adjustable, preset to UHF channel 36 when shipped).
+Note:
 
-8-90 8-90
-
+- \#2 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
+- \#3 UHF channels 43 - 47 (adjustable).
+- \#4 UHF channels 32 - 40 (adjustable, preset to UHF channel 36 when shipped).
+- \#5 UHF channels 36 - 40 (adjustable, preset to UHF channel 36 when shipped).
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Read Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :CATV | CH Coverage :CCTV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HR-D470EK | 8465 | '86/09 | VHS PAL
@@ -3194,13 +3196,12 @@ with lap time counter indication | AC line | 14-day/
 with lap time counter indication | AC line | 14-day/
 4-programme timer | Minimum 3 min.  |
 
-Note: #2 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
-#3 UHF channels 43 - 47 (adjustable).
-#4 UHF channels 32 - 40 (adjustable, preset to UHF channel 36 when shipped).
-#5 UHF channels 36 - 40 (adjustable, preset to UHF channel 36 when shipped).
+Note:
 
-8-91 8-91
-
+- \#2 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
+- \#3 UHF channels 43 - 47 (adjustable).
+- \#4 UHF channels 32 - 40 (adjustable, preset to UHF channel 36 when shipped).
+- \#5 UHF channels 36 - 40 (adjustable, preset to UHF channel 36 when shipped).
 PAL (EK) PAL (EK)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Read Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :GHF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -3214,13 +3215,12 @@ PAL (EK) PAL (EK)
 |  HR-D620EK | 82121 | '89/07 | VHS PAL | 240 V~, 50/60 Hz 45 W | DA3 | 1 normal audio | PST | - | Band IV/V, (#2) | - | UHF (#4) | 24-hour FDP with real time counter indication | Crystal | 1-year/ 8-programme timer | 3 - 5 min.  |
 |  HR-D830EK | 82131 | '89/08 | VHS PAL (SP/LP) Hi-Fi audio | 240 V~, 50/60 Hz 33 W | DA3 + 2A | 2 Hi-Fi audio 1 normal audio | PST | - | Band IV/V, (#2) | - | UHF (#4) | 24-hour FDP with real time counter indication | Crystal | 1-year/ 8-programme timer | Minimum 3 min.  |
 
-Note: #2 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
-#3 UHF channels 43 - 47 (adjustable).
-#4 UHF channels 32 - 40 (adjustable, preset to UHF channel 36 when shipped).
-#5 UHF channels 36 - 40 (adjustable, preset to UHF channel 36 when shipped).
+Note:
 
-8-92 8-92
-
+- \#2 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
+- \#3 UHF channels 43 - 47 (adjustable).
+- \#4 UHF channels 32 - 40 (adjustable, preset to UHF channel 36 when shipped).
+- \#5 UHF channels 36 - 40 (adjustable, preset to UHF channel 36 when shipped).
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CB Coverage :VHF | CB Coverage :UHF | CB Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HR-55500EX | 82142 | '89/10 | S-VES/VHS PAL (SP/LP) Bi-Fi audio | 240 V~, 50/60 Hz 44 W | DA4 + 2A + PE | 2 Bi-Fi audio 1 normal audio | PST | - | Band IV/V, (#2) | - | UHF (#4) | 24-hour PDP with real time counter and tape remaining indication | Crystal | 1-year/ 8 programme timer | Minimum 3 min.  |
@@ -3230,13 +3230,12 @@ Note: #2 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
 |  HR-D580EX | 82178 | '90/05 | VHS PAL | 240 V~, 50/60 Hz 27 W | DA2 | 1 normal audio | PST | - | Band IV/V, (#2) | - | UHF (#4) | 24-hour PDP with real time counter and tape remaining indication | Crystal | 1-year/ 8-programme timer | Minimum 3 min.  |
 |  HR-D660EX | 82192 | '90/06 | VHS PAL | 240 V~, 50/60 Hz 32 W | DA3 + 2A | 2 Bi-Fi audio 1 normal audio | PST | - | Band IV/V, (#2) | - | UHF (#4) | 24-hour PDP with real time counter and tape remaining indication | Crystal | 1-year/ 8-programme timer | Minimum 3 min.  |
 
-Note: #2 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
-#3 UHF channels 43 - 47 (adjustable).
-#4 UHF channels 32 - 40 (adjustable, preset to UHF channel 36 when shipped).
-#5 UHF channels 36 - 40 (adjustable, preset to UHF channel 36 when shipped).
+Note:
 
-8-93 8-93
-
+- \#2 UHF band IV/V, 470 - 862 MHz (channels 21 - 69).
+- \#3 UHF channels 43 - 47 (adjustable).
+- \#4 UHF channels 32 - 40 (adjustable, preset to UHF channel 36 when shipped).
+- \#5 UHF channels 36 - 40 (adjustable, preset to UHF channel 36 when shipped).
 PAL(EM) PAL(EM)
 
 8. PAL (EM)
@@ -3252,30 +3251,32 @@ PAL(EM) PAL(EM)
 |  HR-D211EM | 82030 | '87/10 | VHS PAL | 110/127/220/240 V~ 50/80 Hz 28 W | 2HD | 1 normal audio | VST | Band I, (*1) Band III, (*2) | Band IV/V, (*3) | - | UHF (*9) | 24-hour FDP with tape remaining indication | AC line | 14-day / 1-programme timer | -  |
 |  HR-D300EM | 82041 | '88/01 | VHS PAL | 110/127/220/240 V~ 50/80 Hz 28 W | DAS | 1 normal audio | VST | Band I, (*4) Band III, (*5) | Band IV/V, (*6) | - | UHF (*10) | 24-hour FDP with tape remaining indication | AC line | 14-day / 1-programme timer | -  |
 
-Note: *1 VHF band I, channels 2 - 4.
-*2 VHF band III, channels 5 - 12.
-*3 UHF band IV/V, channels 21 - 68.
-*4 VHF band I, channels E2 - E4.
-*5 VHF band III, channels E5 - E12.
-*6 UHF band IV/V, channels E21 - E69.
-*9 UHF channels 32 - 40 (adjustable).
-*10 UHF channels 32 - 40 (adjustable). System G or I (switchable).
+Note:
 
-8-94 8-94
-
+- \*1 VHF band I, channels 2 - 4.
+- \*2 VHF band III, channels 5 - 12.
+- \*3 UHF band IV/V, channels 21 - 68.
+- \*4 VHF band I, channels E2 - E4.
+- \*5 VHF band III, channels E5 - E12.
+- \*6 UHF band IV/V, channels E21 - E69.
+- \*9 UHF channels 32 - 40 (adjustable).
+- \*10 UHF channels 32 - 40 (adjustable). System G or I (switchable).
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :CATV | CH Coverage :CEV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HH-D321EM | 82083 | '88/10 | VHS PAL | 110/127/220/240 V~ 50/60 Hz 28 W | 2HD | 1 normal audio | VST | Band I, (#4) Band III, (#5) | Band IV/V, (#6) | - | UHF (#10) | 24-hour PDP with lap time counter indication | AC line | 18-day / 4-programme timer | -  |
 |  HH-D521EM | 82135 | '89/10 | VHS PAL | 110/127/220/240 V~ 50/60 Hz 30 W | 2HD | 1 normal audio | PST | Band, (#7) | Band, (#8) | - | UHF (#11) | 24-hour PDP with real time counter indication | Crystal | 1-year / 8-programme timer | -  |
 |  HH-D600EM | 82152 | '89/11 | VHS PAL | 110/127/220/240 V~ 50/60 Hz 33 W | DA3 | 1 normal audio | PST | Band, (#7) | Band, (#8) | - | UHF (#11) | 24-hour PDP with real time counter and tape remaining indication | Crystal | 1-year / 8-programme timer | -  |
 
-Note: #4 VHF band I, channels E2 - E4.
-#5 VHF band III, channels E5 - E12.
-#6 UHF band IV/V, channels E21 - E69.
-#7 VHF band, 47 - 68 MHz : CH E2 - E4 / 162 - 230 MHz : CH E5 - E12 / CH M4 - M10 (Morocco).
-#8 UHF band, 470 - 882 MHz; channels E21 - E69.
-#10 UHF channels 32 - 40 (adjustable). System G or I (switchable).
-#11 UHF channels 36 (adjustable 32 - 40). System G or I (switchable).
+Note:
+
+- \#4 VHF band I, channels E2 - E4.
+- \#5 VHF band III, channels E5 - E12.
+- \#6 UHF band IV/V, channels E21 - E69.
+- \#7 VHF band, 47 - 68 MHz : CH E2 - E4 / 162 - 230 MHz : CH E5 - E12 / CH M4 - M10 (Morocco).
+- \#8 UHF band, 470 - 882 MHz; channels E21 - E69.
+- \#10 UHF channels 32 - 40 (adjustable). System G or I (switchable).
+- \#11 UHF channels 36 (adjustable 32 - 40). System G or I (switchable).
+
 PAL(ER) PAL(ER)
 
 9. PAL (ER)
@@ -3287,14 +3288,13 @@ PAL(ER) PAL(ER)
 |  HR-7700ER | 8200 | '81 | VHS PAL | 110/127/220/240 V~ 50/60Hz (*1) 55 W (70 W with camera) | 2HD | 1 normal audio | Pre-set | Band I, (*2) Band III, (*3) | Band U, (*4) | - | UHF (*5) | 24-hour FDP with day indication | AC line | Within 2 weeks / 8 programmes | -  |
 |  HR-7200ER | 8219 | '82 | VHS PAL | 220/240 V~ 50/60Hz | 2HD | 1 normal audio | Pre-set | Band I, (*2) Band III, (*3) | Band U, (*4) | - | UHF (*5) | - | AC line | 10-day / 1-programme timer | -  |
 
-Note: *1 (to be adjusted by your dealer)
-*2 VHF channels A, B, C.
-*3 VHF channels D, E, F, G, H, J.
-*4 UHF channels 21 - 69.
-*5 UHF channels 32 - 40 (adjustable).
+Note:
 
-8-96 8-96
-
+- \*1 (to be adjusted by your dealer)
+- \*2 VHF channels A, B, C.
+- \*3 VHF channels D, E, F, G, H, J.
+- \*4 UHF channels 21 - 69.
+- \*5 UHF channels 32 - 40 (adjustable).
 10. PAL (ES)
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CB Coverage :VHF | CB Coverage :UHF | CB Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -3308,18 +3308,17 @@ Note: *1 (to be adjusted by your dealer)
 |  HH-D120ES | 8317 | '84/09 | VHS PAL | 220/240 V~ 50/60 Hz 30 W | 2HD | 1 normal audio | VST | Hand I, (#5) Band III, (#6) | Band IV/V, (#7) | - | UHF (#10) | 24-hour FDP with tape remaining indication | AC line | 14-day / 1-programme timer | -  |
 |  HH-D725ES | 8368 | '84/12 | VHS PAL (SP/LP) Hi-Fi audio | 220/240 V~ 50/60 Hz 40 W (50 W with camera) | D44 + 24 | 2 Hi-Fi audio 2 normal audio | VST | Hand I, (#5) Band III, (#6) | Band IV/V, (#7) | - | UHF (#10) | 24-hour FDP with tape remaining indication | Crystal | Within 2 weeks / 8 programmes | -  |
 
-Note: #1 (to be adjusted by your dealer)
-#2 (included thermal heater activates below 20°C, 68°F approx.)
-#3 VHF band III, channels 4 - 13.
-#4 UHF band IV/V, channels 21 - 68.
-#5 VHF band I, channels A - C (Ireland).
-#6 VHF band III, channels D - J (Ireland) / 4 - 13 (Republic of South Africa).
-#7 UHF band IV/V, channels 21 - 68.
-#8 UHF channels 34 - 38 (adjustable).
-#10 UHF channels 32 - 40 (adjustable).
+Note:
 
-8-97 8-97
-
+- \#1 (to be adjusted by your dealer)
+- \#2 (included thermal heater activates below 20°C, 68°F approx.)
+- \#3 VHF band III, channels 4 - 13.
+- \#4 UHF band IV/V, channels 21 - 68.
+- \#5 VHF band I, channels A - C (Ireland).
+- \#6 VHF band III, channels D - J (Ireland) / 4 - 13 (Republic of South Africa).
+- \#7 UHF band IV/V, channels 21 - 68.
+- \#8 UHF channels 34 - 38 (adjustable).
+- \#10 UHF channels 32 - 40 (adjustable).
 PAGES/PAGES
 
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CB Coverage :VHF | CB Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -3333,27 +3332,25 @@ PAGES/PAGES
 |  HH-D320ES | 82080 | '88/09 | VHS PAL | 110/127/220/240 V~ 50/60 Hz 28 W | 2HD | 1 normal audio | VST | Band 1, (*5) Band 111, (*6) | Band IV/V, (*7) | - | UHF (*10) | 24-hour FDP with tape remaining indication | AC line | 14-day / 4-programme timer  |
 |  HH-D400ES | 82084 | '88/10 | VHS PAL (SP/LP) Hi-Fi audio | 110/127/220/240 V~ 50/60 Hz 28 W | DA3 | 1 normal audio | - | Band 1, (*5) Band 111, (*6) | Band IV/V, (*8) | - | UHF (*10) | 24-hour FDP with tape remaining indication | AC line | 14-day / 4-programme timer  |
 
-Note: *5 VHF band 1, channels A - C (Ireland).
-*6 VHF band 111, channels D - J (Ireland) / 4 - 13 (Republic of South Africa).
-*7 UHF band IV/V, channels 21 - 69.
-*8 UHF band IV/V, channels 21 - 69 (Hong Kong, Ireland, Republic of South Africa).
-*10 UHF channels 32 - 40 (adjustable).
+Note:
 
-8-98 8-98
-
+- \*5 VHF band 1, channels A - C (Ireland).
+- \*6 VHF band 111, channels D - J (Ireland) / 4 - 13 (Republic of South Africa).
+- \*7 UHF band IV/V, channels 21 - 69.
+- \*8 UHF band IV/V, channels 21 - 69 (Hong Kong, Ireland, Republic of South Africa).
+- \*10 UHF channels 32 - 40 (adjustable).
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CB Coverage :VHF | CB Coverage :URF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HR-0620ES | 82138 | '89/06 | VHS PAL | 110/127/220/240 V~ 50/60 Hz 33 W | 2HD | 1 normal audio | FST | Band I, (#5) Band III, (#6) | Band IV/V, (#8) | - | URF (#11) | 24-hour FDF with real time counter indication | AC line | 1-year / 8-programme timer | -  |
 |  HR-0520 BS(1) | 82153 | '89/11 | VHS PAL | 110/127/220/240 V~ 50/60 Hz 33 W | 2HD | 1 normal audio | FST | Band I, (#5) Band III, (#6) | Band IV/V, (#8) | - | URF (#11) | 24-hour FDF with real time counter indication | AC line | 1-year / 8-programme timer | -  |
 |  HR-0610ES | 82161 | '90/04 | VHS PAL (SP/LP) | 110/127/220/240 V~ 50/60 Hz 30 W | 4HD | 1 normal audio | VST | Band I, (#5) Band III, (#6) | Band IV/V, (#8) | - | URF (#11) | 24-hour FDF with real time counter and tape remaining indication | AC line | 1-year / 8-programme timer | -  |
 
-Note: #5 VHF band I, channels A - C (Ireland).
-#6 VHF band III, channels D - J (Ireland) / 4 - 13 (Republic of South Africa).
-#8 UHF band IV/V, channels 21 - 69 (Hong Kong, Ireland, Republic of South Africa).
-#11 UHF channels 26 (adjustable 32 - 40).
+Note:
 
-8-99 8-99
-
+- \#5 VHF band I, channels A - C (Ireland).
+- \#6 VHF band III, channels D - J (Ireland) / 4 - 13 (Republic of South Africa).
+- \#8 UHF band IV/V, channels 21 - 69 (Hong Kong, Ireland, Republic of South Africa).
+- \#11 UHF channels 26 (adjustable 32 - 40).
 PAL(A) PAL(A)
 
 11. PAL (A/A (DK))
@@ -3369,13 +3366,12 @@ PAL(A) PAL(A)
 |  HR-D171A | 8466 | '86/08 | VHS PAL | 110/127/220/240 V~ 50/60 Hz 30 w | 2HD | 1 normal audio | PST | Band I, (#1) Band III, (#2) | Band IV/V, (#3) | - | UHF (#4) | 24-hour FDP with tape remaining indication | Crystal | Within one year / 4 programmes | -  |
 |  HR-D180A | 8487 | '86/10 | VHS PAL (SP/LP) | 110/127/220/240 V~ 50/60 Hz 30 w | 4HD | 1 normal audio | PST | Band I, (#1) Band III, (#2) | Band IV/V, (#3) | - | UHF (#4) | 24-hour FDP with tape remaining indication | Crystal | 14-day / 4-programme timer | -  |
 
-Note: #1 VHF band I, channels 2 - 4.
-#2 VHF band III, channels 5 - 12.
-#3 UHF band IV/V, channels 21 - 69.
-#4 UHF channels 32 - 40 (adjustable).
+Note:
 
-8-100 8-100
-
+- \#1 VHF band I, channels 2 - 4.
+- \#2 VHF band III, channels 5 - 12.
+- \#3 UHF band IV/V, channels 21 - 69.
+- \#4 UHF channels 32 - 40 (adjustable).
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :DRF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HR-D370A | 8482 | '86/11 | VHS PAL (SP/LP) Hi-Fi audio | 240 V~, 50/60 Hz 30 W | 2HD + 2A | 2 Hi-Fi audio 1 normal audio | FST | Band 1, (#5) Band III, (#6) | Band IV/V, (#7) | - | UHF (#8) | 24-hour FDP with tape remaining indication | Crystal | Within one year / 8 programmes | 60 min.  |
@@ -3383,16 +3379,19 @@ Note: #1 VHF band I, channels 2 - 4.
 |  HR-D522 A(DK) | 82176 | '90/04 | VHS PAL | 220 V~, 50/60 Hz 30 W | 2HD | 1 normal audio | VST | Band 1, (#12) Band III, (#13) | Band IV/V, (#14) | - | UHF (#11) | 24-hour FDP with real time counter indication | Crystal | 1-year / 8-programme timer | 60 min.  |
 |  HR-D1540A | 82212 | '90/09 | VHS PAL | 110 - 240 V~ 50/60 Hz 21 W | 2HD | 1 normal audio | FST | Band, (#9) | Band, (#10) | - | UHF (#11) | 24-hour FDP with real time counter and tape remaining indication | Crystal | 1-year / 8-programme timer | -  |
 
-Note: #5 VHF band 1, CH 0 - 5 (Australia) / CH 1 - 3 (New Zealand).
-#6 VHF band III, CH 5A - 11 (Australia) / CH 4 - 11 (New Zealand).
-#7 UHF band IV/V, CH 28 - 69 (Australia) / CH 21 - 69 (New Zealand).
-#8 UHF channel 0 or 1 of the Australian channel system (switchable, preset to channel 1 when shipped).
-#9 VHF band, 47 - 68 MHz : CH E2 - E4 / 162 - 230 MHz : CH D5 - E12 , CH M4 - M10 (Morocco).
-#10 UHF band, 470 - 862 MHz : CH E21 - E69.
-#11 UHF channels 36 (adjustable 32 - 40) system G or I (switchable).
-#12 VHF band 1, 47 - 111 MHz.
-#13 VHF band III, 111 - 300 MHz.
-#14 UHF band IV/V, 470 - 862 MHz.
+Note:
+
+- \#5 VHF band 1, CH 0 - 5 (Australia) / CH 1 - 3 (New Zealand).
+- \#6 VHF band III, CH 5A - 11 (Australia) / CH 4 - 11 (New Zealand).
+- \#7 UHF band IV/V, CH 28 - 69 (Australia) / CH 21 - 69 (New Zealand).
+- \#8 UHF channel 0 or 1 of the Australian channel system (switchable, preset to channel 1 when shipped).
+- \#9 VHF band, 47 - 68 MHz : CH E2 - E4 / 162 - 230 MHz : CH D5 - E12 , CH M4 - M10 (Morocco).
+- \#10 UHF band, 470 - 862 MHz : CH E21 - E69.
+- \#11 UHF channels 36 (adjustable 32 - 40) system G or I (switchable).
+- \#12 VHF band 1, 47 - 111 MHz.
+- \#13 VHF band III, 111 - 300 MHz.
+- \#14 UHF band IV/V, 470 - 862 MHz.
+
 N-PAL/M-PAL N-PAL/M-PAL
 
 8.3.5 N-PAL/M-PAL model
@@ -3408,14 +3407,13 @@ N-PAL/M-PAL N-PAL/M-PAL
 |  HR-D441EN | 82118 | '88/07 | VHS N-PAL (SP/LP) | 220 V~ 50/80 Hz 28 W | DA4 | 1 normal audio | PST | CH (#2) | CH (#3) | - | VHF (#5) | 24-hour FDP with real time counter indication | AC line | 14-day / 4-programme timer | 10 sec.  |
 |  HR-D641M | 82151 | '88/12 | VHS M-PAL (SP/EP) | 110 - 220 V~ 50/80 Hz 18 W | DA4 | 1 normal audio | PST | CH (#2) | CH (#4) | - | VHF (#5) | 12-hour (AM/PM) FDP with real time counter indication | Crystal | 14-day / 4-event timer | 10 sec.  |
 
-Note: #1 (to be adjusted by your dealer)
-#2 VHF channels 2 - 13.
-#3 UHF channels 14 - 82.
-#4 UHF channels 14 - 89.
-#5 VHF channels 3 or 4 (switchable; preset to channel 2 when shipped) 75 ohms, unbalanced.
+Note:
 
-8-102 8-102
-
+- \#1 (to be adjusted by your dealer)
+- \#2 VHF channels 2 - 13.
+- \#3 UHF channels 14 - 82.
+- \#4 UHF channels 14 - 89.
+- \#5 VHF channels 3 or 4 (switchable; preset to channel 2 when shipped) 75 ohms, unbalanced.
 #### 3.3.6 SECAM model
 
 ##### 1. SECAM (S)
@@ -3431,17 +3429,16 @@ Note: #1 (to be adjusted by your dealer)
 |  HR-D225S | 8339 | '84/02 | VHS SECAM | 220 V~, 50/60Hz 35 W | 2HD | 2 normal audio | VST | Band I, (*9) Band III, (*10) | Band IV/V, (*4) | - | URF (*11) | 24-hour FDP with lap time counter indication | Crystal | Within 2 weeks/8 programmes | -  |
 |  HR-D725S | 8365 | '84/10 | VHS SECAM Bi-Fi audio | 220 V~, 50/60Hz 40 W (50 W with camera) | DA4 + 2A | 2 Bi-Fi audio 2 normal audio | VST | Band I, (*9) Band III, (*10) | Band IV/V, (*4) | - | URF (*11) | 24-hour FDP with tape remaining indication | Crystal | Within 2 weeks/8-programmes | -  |
 
-Note: *1 (to be adjusted by your dealer)
-*3 VHF band III, channels B6 - B12 / E'4 - E'9
-*4 UHF band IV/V, channels 21 - 69
-*9 VHF band I, channels A, B, C1, C
-*10 VHF band III, channels 1 - 8
-*11 UHF channels 32 - 40 (adjustable)
-*12 UHF channels 43 - 47 (adjustable)
-*13 UHF channels 34 - 38 (adjustable)
+Note:
 
-8-103 8-103
-
+- \*1 (to be adjusted by your dealer)
+- \*3 VHF band III, channels B6 - B12 / E'4 - E'9
+- \*4 UHF band IV/V, channels 21 - 69
+- \*9 VHF band I, channels A, B, C1, C
+- \*10 VHF band III, channels 1 - 8
+- \*11 UHF channels 32 - 40 (adjustable)
+- \*12 UHF channels 43 - 47 (adjustable)
+- \*13 UHF channels 34 - 38 (adjustable)
 SECRET
 DECLASSIFIED
 Authority NND 39211
@@ -3457,16 +3454,15 @@ Authority NND 39211
 |  HR-D565S | 8430 | '85/12 | VHS SECAM Hi-Fi audio | 220 V~, 50/60Hz 40 W | 2HD + 2A | 2 Hi-Fi audio 1 normal audio | VST | Band I, (#14) Band III, (#15) | Band IV/V, (#4) | - | UHF (#11) | 24-hour FDP with tape remaining indication | Crystal | Within one year/ 4 programmes  |
 |  HR-D566S | 8430VF | '85/12 | VHS SECAM Hi-Fi audio | 220 V~, 50/60Hz 40 W | 2HD + 2A | 2 Hi-Fi audio 1 normal audio | VST | Band I, (#14) Band III, (#15) | Band IV/V, (#4) | - | UHF (#11) | 24-hour FDP with tape remaining indication | Crystal | Within one year/ 4 programmes  |
 
-Note: #4 UHF band IV/V, channels 21 - 69
-#9 VHF band I, channels A, B, C1, C
-#10 VHF band III, channels 1 - 6
-#11 UHF channels 32 - 40 (adjustable)
-#14 VHF band I, channels 2 - 4
-#15 VHF band III, channels 5 - 10
-#18 UHF channels 36 - 40 (adjustable, preset to UHF channels 36 when shipped).
+Note:
 
-8-104 8-104
-
+- \#4 UHF band IV/V, channels 21 - 69
+- \#9 VHF band I, channels A, B, C1, C
+- \#10 VHF band III, channels 1 - 6
+- \#11 UHF channels 32 - 40 (adjustable)
+- \#14 VHF band I, channels 2 - 4
+- \#15 VHF band III, channels 5 - 10
+- \#18 UHF channels 36 - 40 (adjustable, preset to UHF channels 36 when shipped).
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CB Coverage :VHF | CB Coverage :CATV | CE Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HB-D142S | 8444 | '86/03 | VHS SECAM | 220 V~, 50/60Hz 30 W | 2HD | 1 normal audio | VST | Band I, (#14) Band III, (#15) | Band IV/V, (#4) | - | UHF (#11) | 24-hour FDP with tape remaining indication | AC line | 14-day/ 1-programme timer | 10 sec.  |
@@ -3478,14 +3474,13 @@ Note: #4 UHF band IV/V, channels 21 - 69
 |  HB-D470S | 8486 | '86/11 | VHS SECAM Hi-Fi audio (SP/LP Hi-Fi audio only) | 220 V~, 50/60Hz 37 W | 2HD + 2A | 2 Hi-Fi audio 1 normal audio | FST | Band I, (#14) Band III, (#16) | Band IV/V, (#4) | - | UHF (#11) | 24-hour FDP with tape remaining indication | Crystal | Within one year/ 8 programmes | 60 min.  |
 |  HB-D210S | 82007VF | '87/06 | VHS SECAM | 220 V~, 50/60Hz 34 W | 2HD | 1 normal audio | VST | Band I, (#14) Band III, (#16) | Band IV/V, (#4) | - | UHF (#11) | 24-hour FDP with lap time counter indication | AC line | 14-day/ 4-programme timer | 10 sec.  |
 
-Note: #4 UHF band IV/V, channels 21 - 69
-#11 UHF channels 32 - 40 (adjustable)
-#14 VHF band I, channels 2 - 4
-#15 VHF band III, channels 5 - 10
-#16 VHF band III, channels 5 - 10 / B - Q / 70 - 86
+Note:
 
-B-105 B-105
-
+- \#4 UHF band IV/V, channels 21 - 69
+- \#11 UHF channels 32 - 40 (adjustable)
+- \#14 VHF band I, channels 2 - 4
+- \#15 VHF band III, channels 5 - 10
+- \#16 VHF band III, channels 5 - 10 / B - Q / 70 - 86
 SECAM(S) SECAM(S)
 
 |  Model Name | MRL No. | Insu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :CHV | Serial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
@@ -3499,14 +3494,13 @@ SECAM(S) SECAM(S)
 |  HR-D310S | 82091 | '88/12 | VHS SECAM | 220 V~, 50/80Hz 34 W | 2HD | 1 normal audio | VST | Band I, (*14) Band III, (*16) | Band IV/V, (*4) | - | UHF (*11) | 24-hour FDP with lap time counter indication | AC line | 14-day/ 4-programme timer  |
 |  HR-D520S | 82119 | '89/05 | VHS SECAM | 220 V~, 50/80Hz 35 W | 2HD | 1 normal audio | VST | Band I, (*14) Band III, (*16) | Band IV/V, (*4) | - | UHF (*17) | 24-hour FDP with real time counter indication | AC line | 1-year/ 8-programme timer  |
 
-Note: *4 UHF band IV/V, channels 21 - 69
-*11 UHF channels 32 - 40 (adjustable)
-*14 VHF band I, channels 2 - 4
-*16 VHF band III, channels 5 - 10 / B - Q / 70 - 86
-*17 UHF channels 36 (adjustable 32 - 40)
+Note:
 
-S-106 8-106
-
+- \*4 UHF band IV/V, channels 21 - 69
+- \*11 UHF channels 32 - 40 (adjustable)
+- \*14 VHF band I, channels 2 - 4
+- \*16 VHF band III, channels 5 - 10 / B - Q / 70 - 86
+- \*17 UHF channels 36 (adjustable 32 - 40)
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :URF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HR-D620S | 82134 | '89/09 | VHS SECAM | 220 V~, 50/60Hz 41 W | DA3 | 1 normal audio | FST | Band 1, (#14) Band III, (#16) | Band IV/V, (#4) | - | URF (#17) | 24-hour FDP with real time counter indication | Crystal | 1-year/ 8-programme timer | Minimum 3 min.  |
@@ -3514,17 +3508,16 @@ S-106 8-106
 |  HR-D540S | 82167 | '90/03 | VHS SECAM | 220 V~, 50/60Hz 23 W | 2HD | 1 normal audio | FST | Band 1, (#14) Band III, (#16) | Band IV/V, (#4) | - | URF (#17) | 24-hour FDP with real time counter and tape remaining indication | Crystal | 1-year/ 8-programme timer | 60 min.  |
 |  HR-D600S | 82174 | '90/05 | VHS SECAM | 220 V~, 50/60Hz 35 W | DA3 | 1 normal audio | FST | Band 1, (#14) Band III, (#16) | Band IV/V, (#4) | - | URF (#17) | 24-hour FDP with real time counter and tape remaining indication | Crystal | 1-year/ 8-programme timer | 60 min.  |
 
-Note: #4 UHF band IV/V, channels 21 - 69
-#11 UHF channels 32 - 40 (adjustable)
-#14 VHF band I, channels 2 - 4
-#16 VHF band III, channels 5 - 10 / D - Q / 70 - 86
-#17 UHF channels 36 (adjustable 32 - 40)
-#19 VHF: 47 - 103 MHz / 104 - 300 MHz
-#20 UHF: 470 - 862 MHz
-#21 Cable channels D - Q / 70 - 86
+Note:
 
-8-107 B-107
-
+- \#4 UHF band IV/V, channels 21 - 69
+- \#11 UHF channels 32 - 40 (adjustable)
+- \#14 VHF band I, channels 2 - 4
+- \#16 VHF band III, channels 5 - 10 / D - Q / 70 - 86
+- \#17 UHF channels 36 (adjustable 32 - 40)
+- \#19 VHF: 47 - 103 MHz / 104 - 300 MHz
+- \#20 UHF: 470 - 862 MHz
+- \#21 Cable channels D - Q / 70 - 86
 SECAM(SV/SR) SECAM(SV/SR)
 
 2. SECAM (SV/SR)
@@ -3540,18 +3533,17 @@ SECAM(SV/SR) SECAM(SV/SR)
 |  HR-7600SR | 8252 | '82 | VHS SECAM | 110/127/220/240 V~, 50/60Hz 45 W (60 W with camera) | 2HD | 1 normal audio | VST | Band I, (#2) Band III, (#3) | Band IV/V, (#4) | - | UHF (#5) | 24-hour FDP with day indication | Crystal | Within 2 weeks/ 6 programmes | -  |
 |  HR-D120SR | 8331 | '84/01 | VHS SECAM | 220 V~, 50/60Hz 30 W | 2HD | 1 normal audio | VST | Band I, (#2) Band III, (#3) | Band IV/V, (#4) | - | UHF (#5) | 24-hour LED with tape remaining indication | AC line | 14-day/ 1-programme timer | -  |
 
-Note: #1 (to be adjusted by your dealer)
-#2 VHF band I, channels R1 - R5
-#3 VHF band III, channels R6 - R12 / K'4 - K'9
-#4 UHF band IV/V, channels 21 - 69
-#5 UHF channels K'4(R6) or K'5(R7)
-(welterable: preset to channel K'5 (RT) when shipped.)
-#9 VHF band I, channels A, B, C1, C
-#10 VHF band III, channels 1 - 6
-#11 UHF channels 32 - 40 (adjustable)
+Note:
 
-8-108 8-108
-
+- \#1 (to be adjusted by your dealer)
+- \#2 VHF band I, channels R1 - R5
+- \#3 VHF band III, channels R6 - R12 / K'4 - K'9
+- \#4 UHF band IV/V, channels 21 - 69
+- \#5 UHF channels K'4(R6) or K'5(R7)
+  (welterable: preset to channel K'5 (RT) when shipped.)
+- \#9 VHF band I, channels A, B, C1, C
+- \#10 VHF band III, channels 1 - 6
+- \#11 UHF channels 32 - 40 (adjustable)
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Head Type | Audio Channel | Tuning System | CH Coverage :VHF | CH Coverage :URF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HR-D140SR | 8411 | '85/09 | VHS SECAM | 220 V~, 50/60Hz 30 W | 2HD | 1 normal audio | VST | Band I, (*2) Band III, (*3) | Band IV/V, (*4) | - | UHF (*5) | 24-hour LED with lap time counter indication | AC line | 14-day/ 1-programme timer | -  |
@@ -3559,12 +3551,15 @@ Note: #1 (to be adjusted by your dealer)
 |  HR-D210SR | 82050 | '88/03 | VHS SECAM | 220 V~, 50/60Hz 28 W | 2HD | 1 normal audio | VST | Band I, (*2) Band III, (*3) | Band IV/V, (*4) | - | UHF (*5) | 24-hour LED with lap time counter indication | AC line | 14-day/ 4-programme timer | -  |
 |  HR-D520SR | 82145 | '89/10 | VHS SECAM | 220 V~, 50/60Hz 31 W | 2HD | 1 normal audio | VST | Band I, (*6) Band III, (3) | Band IV/V, (*8) | - | UHF (*5) | 24-hour LED with real time counter indication | AC line | 1-year/ 8-programme timer | Minimum 3 min.  |
 
-Note: *2 VHF band I, channels R1 - R5
-*3 VHF band III, channels R6 - R12 / X'4 - X'9
-*4 UHF band IV/V, channels 21 - 69
-*5 UHF channels X'4(R6) or X'5(R7)
-(switchable: preset to channel X'5 (R7) when shipped.)
-*6 UHF band IV/V, channels E21 - E69
+Note:
+
+- \*2 VHF band I, channels R1 - R5
+- \*3 VHF band III, channels R6 - R12 / X'4 - X'9
+- \*4 UHF band IV/V, channels 21 - 69
+- \*5 UHF channels X'4(R6) or X'5(R7)
+  (switchable: preset to channel X'5 (R7) when shipped.)
+- \*6 UHF band IV/V, channels E21 - E69
+
 MULTI(M5) MULTI(M5)
 
 8.3.7 MULTI model
@@ -3580,21 +3575,25 @@ MULTI(M5) MULTI(M5)
 |  HR-D159MS | 8461 | '86/06 | VHS PAL/SECAM | 220 V~. 50/60 Hz 39 W | 2HD | 1 normal audio | VST | Band I, (*9) Band III, (*10) | Band IV/V, (*11) | CATV (*16) | UHF (*18) | 24-hour PDP with lap time counter indication | Crystal | 14-day/4-programme timer  |
 |  HR-D170MS | 82014 | '87/07 | VHS PAL/SECAM (SP/LP) Hi-Fi audio | 220 V~. 50/60 Hz 32 W | 2HD | 1 normal audio | VST | Band I, (*12) Band III, (*13) | Band IV/V, (*11) | CATV (*16) | UHF (*18) | 24-hour PDP with lap time counter indication | AC line | 14-day/4-programme timer  |
 
-Note: *0 VHF band I, channels 2 - 4.
-*2 VHF band III, channels 5 - 12.
-*3 UHF band IV/V, channels 21 - 69.
-*4 VHF band I, channels 2 - 4 (A,B,C1,C).
-*5 VHF band III, channels 5 - 12 (I - 6).
-*6 VHF band I, channels E2 - E4.
-*7 VHF band III, channels E5 - E12.
-*8 UHF band IV/V, channels E21 - E69.
-*9 VHF band I, 47 - 111 MHz.
-*10 VHF band III, 111 - 300 MHz.
-*11 UHF band IV/V, 470 - 862 MHz.
-*12 VHF band I, 47 - 103 MHz.
-*13 VHF band III, 104 - 300 MHz.
-*16 CATV: channels B - Q, 70 - 86 (SECAM only).
-*18 UHF channels 32 - 40 (adjustable).
+Note:
+
+
+- \*0 VHF band I, channels 2 - 4.
+- \*2 VHF band III, channels 5 - 12.
+- \*3 UHF band IV/V, channels 21 - 69.
+- \*4 VHF band I, channels 2 - 4 (A,B,C1,C).
+- \*5 VHF band III, channels 5 - 12 (I - 6).
+- \*6 VHF band I, channels E2 - E4.
+- \*7 VHF band III, channels E5 - E12.
+- \*8 UHF band IV/V, channels E21 - E69.
+- \*9 VHF band I, 47 - 111 MHz.
+- \*10 VHF band III, 111 - 300 MHz.
+- \*11 UHF band IV/V, 470 - 862 MHz.
+- \*12 VHF band I, 47 - 103 MHz.
+- \*13 VHF band III, 104 - 300 MHz.
+- \*16 CATV: channels B - Q, 70 - 86 (SECAM only).
+- \*18 UHF channels 32 - 40 (adjustable).
+
 |  Model Name | MNL No. | Issu Date | Tape Format | Power Requirement / Power Consumption | Band Type | Audio Channel | Tuning System | CH Coverage :CHF | CH Coverage :CHF | CH Coverage :CATV | Aerial Output | Clock Display | Reference Frequency | Program Capacity | Memory Back-up Time  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  HH-D337MS | 82051 | '88/05 | VHS PAL/SECAM/NTSC(4.43)(SP/LP/EP) | 110/127/220/240 V~50/60 Hz33 W | DA4 | 1 normal audio | VST | CH (#14) | CH (#15) | CABLE (#17) | UHF (#19) | 24-hour FDP with tap time counter indication | Crystal | 14-day/4-programme timer | -  |
@@ -3606,30 +3605,36 @@ Note: *0 VHF band I, channels 2 - 4.
 |  HH-D527MS | 82177 | '90/05 | VHS PAL/SECAMMESECAM/NTSC(3.58)/NTSC(4.43) | 110/127/220/240 V~50/60 Hz27 W | 2HD | 1 normal audio | VST | VHF band, (#26) | Band IV/V, (#29) | CABLE (#30) | UHF (#19) | 24-hour FDP with real time counter indication | Crystal | 1-year/8-programme timer | Minimum 3 min.  |
 |  HH-D550MS | 82188 | '90/06 | VHS PAL/SECAM | 220 V~50/60 Hz26 W | 2HD | 1 normal audio | FST | Band I, (#23)Band III, (#24) | Band IV/V, (#25) | CABLE (#26) | UHF (#27) | 24-hour FDP with real time counter and tape remaining indication | Crystal | 1-year/8-programme timer | 60 min.  |
 
-Note: #11 UHF band IV/V, 470 - 862 MHz.
-#12 VHF band I, 47 - 103 MHz.
-#13 VHF band III, 104 - 300 MHz.
-#14 VHF: CH E2 - E4, E5 - E12, S1 - S20 (Europe ch) / CH 2 - 6, 7 - 13 (USA ch) / CH 1 - 2, 3 - 12 (JAPAN ch).
-#15 UHF: CH E21 - E69 (Europe ch) / CH 14 - 79 (USA ch) / CH 13 - 62 (JAPAN ch).
-#16 CATV: channels H - Q, 70 - 86 (SECAM only).
-#17 CABLE ch A - I, J - W (USA ch).
-#18 UHF channels 32 - 40 (adjustable).
-#19 X, I, G, M modulation. PAL: UHF 32 - 40 adjustable (preset D36 ch) / NTSC(USA): UHF 29 - 39 adjustable (preset 34 ch) / NTSC(JAPAN): UHF 28 - 38 adjustable (preset 33 ch).
-#20 VHF band I, 47 - 68 MHz (CH E2 - E4).
-#21 VHF band III, 192 - 230 MHz (CH E5 - E12).
-#22 UHF band IV/V, 470 - 862 MHz (CH E21 - E69).
+Note:
 
-Note: #23 VHF band I: Frequency / 47 - 111 MHz.
-L channel / CH 2 - 4. B/Q channel / CH E2 - E4.
-#24 VHF band III: Frequency / 111 - 300 MHz.
-L channel / CH 5 - 10. B/Q channel / CH E5 - E12.
-#25 UHF band IV/V: Frequency / 470 - 862 MHz.
-L channel / CH 21 - 69. B/Q channel CH E21 - E69.
-#26 Cable channel: L channel / CH B - Q, CH 70 - 86.
-B/Q channel / CH S1 - S20, CH X, CH Y, CH Z, CH M1 - M10, CH U1 - U10.
-#27 UHF channels 36 (adjustable 32 - 40).
-#28 System H/Q, D/K, I, M.
-[VHF] Europe ch: E2 - E4; X - S10 / E5 - E12; S11 - S20.
-USA ch: 2 - 6, 7 - 13. Japan ch: 1 - 2, 3 - 12.
-#29 [UHF] Europe ch: E21 - E69. USA ch: 14 - 63. Japan ch: 13 - 62.
-#30 [CABLE] USA ch: A-2 - I, J - W.
+
+- \#11 UHF band IV/V, 470 - 862 MHz.
+- \#12 VHF band I, 47 - 103 MHz.
+- \#13 VHF band III, 104 - 300 MHz.
+- \#14 VHF: CH E2 - E4, E5 - E12, S1 - S20 (Europe ch) / CH 2 - 6, 7 - 13 (USA ch) / CH 1 - 2, 3 - 12 (JAPAN ch).
+- \#15 UHF: CH E21 - E69 (Europe ch) / CH 14 - 79 (USA ch) / CH 13 - 62 (JAPAN ch).
+- \#16 CATV: channels H - Q, 70 - 86 (SECAM only).
+- \#17 CABLE ch A - I, J - W (USA ch).
+- \#18 UHF channels 32 - 40 (adjustable).
+- \#19 X, I, G, M modulation. PAL: UHF 32 - 40 adjustable (preset D36 ch) / NTSC(USA): UHF 29 - 39 adjustable (preset 34 ch) / NTSC(JAPAN): UHF 28 - 38 adjustable (preset 33 ch).
+- \#20 VHF band I, 47 - 68 MHz (CH E2 - E4).
+- \#21 VHF band III, 192 - 230 MHz (CH E5 - E12).
+- \#22 UHF band IV/V, 470 - 862 MHz (CH E21 - E69).
+
+Note:
+
+
+- \#23 VHF band I: Frequency / 47 - 111 MHz.
+- L channel / CH 2 - 4. B/Q channel / CH E2 - E4.
+- \#24 VHF band III: Frequency / 111 - 300 MHz.
+- L channel / CH 5 - 10. B/Q channel / CH E5 - E12.
+- \#25 UHF band IV/V: Frequency / 470 - 862 MHz.
+- L channel / CH 21 - 69. B/Q channel CH E21 - E69.
+- \#26 Cable channel: L channel / CH B - Q, CH 70 - 86.
+- B/Q channel / CH S1 - S20, CH X, CH Y, CH Z, CH M1 - M10, CH U1 - U10.
+- \#27 UHF channels 36 (adjustable 32 - 40).
+- \#28 System H/Q, D/K, I, M.
+- [VHF] Europe ch: E2 - E4; X - S10 / E5 - E12; S11 - S20.
+- USA ch: 2 - 6, 7 - 13. Japan ch: 1 - 2, 3 - 12.
+- \#29 [UHF] Europe ch: E21 - E69. USA ch: 14 - 63. Japan ch: 13 - 62.
+- \#30 [CABLE] USA ch: A-2 - I, J - W.

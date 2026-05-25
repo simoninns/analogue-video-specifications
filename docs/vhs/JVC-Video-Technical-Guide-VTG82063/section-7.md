@@ -95,7 +95,7 @@ Fig. 7-2-4(A) shows crosstalk between adjacent audio tracks. A rejection of more
 ![img-165.jpeg](assets/JVC-Video-Technical-Guide-VTG82063-part2-page-92-img-165.jpeg)
 
 *Fig. 7-2-4(C) Crosstalk between audio and adjacent video*
-```markdown
+
 #### 7.2.3 VHS Hi-Fi outline : PAL/SECAM
 
 High fidelity sound recording and playback are made possible in the VHS Hi-Fi system by employing special rotating audio heads, which are mounted on the upper drum along with the video heads. The audio input signals are then frequency modulated and recorded in the form of FM signals.
@@ -141,7 +141,7 @@ Recording in the tape thickness direction introduces thickness loss which attenu
 Video signal: $d = \frac{\lambda}{4} = \frac{1.0 \text{ to } 1.3}{4} = \text{approx. } 0.26 \text{ to } 0.36$ (μm)
 
 Audio signal: $d = \frac{\lambda}{4} = \frac{2.7 \text{ to } 3.5}{4} = \text{approx. } 0.68 \text{ to } 0.89$ (μm)
-```
+
 As indicated in Fig. 7-2-7, when these signals are recorded on the same tape, the audio signal is recorded in the deep portion of the magnetic layer, while the subsequently recorded video signal occupies the portion toward the tape surface.
 
 ![img-168.jpeg](assets/JVC-Video-Technical-Guide-VTG82063-part2-page-94-img-168.jpeg)
