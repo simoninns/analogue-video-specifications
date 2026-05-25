@@ -191,37 +191,26 @@ During playback, head rotation is synchronized to a crystal oscillator signal in
 
 *Fig. 4-2-1 Drum servo loop*
 
-|  Control Signal
-Modes | DRUM SERVO  |   |
+|  Control Signal<br>Modes | DRUM SERVO  |   |
 | --- | --- | --- |
 |   |  Reference signal | Comparison signal  |
-|  REC | Video V. sync
-(30 Hz) | Drum pick-up pulse
-(30 Hz)  |
-|  Playback | Crystal osc.
-(30 Hz)  |   |
+|  REC | Video V. sync<br>(30 Hz) | Drum pick-up pulse<br>(30 Hz)  |
+|  Playback | Crystal osc.<br>(30 Hz)  |   |
 |  Search | Horizontal discriminator  |   |
-|  Slow | Crystal osc.
-(30 Hz) | Drum pick-up pulse
-(30 Hz)  |
+|  Slow | Crystal osc.<br>(30 Hz) | Drum pick-up pulse<br>(30 Hz)  |
 
 Table 4-2-1 Drum servo control signal (NTSC)
 
-|  Control Signal
-Modes | DRUM SERVO  |   |
+|  Control Signal<br>Modes | DRUM SERVO  |   |
 | --- | --- | --- |
 |   |  Reference signal | Comparison signal  |
-|  REC | Video V. sync
-(25 Hz) | Drum pick-up pulse
-(25 Hz)  |
-|  Playback | Crystal osc.
-(25 Hz)  |   |
+|  REC | Video V. sync<br>(25 Hz) | Drum pick-up pulse<br>(25 Hz)  |
+|  Playback | Crystal osc.<br>(25 Hz)  |   |
 |  Search | Horizontal discriminator  |   |
-|  Slow | Crystal osc.
-(25 Hz) | Drum pick-up pulse
-(25 Hz)  |
+|  Slow | Crystal osc.<br>(25 Hz) | Drum pick-up pulse<br>(25 Hz)  |
 
 Table 4-2-2 Drum servo control signal (PAL/SECAM)
+
 ###### (1) Flat direct-drive drum motor
 
 ## Construction
