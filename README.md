@@ -61,8 +61,17 @@ GitHub Actions publishes the site to GitHub Pages on pushes to the `main` branch
 - [ANSI/CTA-608-E S-2019 - Line 21 Data Services](docs/video_metadata/ANSI-CTA-608-E-S-2019/ANSI-CTA-608-E-S-2019.md)  
 	Specifies Line 21 closed captioning, text, and Extended Data Services (XDS) data formats, signal characteristics, packet definitions, encoder/decoder behavior, and related regulatory and implementation guidance.
 
+- [EBU Tech. 3209 - Performance specification of equipment for E.B.U. insertion signals](docs/video_metadata/EBU-Tech-3209/EBU-Tech-3209.md)  
+	Specifies generation, insertion, and erasure performance requirements for E.B.U. insertion test signals used in 625-line television systems.
+
 - [IEC 60461:2010 - Time and control code](docs/video_metadata/IEC-60461-2010-Time-and-control-code/IEC-60461-2010-Time-and-control-code.md)  
 	Specifies time address, flag bits, binary groups, and linear and vertical interval transport structures for time and control code across television, film, and audio systems.
+
+- [ITU-R BT.1439-1 - Measurement methods applicable in the analogue television studio and the overall analogue television system](docs/video_metadata/R-REC-BT-1439-1-2006/R-REC-BT-1439-1-2006.md)  
+	Defines baseband video parameter terminology, test signals, and measurement methods for monitoring analogue television studio and transmission chain performance.
+
+- [ITU-T J.63 - Insertion of test signals in the field-blanking interval of monochrome and colour television signals](docs/video_metadata/T-REC-J-63-1990/T-REC-J-63-1990.md)  
+	Recommends insertion test-signal structures and timing for 625-line and 525-line systems to support operational measurements during programme transmission.
 
 - [Vertical Interval Test Signals - NTSC and PAL definitions](docs/video_metadata/VITS/index.md)  
 	Documents [NTSC](docs/video_metadata/VITS/NTSC-VITS.md) and [PAL](docs/video_metadata/VITS/PAL-VITS.md) VITS waveforms, including NTC-7, FCC, VIRS, ITU, and UK national insertion test signals. The waveform diagrams are generated from YAML definitions in `resources/definitions/vits/` using `scripts/generate-vits-diagrams`.
