@@ -16,6 +16,7 @@ This document describes the Vertical Interval Test Signals (VITS) used in PAL 62
 **YAML:** `resources/definitions/vits/pal/vits17.yaml`  
 **VBI Line:** 17 | **Field:** 1  
 **Standard:** EBU/CCIR insertion test signal
+**Normative Source:** ITU-T J.63 Annex I section 2; EBU Tech 3209 section 7.2
 
 ### Description
 
@@ -26,8 +27,7 @@ The signal is constructed in temporal order across the active line as follows:
 - A **100% white reference bar** (12.0–22.0 µs) establishes the luminance reference level.
 - A **2T sine-squared pulse** (centred at 26.0 µs) tests luminance bandwidth and group delay. In 625-line PAL, T ≈ 100 ns, giving a half-duration of 0.20 µs (2T).
 - A **20T modulated sine-squared pulse** (centred at 32.0 µs) carries both a luminance component (Y, 350 mV, half-duration 2.0 µs) and a chrominance component (C, at PAL subcarrier 4.434 MHz, 90°). Together they form the chrominance-to-luminance timing and group-delay test element.
-- A **5-step luminance staircase** (40.0–60.0 µs, 700 mV peak) tests differential gain and luminance non-linearity.
-- An **end-of-line reference bar** (60.0–62.0 µs, 700 mV) marks the end of the active video zone.
+- A **5-step luminance staircase** (40.0–62.0 µs, 700 mV peak) tests differential gain and luminance non-linearity. This follows the nominal characteristic instants 20H/32, 22H/32, 24H/32, 26H/32, 28H/32 and 31H/32 (fall).
 
 ### Elements
 
@@ -37,12 +37,11 @@ The signal is constructed in temporal order across the active line as follows:
 | 0 | Sine-Squared Pulse | 2T Luminance Pulse | 700 mV, centre 26.0 µs, half-dur 0.200 µs |
 | 2 | Sine-Squared Pulse | 20T Luminance Component | 350 mV, centre 32.0 µs, half-dur 2.0 µs |
 | 3 | Composite Pulse | 20T Chrominance Component | dc 0 mV, centre 32.0 µs, Fsc 4.434 MHz, φ 90° |
-| 5 | Staircase | 5-Step Luminance Staircase | top 700 mV, 40.0–60.0 µs, 5 steps |
-| 4 | Colour Bar | End-of-Line Reference Bar | 700 mV, 60.0–62.0 µs |
+| 4 | Staircase | 5-Step Luminance Staircase | top 700 mV, 40.0–62.0 µs, 5 risers (J.63 timing instants) |
 
 #### Staircase Detail — 5-Step Luminance Staircase
 
-5 steps, each equal width. Step width = (60.0 − 40.0) / 5 = **4.0 µs**. Top level: 700.0 mV. All times relative to sync edge.
+The staircase follows J.63 characteristic instants (20H/32 to 31H/32 fall). This yields a longer top tread than the first four risers. Top level: 700.0 mV. All times relative to sync edge.
 
 | Step | Start (µs) | End (µs) | Level (mV) | % of 700 mV |
 |------|------------|----------|------------|-------------|
@@ -50,7 +49,7 @@ The signal is constructed in temporal order across the active line as follows:
 | 2 | 44.0 | 48.0 | 280.0 | 40% |
 | 3 | 48.0 | 52.0 | 420.0 | 60% |
 | 4 | 52.0 | 56.0 | 560.0 | 80% |
-| 5 | 56.0 | 60.0 | 700.0 | 100% |
+| 5 | 56.0 | 62.0 | 700.0 | 100% |
 
 <!-- vits-diagram: vits17 -->
 ![vits17 waveform diagram](assets/vits-diagrams/pal/vits17.png)
@@ -62,6 +61,7 @@ The signal is constructed in temporal order across the active line as follows:
 **YAML:** `resources/definitions/vits/pal/itu-multiburst.yaml`  
 **VBI Line:** 18 | **Field:** 1  
 **Standard:** ITU Multiburst for PAL systems B, D, G, H, I
+**Normative Source:** ITU-T J.63 Annex I section 3; EBU Tech 3209 section 7.2.9
 
 ### Description
 
@@ -82,7 +82,7 @@ Six burst packets follow in order of increasing frequency:
 | 5 | 4.8 MHz | 144° |
 | 6 | 5.8 MHz | −144° |
 
-Bursts at 4.8 and 5.8 MHz carry phase offsets to avoid aliasing with the PAL line-alternating subcarrier phase during comb filtering. All bursts have an envelope amplitude of 210 mV.
+Bursts at 4.8 and 5.8 MHz are implemented in this repository with phase offsets (144° and −144°). J.63/EBU 3209 define the burst frequencies and timing but do not mandate these exact absolute phase offsets. All bursts have an envelope amplitude of 210 mV.
 
 ### Elements
 
@@ -108,6 +108,7 @@ Bursts at 4.8 and 5.8 MHz carry phase offsets to avoid aliasing with the PAL lin
 **YAML:** `resources/definitions/vits/pal/uk-national.yaml`  
 **VBI Line:** 19 | **Field:** 1  
 **Standard:** UK National Insertion Test Signal (IBA/EBU, PAL-I)
+**Normative Source:** National UK ITS specification (not defined in J.63/EBU 3209/BT.1439)
 
 ### Description
 
@@ -147,6 +148,7 @@ VITS 19 is the IBA/EBU United Kingdom ITS Line 19 signal for PAL-I operation. It
 **YAML:** `resources/definitions/vits/pal/vits20.yaml`  
 **VBI Line:** 20 | **Field:** 1  
 **Standard:** IBA / EBU UK ITS-2
+**Normative Source:** National UK ITS-2 specification (not defined in J.63/EBU 3209/BT.1439)
 
 ### Description
 
@@ -175,6 +177,7 @@ Both bursts are composite-channel dc-offset free (dc_offset_mv: 0); the chroma l
 **YAML:** `resources/definitions/vits/pal/itu-composite.yaml`  
 **VBI Line:** 330 | **Field:** 2  
 **Standard:** ITU Composite Insertion Test Signal for PAL (BT.628 / BT.473)
+**Normative Source:** ITU-T J.63 Annex I section 4; EBU Tech 3209 section 7.2
 
 ### Description
 
@@ -189,12 +192,11 @@ In this Pattern Master implementation, those core components are mapped to the f
 | 1 | Colour Bar | 100% White Reference Bar | 700 mV, 12.0–22.0 µs |
 | 0 | Sine-Squared Pulse | 2T Luminance Pulse | 700 mV, centre 26.0 µs, half-dur 0.200 µs |
 | 3 | Burst | Chrominance Phase Reference Burst | dc 0 mV / Y 140 mV, 30.0–60.0 µs, 4.434 MHz, φ 60.66° |
-| 4 | Staircase | 5-Step Luminance Staircase | top 700 mV, 40.0–60.0 µs, 5 steps |
-| 2 | Colour Bar | End-of-Line Reference Bar | 700 mV, 60.0–62.0 µs |
+| 2 | Staircase | 5-Step Luminance Staircase | top 700 mV, 40.0–62.0 µs, 5 risers (J.63 timing instants) |
 
 #### Staircase Detail — 5-Step Luminance Staircase
 
-5 steps, each equal width. Step width = (60.0 − 40.0) / 5 = **4.0 µs**. Top level: 700.0 mV. All times relative to sync edge.
+The staircase follows J.63 characteristic instants (20H/32 to 31H/32 fall). This yields a longer top tread than the first four risers. Top level: 700.0 mV. All times relative to sync edge.
 
 | Step | Start (µs) | End (µs) | Level (mV) | % of 700 mV |
 |------|------------|----------|------------|-------------|
@@ -202,7 +204,7 @@ In this Pattern Master implementation, those core components are mapped to the f
 | 2 | 44.0 | 48.0 | 280.0 | 40% |
 | 3 | 48.0 | 52.0 | 420.0 | 60% |
 | 4 | 52.0 | 56.0 | 560.0 | 80% |
-| 5 | 56.0 | 60.0 | 700.0 | 100% |
+| 5 | 56.0 | 62.0 | 700.0 | 100% |
 
 <!-- vits-diagram: itu-composite -->
 ![itu-composite waveform diagram](assets/vits-diagrams/pal/itu-composite.png)
@@ -214,6 +216,7 @@ In this Pattern Master implementation, those core components are mapped to the f
 **YAML:** `resources/definitions/vits/pal/itu-combination.yaml`  
 **VBI Line:** 331 | **Field:** 2  
 **Standard:** ITU Combination Insertion Test Signal for PAL (BT.473)
+**Normative Source:** ITU-T J.63 Annex I section 5; EBU Tech 3209 sections 7.2.6-7.2.7
 
 ### Description
 

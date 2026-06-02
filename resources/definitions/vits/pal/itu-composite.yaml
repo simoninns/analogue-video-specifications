@@ -49,20 +49,46 @@ primitives:
     subcarrier_lock_multiple: 1.0
     phase_deg: 60.660
 
-  - id: staircase
-    type: "staircase"
-    label: "5-Step Luminance Staircase"
-    window_us: { start: 40.0, end: 60.0 }
+  - id: staircase_step_1
+    type: "colour_bar"
+    label: "Luminance Staircase Step 1 (20%)"
+    window_us: { start: 40.0, end: 44.0 }
     channel: y
     combine: replace
-    top_level_mv: 700.0
+    level_mv: 140.0
     rise_time_us: 0.235
-    steps: 5
 
-  - id: black_reference
+  - id: staircase_step_2
     type: "colour_bar"
-    label: "End-of-Line Reference Bar"
-    window_us: { start: 60.0, end: 62.0 }
+    label: "Luminance Staircase Step 2 (40%)"
+    window_us: { start: 44.0, end: 48.0 }
+    channel: y
+    combine: replace
+    level_mv: 280.0
+    rise_time_us: 0.235
+
+  - id: staircase_step_3
+    type: "colour_bar"
+    label: "Luminance Staircase Step 3 (60%)"
+    window_us: { start: 48.0, end: 52.0 }
+    channel: y
+    combine: replace
+    level_mv: 420.0
+    rise_time_us: 0.235
+
+  - id: staircase_step_4
+    type: "colour_bar"
+    label: "Luminance Staircase Step 4 (80%)"
+    window_us: { start: 52.0, end: 56.0 }
+    channel: y
+    combine: replace
+    level_mv: 560.0
+    rise_time_us: 0.235
+
+  - id: staircase_step_5
+    type: "colour_bar"
+    label: "Luminance Staircase Step 5 (100%)"
+    window_us: { start: 56.0, end: 62.0 }
     channel: y
     combine: replace
     level_mv: 700.0
@@ -74,5 +100,8 @@ render_tree:
   - white_reference
   - pulse_2t
   - chroma_reference
-  - staircase
-  - black_reference
+  - staircase_step_1
+  - staircase_step_2
+  - staircase_step_3
+  - staircase_step_4
+  - staircase_step_5

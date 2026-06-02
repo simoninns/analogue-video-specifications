@@ -14,8 +14,9 @@ c_rise_time_us: 0.40
 # to measure the frequency response and bandwidth of the transmission path.
 # The grey pedestal and amplitude reference bars at the start of the line provide
 # a known amplitude scale against which burst amplitudes are compared at the receiver.
-# Bursts at 4.8 and 5.8 MHz use specific phase offsets to avoid aliasing with PAL
-# line-alternating subcarrier phase.
+# Bursts at 4.8 and 5.8 MHz use implementation-specific phase offsets in this
+# repository model. J.63/EBU 3209 define burst frequencies and timing but do not
+# mandate these exact absolute phase offsets.
 
 primitives:
   - id: positive_reference_boost

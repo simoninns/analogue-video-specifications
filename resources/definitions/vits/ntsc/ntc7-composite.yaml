@@ -53,7 +53,7 @@ primitives:
 
   - id: modulated_c
     type: "composite_pulse"
-    label: "12.5T Chrominance Component (C part of modulated pulse)"
+    label: "12.5T Chrominance Component (phase-locked to burst)"
     window_us: { start: 35.400, end: 38.600 }
     channel: c
     combine: add
@@ -61,7 +61,7 @@ primitives:
     component_amplitude_ire: 50.0
     rise_time_us: 0.400
     subcarrier_lock_multiple: 1.0
-    phase_deg: 180.0
+    phase_deg: 0.0
 
   - id: chrominance_reference
     type: "burst"

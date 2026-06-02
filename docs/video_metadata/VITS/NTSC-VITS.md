@@ -16,6 +16,7 @@ This document describes the Vertical Interval Test Signals (VITS) used in NTSC 5
 **YAML:** `resources/definitions/vits/ntsc/ntc7-composite.yaml`  
 **VBI Line:** 17 | **Field:** 1  
 **Standard:** EIA RS-498 / SMPTE RP 168 (NTC-7 ITS)
+**Normative Source:** ITU-T J.63 Annex II section 2 (element assembly); BT.1439 Annex 1 (element definitions)
 
 ### Description
 
@@ -25,7 +26,7 @@ The NTC-7 ITS was defined to enable comprehensive measurement of analogue compos
 
 - A **100 IRE white reference bar** (12.00–30.00 µs) for luminance level reference.
 - A **2T sine-squared pulse** (centred at 34.0 µs) for luminance group delay and bandwidth. In 525-line NTSC, T ≈ 125 ns.
-- A **12.5T modulated sine-squared pulse** (centred at 37.0 µs) consisting of a 50 IRE luminance component and a chrominance component (3.58 MHz, 180°) for chrominance-to-luminance delay measurement.
+- A **12.5T modulated sine-squared pulse** (centred at 37.0 µs) consisting of a 50 IRE luminance component and a chrominance component (3.58 MHz, phase-locked to burst) for chrominance-to-luminance delay measurement.
 - A **sustained chrominance burst** (42.00–60.00 µs, centre 0 IRE, ±20 IRE (40 p-p), 3.58 MHz, 180°) spanning the staircase zone. When superposed on the staircase, the total level on each step is step value ±20 IRE.
 - A **5-step luminance staircase** (46.00–60.00 µs, peak 90 IRE) for differential gain measurement.
 
@@ -36,7 +37,7 @@ The NTC-7 ITS was defined to enable comprehensive measurement of analogue compos
 | 0 | Colour Bar | 100 IRE White Reference Bar | 100 IRE, 12.00–30.00 µs |
 | 1 | Sine-Squared Pulse | 2T Luminance Pulse | 100 IRE, centre 34.0 µs, half-dur 0.25 µs |
 | 2 | Sine-Squared Pulse | 12.5T Luminance Component | 50 IRE, centre 37.0 µs, half-dur 1.6 µs |
-| 3 | Composite Pulse | 12.5T Chrominance Component | dc 0 IRE, centre 37.0 µs, Fsc 3.58 MHz, φ 180° |
+| 3 | Composite Pulse | 12.5T Chrominance Component | dc 0 IRE, centre 37.0 µs, Fsc 3.58 MHz, phase-locked to burst |
 | 4 | Burst | Chrominance Reference Burst | dc 0 IRE, ±20 IRE (40 p-p), 42.00–60.00 µs, 3.58 MHz, φ 180° |
 | 5 | Staircase | 5-Step Luminance Staircase | top 90 IRE, 46.00–60.00 µs, 5 steps |
 | 6 | Colour Bar | Reference Level Bar | 90 IRE, 60.00–62.00 µs |
@@ -63,6 +64,7 @@ The NTC-7 ITS was defined to enable comprehensive measurement of analogue compos
 **YAML:** `resources/definitions/vits/ntsc/ntc7-combination.yaml`  
 **VBI Line:** 280 | **Field:** 2  
 **Standard:** EIA RS-498 / SMPTE RP 168 (NTC-7 ITS)
+**Normative Source:** ITU-T J.63 Annex II section 3 (element assembly); BT.1439 Annex 1 (element definitions)
 
 ### Description
 
@@ -96,6 +98,7 @@ The 50 IRE grey pedestal spans the full active line. A narrower +50 IRE initial 
 **YAML:** `resources/definitions/vits/ntsc/fcc-multiburst.yaml`  
 **VBI Line:** 18 | **Field:** 1  
 **Standard:** FCC Rules Part 73 / EIA RS-498
+**Normative Source:** FCC/EIA national usage (not a preferred J.63 international insertion assembly)
 
 ### Description
 
@@ -137,6 +140,7 @@ A colour reference burst is embedded in the sync back porch (Sync1: centre 0 IRE
 **YAML:** `resources/definitions/vits/ntsc/fcc-composite.yaml`  
 **VBI Line:** 281 | **Field:** 2  
 **Standard:** FCC Rules Part 73 / EIA RS-498
+**Normative Source:** FCC/EIA national usage (not a preferred J.63 international insertion assembly)
 
 ### Description
 
@@ -183,6 +187,7 @@ The signal is arranged as follows:
 **YAML:** `resources/definitions/vits/ntsc/virs.yaml`  
 **VBI Line:** assignment-dependent | **Field:** n/a  
 **Standard:** SMPTE RP 168 / EIA RS-498
+**Normative Source:** SMPTE RP 168 / EIA RS-498 (outside J.63 preferred insertion assemblies)
 
 ### Description
 
