@@ -647,25 +647,34 @@ $$
 
 *Figure 12 - 40-bit system, white flag (Sub-clause 10.2).*
 
-![Figure 13 - 40-bit system, bit cell length and digital level](assets/img-18.jpeg)
+Note: Sync to start of white flag is 0.160H +- 0.010H.  White flag length is 0.790H +- 0.020H.  Rise and fall times are 135 +- 15 ns (10% to 90%).
 
-![Figure 13 - 40-bit system, bit cell length and digital level](assets/img-19.jpeg)
+![Figure 13a - 40-bit system, bit cell length and digital level](assets/img-18.jpeg)
 
-*Figure 13 - 40-bit system, bit cell length and digital level (Sub-clause 10.2). 40-bit FM code (video field 2, Frame No. 12345 shown).*
+*Figure 13a - 40-bit system, bit cell length and digital level (Sub-clause 10.2)*
+
+Note: Sync to start of FM code is 0.215H +- 0.010H.  The 40-bit FM code is 40 bits at 1 +- 1.0 uS/bit
+
+![Figure 13b - 40-bit system, bit cell length and digital level](assets/img-19.jpeg)
+
+*Figure 13b - 40-bit FM code (video field 2, Frame No. 12345 shown).*
 
 1. Transitions in center of bit cell represent logical “1”s.
 2. Rise and fall times = 135 ± 15 ns.
-3. Bit(s) Remarks
-1-4 Receiver clock synchronizing bits — “0011”
-5 Video field indicator bit (logic “1” = video field one)
-6-12 Leading, data recognition bits — “1110010”
-13-16 Data — X₅ bit 13 = LSB
-17-20 Data — X₄ bit 17 = LSB
-21-24 Data — X₃ bit 21 = LSB
-25-28 Data — X₂ bit 25 = LSB
-29-32 Data — X₁ bit 29 = LSB
-33 Data parity bit (odd parity)
-34-40 Trailing, data recognition bits — “0001101”
+3. Bit(s) and remarks:
+
+   | Bit(s) | Remarks |
+   |--------|---------|
+   | 1-4    | Receiver clock synchronizing bits — “0011” |
+   | 5      | Video field indicator bit (logic “1” = video field one) |
+   | 6-12   | Leading, data recognition bits — “1110010” |
+   | 13-16  | Data — X₅ bit 13 = LSB |
+   | 17-20  | Data — X₄ bit 17 = LSB |
+   | 21-24  | Data — X₃ bit 21 = LSB |
+   | 25-28  | Data — X₂ bit 25 = LSB |
+   | 29-32  | Data — X₁ bit 29 = LSB |
+   | 33     | Data parity bit (odd parity) |
+   | 34-40  | Trailing, data recognition bits — “0001101” |
 
 ![Figure 14 - Radial signal](assets/img-20.jpeg)
 
