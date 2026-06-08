@@ -503,26 +503,60 @@ $$
 \bar {A} = \frac {\bar {V} _ {\text {out}}}{\bar {V} _ {\text {in}}} = 1 + \mathrm {j} \omega t _ {1}, \quad \text {where} \quad t _ {1} = 75 \pm 1.5 \mu \mathrm {s}
 $$
 
-![Figure 6 - Video signal pilot burst, line-synchronizing pulses.](assets/img-7.jpeg)
-a) In the line-synchronizing pulses.
+![Figure 6i - Video signal pilot burst, line-synchronizing pulses.](assets/img-7.jpeg)
 
-![Figure 6 - Video signal pilot burst, equalizing pulses.](assets/img-8.jpeg)
-b) In the equalizing pulses.
+*Figure 6i - Video signal pilot burst, line-synchronizing pulses.*
 
-![Figure 6 - Video signal pilot burst, field-synchronizing pulses.](assets/img-9.jpeg)
+i) In the line-synchronizing pulses. p = the time between the sync falling-edge mid-point and the start of the pilot burst.  q = the duration of the pilot burst.
 
-*Figure 6 - Video signal pilot burst (Sub-clause 9.1.2).*
+![Figure 6ii - Video signal pilot burst, equalizing pulses.](assets/img-8.jpeg)
 
-c) In the field-synchronizing pulses.
-$p = 0.5\pm 0.1\mu \mathrm{s}$
-$q = 13.5\pm 1$  periods of  $3.75\mathrm{MHz}$ $(3.6\mu \mathrm{s}$  nominal)
-$r = 6\pm 1$  periods of  $3.75\mathrm{MHz}$ $(1.6\mu \mathrm{s}$  nominal)
-For detail, see Figure 6a, page 37.
+*Figure 6ii - Video signal pilot burst, equalizing pulses.*
+
+ii) In the equalizing pulses.  p = the time between the sync falling-edge mid-point and the start of the pilot burst.  r = the duration of the pilot burst.
+
+![Figure 6iii - Video signal pilot burst, field-synchronizing pulses.](assets/img-9.jpeg)
+
+*Figure 6iii - Video signal pilot burst, field-synchronizing pulses.*
+
+iii) In the field-synchronizing pulses.
+
+For figures 6i, 6ii and 6iii:
+- $p = 0.5\pm 0.1\mu \mathrm{s}$
+- $q = 13.5\pm 1$  periods of  $3.75\mathrm{MHz}$ $(3.6\mu \mathrm{s}$  nominal)
+- $r = 6\pm 1$  periods of  $3.75\mathrm{MHz}$ $(1.6\mu \mathrm{s}$  nominal)
+
 Note. — Insertion of special burst during half-line intervals in equalizing pulse and field-synchronizing pulse is optional. In the field-synchronizing pulse  $q$  may be increased to a maximum of 100 periods.
 
 ![Figure 6a - Detail of Figure 6, overview.](assets/img-10.jpeg)
 
+*Figure 6a (overview) — Equalizing pulse detail measurements:*
+
+| Parameter | Value |
+|-----------|-------|
+| 100% reference level | Peak white / full carrier amplitude |
+| 50% reference level | Half-amplitude point; used as the timing edge reference for pulse width measurements |
+| 20% reference level | Lower threshold near sync tip; used as the base reference for rise/fall transitions |
+| Carrier amplitude | (200 ± 20)% |
+| p (pre-equalizing period) | min. 0.4 µs |
+| r (burst duration) | min. 5 periods |
+| t_e (leading edge of equalizing pulse to end of burst) | 2.1 ± 0.1 µs |
+| Equalizing pulse total width | 2.35 ± 0.1 µs |
+
 ![Figure 6a - Detail of Figure 6.](assets/img-11.jpeg)
+
+*Figure 6a (detail) — Line sync pulse detail measurements:*
+
+| Parameter | Value |
+|-----------|-------|
+| 100% reference level | Peak white / full carrier amplitude |
+| 50% reference level | Half-amplitude point; used as the timing edge reference for pulse width measurements |
+| 20% reference level | Lower threshold near sync tip; used as the base reference for rise/fall transitions |
+| Carrier amplitude | (200 ± 20)% |
+| p (pre-sync period) | min. 0.4 µs |
+| q (burst duration) | min. 12 periods |
+| t_1 (leading edge of line sync to end of burst) | 4.1 ± 0.1 µs |
+| Line sync total width | 4.7 ± 0.2 µs |
 
 *Figure 6a - Detail of Figure 6.*
 
