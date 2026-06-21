@@ -14,3 +14,4 @@ Use the navigation to browse the available specifications by document family.
 	- Vertical Interval Test Signals
 - LaserDisc and Laservision
 - VHS
+	- [SMPTE 32M-2004 - Video Recording — 1/2-in Type H — Cassette, Tape and Records](vhs/SMPTE-32M-2004/markdown.md)

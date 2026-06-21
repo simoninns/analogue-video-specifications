@@ -98,5 +98,8 @@ GitHub Actions publishes the site to GitHub Pages on pushes to the `main` branch
 
 ### VHS
 
+- [SMPTE 32M-2004 - Video Recording — 1/2-in Type H — Cassette, Tape and Records](docs/vhs/SMPTE-32M-2004/markdown.md)  
+	Specifies cassette, tape, and recording characteristics for Type H helical-scan ½-in VHS video tape recorders, including SP, LP, and EP modes, optional FM audio, compact video cassette dimensions, and high-performance type H parameters. Covers 525-line, 59.94-field NTSC systems.
+
 - [JVC Video Technical Guide VTG82063](docs/vhs/JVC-Video-Technical-Guide-VTG82063/index.md)  
 	Technical guide covering VHS and S-VHS format operation, recording and playback systems, mechanism descriptions, servo and signal processing circuits, tuner and audio sections, and related service reference material.

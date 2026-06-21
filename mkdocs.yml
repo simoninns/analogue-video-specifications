@@ -58,6 +58,7 @@ nav:
       - IEC 60857:1986 Amendment 1: laserdisc/IEC-60857-1986-Laservision-NTSC-Amendment-1/IEC-60857-1986-Laservision-NTSC-Amendment-1.md
       - IEC 60857:1986 Amendment 2: laserdisc/IEC-60857-1986-Laservision-NTSC-Amendment-2/IEC-60857-1986-Laservision-NTSC-Amendment-2.md
   - VHS:
+      - SMPTE 32M-2004: vhs/SMPTE-32M-2004/markdown.md
       - JVC Video Technical Guide VTG82063:
         - Overview: vhs/JVC-Video-Technical-Guide-VTG82063/index.md
         - Section 1 - VHS Basics Technology: vhs/JVC-Video-Technical-Guide-VTG82063/section-1.md
